@@ -1,0 +1,9 @@
+.select-day-month-years{
+    background: rgb(255, 255, 255);
+}
+.h-main-menu{
+    margin-top:50px;
+    height: 120px;
+    border: 2px solid pink;
+    border-radius: 30px 00px 30px 0px;
+}
