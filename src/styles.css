@@ -11,6 +11,13 @@
 	font-family: 'Saysettha_OT';
 }
 
+.eng-font{
+    font-family: 'OldStandard-Italic';
+    font-weight: normal;
+    font-style: normal;
+    src: url('assets/css/fonts/OldStandard-Italic.ttf');
+}
+
 
 body{
     background: rgb(248, 247, 233);
@@ -21,4 +28,12 @@ body{
 
 .main-color{
     color: rgb(245, 245, 245);
+}
+
+.icon-mounao{
+    color: green;
+}
+.icon-mounao-rotate{
+    color: green;
+    -webkit-transform: rotate(-90deg);
 }

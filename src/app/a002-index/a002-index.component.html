@@ -1,19 +1,19 @@
-<div class="container mt-5">
-  <div class="col card">
-    <h1 class="text-center">Welcome to MOUNAO website</h1>
-    <section class="one p-5">
+<div class="container">
+  <div class="col card" id="mydiv">
+    <h1 class="text-center text-uppercase eng-font"><i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> Welcome to MOUNAO BUFFET <i class="fas fa-feather-alt icon-mounao"></i></h1>
+    <section class="one mt-3 pd-main-menu">
       <div class="select-day-month-years">
         <button class="btn btn-primary d-flex mx-auto">Select-Days</button>
       </div>
       <div class="row">
         <div class="col-md-3 col-sm-6 col-12">
-          <button class="btn btn-primary lao-font w-100 h-main-menu">ເຂົ້າ</button>
+          <button class="btn btn-primary lao-font w-100 h-main-menu" [routerLink]="['/add-products']">ເຂົ້າ</button>
         </div>
         <div class="col-md-3 col-sm-6 col-12">
-          <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu">ອອກ</button>
+          <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/subtract-products']">ອອກ</button>
         </div>
         <div class="col-md-3 col-sm-6 col-12">
-            <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu">ສະຫຼຸບ</button>
+            <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/report']">ສະຫຼຸບ</button>
           </div>
           <div class="col-md-3 col-sm-6 col-12">
               <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/make-product']">ສ້າງສິນຄ້າ</button>
