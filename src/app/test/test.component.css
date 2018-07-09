@@ -1,0 +1,16 @@
+
+ .w-px {
+    height: 150px;
+    width: 150px;
+}
+.size-img-make-product{
+    height: 80px;
+    width: 80px;
+}
+.text-content-center td{
+    text-align: center;
+    vertical-align:middle;
+}
+.ip-text-w{
+    width: 100px;
+}
