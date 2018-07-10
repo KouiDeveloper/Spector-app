@@ -8,25 +8,25 @@
     background: rgb(255, 255, 255);
 }
 .h-main-menu{
-    margin-top:50px;
-    height: 100px;
+    margin-top:20px;
+    height: 60px;
     border: 1px solid rgb(17, 104, 17);
     box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
     border-radius: 30px 00px 30px 0px;
     background: rgb(221, 221, 208) !important;
     color: rgb(32, 32, 32);
-    font-size: 20pt;
+    font-size: 15pt;
     /* font-weight: normal !important; */
 }
 .h-main-menu:hover{
-    margin-top:50px;
-    height: 100px;
+    margin-top:20px;
+    height: 60px;
     border: 1px solid rgb(17, 104, 17);
     box-shadow: 2px 2px 2px 2px rgba(104, 139, 104, 0.63);
     border-radius: 30px 00px 30px 0px;
     background: rgb(240, 240, 208) !important;
     color: rgb(32, 32, 32);
-    font-size: 21pt;
+    font-size: 16pt;
     transition: .5s
 }
 
@@ -47,7 +47,7 @@
     border-radius: 10px 00px 10px 0px;
     background: rgb(221, 221, 208) !important;
     color: rgb(32, 32, 32);
-    font-size: 20pt;
+    font-size: 13pt;
 }
 .bg-select-days:hover{
     border: 1px solid rgb(17, 104, 17);
@@ -55,7 +55,8 @@
     /* border-radius: 30px 00px 30px 0px; */
     background: rgb(240, 240, 208) !important;
     color: rgb(32, 32, 32);
-    font-size: 20pt;
+    font-size: 14pt;
+    transition: .5s;
 }
 
 .bg-primary {
@@ -64,9 +65,90 @@
 
 /* css screen */
 
+@media(min-width: 200px){
+    h1 {
+        font-size: 1.5rem;
+        }
+
+}
+
+@media(min-width: 600px){
+    h1 {
+        font-size: 1.9rem;
+        }
+
+}
+
+@media( min-width:900px){
+    h1, .h1 {
+        font-size: 2rem;
+      }
+      .h-main-menu{
+        margin-top:50px;
+        height: 80px;
+        border: 1px solid rgb(17, 104, 17);
+        box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+        border-radius: 30px 00px 30px 0px;
+        background: rgb(221, 221, 208) !important;
+        color: rgb(32, 32, 32);
+        font-size: 17pt;
+        /* font-weight: normal !important; */
+    }
+    .h-main-menu:hover{
+        margin-top:50px;
+        height: 80px;
+        border: 1px solid rgb(17, 104, 17);
+        box-shadow: 2px 2px 2px 2px rgba(104, 139, 104, 0.63);
+        border-radius: 30px 00px 30px 0px;
+        background: rgb(240, 240, 208) !important;
+        color: rgb(32, 32, 32);
+        font-size: 18pt;
+        transition: .5s
+    }  
+}
 @media (min-width: 1200px) { 
     .pd-main-menu{
         padding-left: 150px !important;
         padding-right: 150px !important; 
     }
- }
+    h1, .h1 {
+        font-size: 2.5rem;
+      }
+    .h-main-menu{
+    margin-top:50px;
+    height: 100px;
+    border: 1px solid rgb(17, 104, 17);
+    box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+    border-radius: 30px 00px 30px 0px;
+    background: rgb(221, 221, 208) !important;
+    color: rgb(32, 32, 32);
+    font-size: 18pt;
+    /* font-weight: normal !important; */
+}
+    .h-main-menu:hover{
+        margin-top:50px;
+        height: 100px;
+        border: 1px solid rgb(17, 104, 17);
+        box-shadow: 2px 2px 2px 2px rgba(104, 139, 104, 0.63);
+        border-radius: 30px 00px 30px 0px;
+        background: rgb(240, 240, 208) !important;
+        color: rgb(32, 32, 32);
+        font-size: 19pt;
+    }
+    .bg-select-days{
+        border: 1px solid rgb(17, 104, 17);
+        box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+        border-radius: 10px 00px 10px 0px;
+        background: rgb(221, 221, 208) !important;
+        color: rgb(32, 32, 32);
+        font-size: 16pt;
+    }
+    .bg-select-days:hover{
+        border: 1px solid rgb(17, 104, 17);
+        box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+        /* border-radius: 30px 00px 30px 0px; */
+        background: rgb(240, 240, 208) !important;
+        color: rgb(32, 32, 32);
+        font-size: 17pt;
+    }
+}
