@@ -10,10 +10,10 @@
         <form class="form-inline">
           <div class="form-group">
             <div class="input-group">
-              <input class="form-control btn btn-primary d-flex mx-auto bg-select-day" placeholder="yyyy-mm-dd"
+              <input class="form-control btn btn-primary d-flex mx-auto bg-select-days" placeholder="yyyy-mm-dd"
                      name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
               <div class="input-group-append">
-                <button class="btn btn-primary" (click)="d.toggle()"type="button">
+                <button class="btn bg-select-days" (click)="d.toggle()"type="button">
                     <i class="far fa-calendar-alt" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
                 </button>
               </div>
