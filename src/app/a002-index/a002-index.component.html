@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5">
   <div class="col card pd-container">
     <h1 class="text-center text-uppercase eng-font">
       <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> Welcome to MOUNAO BUFFET
@@ -10,10 +10,10 @@
         <form class="form-inline">
           <div class="form-group">
             <div class="input-group">
-              <input class="form-control" placeholder="yyyy-mm-dd"
-                     name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+              <input class="form-control btn btn-primary d-flex mx-auto bg-select-day" placeholder="yyyy-mm-dd"
+                     name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary" (click)="d.toggle()"type="button">
+                <button class="btn btn-primary" (click)="d.toggle()"type="button">
                     <i class="far fa-calendar-alt" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
                 </button>
               </div>
@@ -21,15 +21,15 @@
           </div>
         </form>
       </div>
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn btn-primary lao-font w-100 h-main-menu" [routerLink]="['/add-products']">ເຂົ້າ</button>
+          <button class="btn lao-font w-100 h-main-menu" [routerLink]="['/add-products']">ເຂົ້າ</button>
         </div>
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/subtract-products']">ອອກ</button>
+          <button class="btn lao-font mr-auto w-100 h-main-menu" [routerLink]="['/subtract-products']">ອອກ</button>
         </div>
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/make-product']">ສ້າງສິນຄ້າ</button>
+          <button class="btn lao-font mr-auto w-100 h-main-menu" [routerLink]="['/make-product']">ສ້າງສິນຄ້າ</button>
         </div>  
       </div>
     </section>
