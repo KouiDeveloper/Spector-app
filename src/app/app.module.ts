@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { NgbModule, NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 
+import { AppRoutingModule } from './/app-routing.module';
 import { AppComponent } from './app.component';
 import { A001HeaderComponent } from './a001-header/a001-header.component';
-import { AppRoutingModule } from './/app-routing.module';
 import { A002IndexComponent } from './a002-index/a002-index.component';
 import { TestComponent } from './test/test.component';
 import { A003ReportComponent } from './a003-report/a003-report.component';
@@ -24,7 +26,9 @@ import { A006SubtractProductsComponent } from './a006-subtract-products/a006-sub
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

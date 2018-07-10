@@ -1,9 +1,15 @@
+
+.pd-container{
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+
 .select-day-month-years{
     background: rgb(255, 255, 255);
 }
 .h-main-menu{
     margin-top:50px;
-    height: 120px;
+    height: 100px;
     border: 1px solid rgb(17, 104, 17);
     box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
     border-radius: 30px 00px 30px 0px;
@@ -13,14 +19,7 @@
     /* font-weight: normal !important; */
 }
 
-#mydiv {
-    padding-top:50px;
-    padding-bottom: 50px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+
 
 .bg-select-days{
     border: 1px solid rgb(17, 104, 17);
@@ -31,9 +30,15 @@
     font-size: 20pt;
 }
 
+.bg-primary {
+    background-color: #0e2641!important;
+}
+
+/* css screen */
+
 @media (min-width: 1200px) { 
     .pd-main-menu{
-        padding-left: 250px !important;
-        padding-right: 250px !important; 
+        padding-left: 150px !important;
+        padding-right: 150px !important; 
     }
  }

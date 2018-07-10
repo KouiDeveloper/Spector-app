@@ -1,25 +1,40 @@
 <div class="container">
-  <div class="col card" id="mydiv">
-    <h1 class="text-center text-uppercase eng-font"><i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> Welcome to MOUNAO BUFFET <i class="fas fa-feather-alt icon-mounao"></i></h1>
+  <div class="col card pd-container">
+    <h1 class="text-center text-uppercase eng-font">
+      <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> Welcome to MOUNAO BUFFET
+      <i class="fas fa-feather-alt icon-mounao"></i>
+    </h1>
     <section class="one mt-3 pd-main-menu">
-      <div class="select-day-month-years">
-        <button class="btn btn-primary d-flex mx-auto bg-select-days">Select-Days</button>
+      <div class="select-day-month-years justify-content-center d-flex">
+        <!-- <button class="btn btn-primary d-flex mx-auto bg-select-days">Select-Days</button> -->
+        <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd"
+                     name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" (click)="d.toggle()"type="button">
+                    <i class="far fa-calendar-alt" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
       <div class="row">
-        <div class="col-md-3 col-sm-6 col-12">
+        <div class="col-md-4 col-sm-6 col-12">
           <button class="btn btn-primary lao-font w-100 h-main-menu" [routerLink]="['/add-products']">ເຂົ້າ</button>
         </div>
-        <div class="col-md-3 col-sm-6 col-12">
+        <div class="col-md-4 col-sm-6 col-12">
           <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/subtract-products']">ອອກ</button>
         </div>
-        <div class="col-md-3 col-sm-6 col-12">
-            <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/report']">ສະຫຼຸບ</button>
-          </div>
-          <div class="col-md-3 col-sm-6 col-12">
-              <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/make-product']">ສ້າງສິນຄ້າ</button>
-            </div>
+        <div class="col-md-4 col-sm-6 col-12">
+          <button class="btn btn-primary lao-font mr-auto w-100 h-main-menu" [routerLink]="['/make-product']">ສ້າງສິນຄ້າ</button>
+        </div>  
       </div>
-      
     </section>
   </div>
 </div>
+   <div class="mb-5">
+      <app-a003-report></app-a003-report>
+   </div>
