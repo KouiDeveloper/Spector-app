@@ -1,5 +1,23 @@
+.container{
+    color: rgb(83, 81, 81);
+    background-color: #d8dadb;
+    border-color: #007bff;
+}
+.card{
+    background-color: #4ca2fd;
+}
+.card, .table-bordered, th, td{
+    border-color:rgb(121, 118, 118) !important;
+    color: rgb(56, 55, 55);
+    
+    border-color: #007bff;
+}
 .bg-add-products{
-    background: rgb(228, 228, 216);
+    padding:40px;
+    padding-top:30px;
+    color: rgb(56, 55, 55);
+    background-color: #4ca2fd;
+    border-color: #007bff;
 }
  .w-px {
     height: 150px;
@@ -17,13 +35,7 @@
 .ip-text-w{
     width: 100px;
 }
-.card{
-    /* background: rgb(228, 228, 216) !important; */
-}
-/* .table-bordered {
-    border: 1px solid #4d5053;
-  }
-   */
+
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #d0d2d3;
@@ -39,8 +51,22 @@
     transition: 0.5s;
     color: rgb(100, 90, 90);
     cursor: pointer;
-    background: rgb(228, 228, 216);
+    background:rgba(231, 231, 228, 0.548) !important;
 }
+
+.btn-success {
+    color: #fff;
+    background-color: #3a9951 !important;
+    border-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    color: #fff;
+    background-color: #218838 !important;
+    border-color: #1e7e34;
+  }
+   
+
 
 
 
@@ -68,6 +94,6 @@
 
   @media (min-width: 992px) { 
       .pd-add-prod{
-          padding: 50px;
+          padding: 30px;
       }
    }
