@@ -11,6 +11,7 @@ import { A006SubtractProductsComponent } from './a006-subtract-products/a006-sub
 
 const routes: Routes = [
   { path: '', component: A002IndexComponent },
+  { path: 'index', component: A002IndexComponent },
   { path: 'test', component: TestComponent},
   { path: 'report', component: A003ReportComponent},
   { path: 'make-product', component: A004MakeProductsComponent},
