@@ -1,4 +1,6 @@
-
+.container-fluid{
+    background: #dc3545;
+}
  .w-px {
     height: 150px;
     width: 150px;
@@ -17,13 +19,13 @@
 
 .container{
     color: rgb(83, 81, 81);
-    background-color: #cfd3d6;
+    background-color: #d8dadb;
     border-color: #007bff;
 }
 .card{
     border: #fdb850 !important;
     padding-bottom: 30px;
-    background-color: #fdb850;
+    background-color: #e5e7e9;
 }
 .card, .table-bordered, th, td{
     border-color:rgb(121, 118, 118) !important;
@@ -35,7 +37,7 @@
     padding:40px;
     padding-top:30px;
     color: rgb(56, 55, 55);
-    background-color: #fdb850;
+    background-color: #e5e7e9;
     border-color: #007bff;
     padding-bottom: 70px;
 }

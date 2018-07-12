@@ -15,7 +15,9 @@
     width: 100px;
 }
 
-
+.container-fluid{
+    background: rgb(248, 248, 220);
+}
 
 .container{
     color: rgb(83, 81, 81);
