@@ -22,60 +22,15 @@
     
                 <!--Table body-->
                 <tbody>
-                  <tr class="lao-font text-center bg-list-stock">
-                    <th scope="row">1</th>
-                    <td>ປາໝຶກ</td>
-                    <td>200 kg</td>
-                    <td>190 kg</td>
-                    <td>10</td>
-                    <td>2.000.000 kip</td>
-                    <td>ຊື້ວັນທີ 18.8.2018</td>
+                  <tr class="lao-font text-center bg-list-stock" *ngFor="let ar of _arrayReport; let i = index">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{ar.productname}}</td>
+                    <td>{{ar.lastimport}}</td>
+                    <td>{{ar.lastexport}}</td>
+                    <td>{{ar.qtty}}</td>
+                    <td>{{ar.price}}</td>
+                    <td>{{ar.description}}</td>
                   </tr>
-                  <tr class="lao-font text-center bg-list-stock">
-                    <th scope="row">2</th>
-                    <td>ປາໝຶກ</td>
-                    <td>200 kg</td>
-                    <td>190 kg</td>
-                    <td>10</td>
-                    <td>2.000.000 kip</td>
-                    <td>ຊື້ວັນທີ 18.8.2018</td>
-                  </tr>
-                  <tr class="lao-font text-center bg-list-stock">
-                    <th scope="row">3</th>
-                    <td>ປາໝຶກ</td>
-                    <td>200 kg</td>
-                    <td>190 kg</td>
-                    <td>10</td>
-                    <td>2.000.000 kip</td>
-                    <td>ຊື້ວັນທີ 18.8.2018</td>
-                  </tr>
-                  <tr class="lao-font text-center bg-list-stock">
-                    <th scope="row">4</th>
-                    <td>ປາໝຶກ</td>
-                    <td>200 kg</td>
-                    <td>190 kg</td>
-                    <td>10</td>
-                    <td>2.000.000 kip</td>
-                    <td>ຊື້ວັນທີ 18.8.2018</td>
-                  </tr>
-                  <tr class="lao-font text-center bg-list-stock">
-                      <th scope="row">5</th>
-                      <td>ປາໝຶກ</td>
-                      <td>200 kg</td>
-                      <td>190 kg</td>
-                      <td>10</td>
-                      <td>2.000.000 kip</td>
-                      <td>ຊື້ວັນທີ 18.8.2018</td>
-                    </tr>
-                    <tr class="lao-font text-center bg-list-stock">
-                      <th>ລວມ</th>
-                      <td></td>
-                      <td >10.000 kg</td>
-                      <td>950 kg</td>
-                      <td>50 kg</td>
-                      <td>10.000.000 kip</td>
-                      <td></td>
-                    </tr>
                   </tbody>
                 <!--Table body-->
     

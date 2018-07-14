@@ -1,0 +1,57 @@
+export interface stockowner {
+    _rev: string,
+    _id: string,
+    name: string,
+    logointoken: string,
+    lastlogin: Date,
+    gui: string,
+}
+export interface product {
+    _rev: string,
+    _id: string,
+    name: string,
+    code: string,
+    price: number,
+    currency: string,
+    gui: string,
+    photo: string,
+    unit: string,
+    lastupdate: string,
+    isobsoleted: boolean,
+    ownergui: string,
+    qtty: number
+}
+export interface stockitem {
+    _rev: string,
+    _id: string,
+    productname: string,
+    productgui: string,
+    qtty: number,
+    unit: string,
+    type: string,
+    description: string,
+    gui: string,
+    lastupdate: string
+}
+export interface stock {
+    _rev: string,
+    _id: string,
+    productname: string,
+    productcode: string,
+    productgui: string,
+    price: number,
+    gui: string,
+    photo: string,
+    unit: string,
+    qtty: number,
+    totalimport: number,
+    totalexport: number,
+    lastimport: number,
+    lastexport: number,
+    lastimporttime: string,
+    lastexporttime: string,
+    lastupdate: string,
+    isobsoleted: boolean,
+    ownergui: string,
+    description:string
+}
