@@ -45,7 +45,7 @@ export class WebsocketDataServiceService implements OnInit {
   private _report: any;
   public _units: any;
   public _currency: any[]=[];
-
+  _productList: any[]=[];
   // public heartbeat_interval: number;
 
   private _otherMessage: any;
@@ -61,11 +61,13 @@ export class WebsocketDataServiceService implements OnInit {
   // private timeOut_runner: NodeJS.Timer;
   public currentStockOwner = new BehaviorSubject<any>(this._stockOwner);
   public currentProduct = new BehaviorSubject<any>(this._product);
+  public currentProductList = new BehaviorSubject<any>(this._productList);
   public currentStockItem = new BehaviorSubject<any>(this._stockItem);
   public currentStock = new BehaviorSubject<any>(this._stock);
   public currentReport = new BehaviorSubject<any>(this._report);
   public currentUnits = new BehaviorSubject<any>(this._units);
   public currentCurrency = new BehaviorSubject<any>(this._currency);
+  
   // private currentMessage = this.clientSource.asObservable();
   // private serverEvent = this.eventSource.asObservable();
   // timeOut_runner = setTimeout(() => {
@@ -79,6 +81,9 @@ export class WebsocketDataServiceService implements OnInit {
   }
   public refreshProduct() {
     this.currentProduct.next(this._product);
+  }
+  public refreshProductList() {
+    this.currentProductList.next(this._productList);
   }
   public refreshStockItem() {
     this.currentStockItem.next(this._stockItem);
@@ -529,7 +534,7 @@ export class WebsocketDataServiceService implements OnInit {
                   // console.log(this._client.data['message']);
                 } else {
                   console.log(this._client.data["message"]);
-                  this._product = this._client.data.deviceinfo;
+                  this._product = this._client.data.product;
                   this.refreshProduct();
                 }
                 break;
@@ -542,7 +547,7 @@ export class WebsocketDataServiceService implements OnInit {
                   // console.log(this._client.data['message']);
                 } else {
                   console.log(this._client.data["message"]);
-                  this._product = this._client.data.deviceinfo;
+                  this._product = this._client.data.product;
                   this.refreshProduct();
                 }
                 break;
@@ -555,7 +560,7 @@ export class WebsocketDataServiceService implements OnInit {
                   // console.log(this._client.data['message']);
                 } else {
                   console.log(this._client.data["message"]);
-                  this._product = this._client.data.deviceinfo;
+                  this._product = this._client.data.product;
                   this.refreshProduct();
                 }
                 break;
@@ -567,7 +572,7 @@ export class WebsocketDataServiceService implements OnInit {
                   // console.log(this._client.data['message']);
                 } else {
                   console.log(this._client.data["message"]);
-                  this._product = this._client.data.deviceinfo;
+                  this._product = this._client.data.product;
                   this.refreshProduct();
                 }
                 break;
@@ -581,6 +586,18 @@ export class WebsocketDataServiceService implements OnInit {
                 } else {
                   console.log(this._client.data["message"]);
                   this._report = this._client.data.report;
+                  this.refreshReport();
+                }
+                break;
+                case "get-product-list":
+                if (
+                  this._client.data["message"].toLowerCase().indexOf("error") >
+                  -1
+                ) {
+                  // console.log(this._client.data['message']);
+                } else {
+                  console.log(this._client.data["message"]);
+                  this._productList = this._client.data.productlist;
                   this.refreshReport();
                 }
                 break;

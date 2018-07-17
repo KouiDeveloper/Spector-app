@@ -79,6 +79,8 @@
                   <th class="xl">ຊື່ສິນຄ້າ</th>
                   <th>ລະຫັດ</th>
                   <th>ລາຄາ</th>
+                  <th>currency</th>
+                  <th>unit</th>
                   <th>ໝາຍເຫດ</th>
                 </tr>
               </thead>
@@ -86,14 +88,16 @@
 
               <!--Table body-->
               <tbody>
-                <tr class="lao-font text-content-center bg-list-stock" (click)="selectProduct()">
+                <tr class="lao-font text-content-center bg-list-stock" *ngFor="let n of _productList" (click)="selectProduct(n)">
                   <th scope="row" class="size-img-make-product">
                     <img src="../../assets/img/squid.jpg" alt="" class="w-100 h-100">
                   </th>
-                  <td>ປາໝຶກ</td>
-                  <td>0215778</td>
-                  <td>100.000 ກີບ</td>
-                  <td></td>
+                  <td>{{n.name}}</td>
+                  <td>{{n.code}}</td>
+                  <td>{{n.price}}</td>
+                  <td>{{n.currency}}</td>
+                  <td>{{n.unit}}</td>
+                  <td>{{n.description}}</td>
                 </tr>
 
                 <tr class="lao-font text-content-center bg-list-stock">
@@ -103,6 +107,8 @@
                   <td>ປາໝຶກ</td>
                   <td>0215778</td>
                   <td>100.000 ກີບ</td>
+                  <td></td>
+                  <td></td>
                   <td></td>
                 </tr>
 

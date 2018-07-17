@@ -29,7 +29,7 @@ export class A004MakeProductsComponent {
   public now = new Date();
   public _message: Message;
   public _product: any = {};
-  public _arr_product: any[] = [];
+  public _productList: any[] = [];
   public _selectedSubUsers: any;
   @Input() _selectedTime: any[] = [{}];
   public _server_event: any[] = [];
@@ -74,6 +74,11 @@ export class A004MakeProductsComponent {
     );
     this._subs.push(
       this.websocketDataServiceService.currentProduct.subscribe(prod => {
+        this.readProduct(prod);
+      })
+    );
+    this._subs.push(
+      this.websocketDataServiceService.currentProductList.subscribe(prod => {
         this.readProduct(prod);
       })
     );
@@ -310,7 +315,7 @@ export class A004MakeProductsComponent {
       if (Array.isArray(p)) {
         this._product = p;
       } else {
-        this._arr_product = p;
+        this._productList = p;
       }
     }
   }
