@@ -598,7 +598,7 @@ export class WebsocketDataServiceService implements OnInit {
                 } else {
                   console.log(this._client.data["message"]);
                   this._productList = this._client.data.productlist;
-                  this.refreshReport();
+                  this.refreshProductList();
                 }
                 break;
 
@@ -615,6 +615,7 @@ export class WebsocketDataServiceService implements OnInit {
         }
         // // console.log('current client');
       } catch (error) {
+        console.log('data ',this._client.data);
         console.log(error);
         sessionStorage.clear();
       }
@@ -1137,6 +1138,14 @@ export class WebsocketDataServiceService implements OnInit {
     this._message.data.day = selectedTime.day;
     this._message.data.month =selectedTime.month;
     this._message.data.year = selectedTime.year;
+    this.sendMsg();
+  }
+  
+  getProductList(){
+    this._message = JSON.parse(JSON.stringify(this._client));
+    this._message.data = {};
+    this._message.data.transaction = this.createTransaction();
+    this._message.data.command = "get-product-list";
     this.sendMsg();
   }
 }

@@ -50,10 +50,9 @@ export class A004MakeProductsComponent {
 
   public _currentReport: any;
   public _arrayReport: any[];
-  public _isNew:boolean=false;
-  public _currency:any[]=[];
-  public _units:any[]=[];
-
+  public _isNew: boolean = false;
+  public _currency: any[] = [];
+  public _units: any[] = [];
 
   /// WEBSOCKET LAUNCHING
   constructor(
@@ -105,14 +104,19 @@ export class A004MakeProductsComponent {
     );
     this._subs.push(
       this.websocketDataServiceService.currentUnits.subscribe(msg => {
-        this._units=msg;
-        console.log('units',this._units);
+        if (msg) {
+          this._units = msg;
+          console.log("units", this._units);
+          if (this._units.length) {
+            this._rightUnit = this._units[0];
+          }
+        }
       })
     );
     this._subs.push(
       this.websocketDataServiceService.currentCurrency.subscribe(msg => {
-        console.log('current currency',msg);
-        this._currency=msg;
+        console.log("current currency", msg);
+        this._currency = msg;
         this.getRightCurrency();
       })
     );
@@ -167,8 +171,9 @@ export class A004MakeProductsComponent {
     setTimeout(() => {
       this.getCurrency();
       this.getUnits();
-     // console.log('currency',this._currency);
+      // console.log('currency',this._currency);
       this.getReport();
+      this.getProductList();
     }, 2000);
   }
   ngOnDestroy() {
@@ -312,7 +317,7 @@ export class A004MakeProductsComponent {
   readProduct(p): any {
     // this._newUser;
     if (p !== undefined) {
-      if (Array.isArray(p)) {
+      if (!Array.isArray(p)) {
         this._product = p;
       } else {
         this._productList = p;
@@ -407,74 +412,91 @@ export class A004MakeProductsComponent {
     this.websocketDataServiceService.getReport(selectedTime);
   }
   updateProduct() {
-    if (this._product!={}) {
-      this._isNew=true;
-      this._product.currency=this._rightCurrency;
-      this._product.unit=this._rightUnit;
-      this._product.type='import';
-      this.websocketDataServiceService.addObsoletedGoods(this._product);
+    if (this._product != {}) {
+      this._isNew = true;
+      this._isEdit=false;
+      this._product.currency = this._rightCurrency;
+      this._product.unit = this._rightUnit;
+      this._product.type = "import";
+      this.websocketDataServiceService.addGoods(this._product);
+      console.log(this._product);
+      this._selectedProduct = null;
+      this._product = {};
     }
   }
   addObsoletedProduct() {
-    if (this._product!={}) {
-      this._product.type='obsolete';
+    if (this._product != {}) {
+      this._product.type = "obsolete";
       this.websocketDataServiceService.addObsoletedGoods(this._product);
+      this._selectedProduct = null;
+      this._product = {};
+      this._isEdit=false;
     }
   }
   getCurrency() {
-      this.websocketDataServiceService.getCurrency();
-      // alert('load currency')
+    this.websocketDataServiceService.getCurrency();
+    // alert('load currency')
   }
   getUnits() {
-      this.websocketDataServiceService.getUnits();
+    this.websocketDataServiceService.getUnits();
   }
-  addNew(){
-    this._isNew=true;
-    this._product={
-      name: 'new product',
-      code: 'new code',
+  addNew() {
+    this._isNew = true;
+    this._isEdit = true;
+    this._selectedProduct = null;
+    this._product = {
+      name: "new product",
+      code: "new code",
       price: 0,
       currency: this._rightCurrency,
-      gui: '',
-      photo: '',
+      gui: "",
+      photo: "",
       unit: this._rightUnit,
       lastupdate: new Date(),
       isobsoleted: false,
-      description:'new product',
-      ownergui: '',
+      description: "new product",
+      ownergui: "",
       qtty: 0
     };
   }
-  cancle(){
-    this._isNew=false;
-    this._product={};
-
+  cancle() {
+    this._isNew = false;
+    this._product = {};
+    this._selectedProduct = null;
+    this._isEdit=false;
   }
-  public _rightCurrency='';
-  getRightCurrency(){
+  public _rightCurrency = "";
+  getRightCurrency() {
     //console.log(this._rightCurrency);
-    if(this._rightCurrency){
-
+    if (this._rightCurrency) {
       for (let index = 0; index < this._currency.length; index++) {
         const element = this._currency[index];
-        if(this._rightCurrency===element){
-          if(index+1>=this._currency.length){
-             this._rightCurrency=this._currency[0];
-             break;
-          }else{
-             this._rightCurrency=this._currency[index+1];
-             break;
+        if (this._rightCurrency === element) {
+          if (index + 1 >= this._currency.length) {
+            this._rightCurrency = this._currency[0];
+            break;
+          } else {
+            this._rightCurrency = this._currency[index + 1];
+            break;
           }
         }
       }
-    }else{
+    } else {
       console.log(this._currency);
-       this._rightCurrency=this._currency[0];
-      
+      this._rightCurrency = this._currency[0];
     }
   }
-  public _rightUnit='';
-  selectUnit(e){
-    this._rightUnit=e;
+  public _rightUnit = "";
+  selectUnit(e) {
+    this._rightUnit = e;
   }
+  getProductList() {
+    this.websocketDataServiceService.getProductList();
+  }
+  _selectedProduct = null;
+  selectProduct(p: any) {
+    this._selectedProduct = p;
+    this._product = p;
+  }
+  _isEdit=false;
 }
