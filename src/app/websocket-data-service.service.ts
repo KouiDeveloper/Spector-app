@@ -45,7 +45,8 @@ export class WebsocketDataServiceService implements OnInit {
   private _report: any;
   public _units: any;
   public _currency: any[]=[];
-  _productList: any[]=[];
+  public _goodstype: any[]=[];
+  _productList: any={};
   // public heartbeat_interval: number;
 
   private _otherMessage: any;
@@ -67,6 +68,8 @@ export class WebsocketDataServiceService implements OnInit {
   public currentReport = new BehaviorSubject<any>(this._report);
   public currentUnits = new BehaviorSubject<any>(this._units);
   public currentCurrency = new BehaviorSubject<any>(this._currency);
+  public currentGoodsType = new BehaviorSubject<any>(this._goodstype);
+
   
   // private currentMessage = this.clientSource.asObservable();
   // private serverEvent = this.eventSource.asObservable();
@@ -96,6 +99,12 @@ export class WebsocketDataServiceService implements OnInit {
   }
   public refreshCurrency() {
     this.currentCurrency.next(this._currency);
+    // alert(this._currency);
+  }
+  public refreshGoodsType(){
+    this.currentGoodsType.next(this._goodstype);
+    //alert(this._goodstype);
+   // console.log("Read-good-type",this._goodstype);
   }
 
 
@@ -599,6 +608,18 @@ export class WebsocketDataServiceService implements OnInit {
                   console.log(this._client.data["message"]);
                   this._productList = this._client.data.productlist;
                   this.refreshProductList();
+                }
+                break;
+                case "get-goods-type":
+                if (
+                  this._client.data["message"].toLowerCase().indexOf("error") >
+                  -1
+                ) {
+                  // console.log(this._client.data['message']);
+                } else {
+                  console.log(this._client.data["message"]);
+                  this._goodstype = this._client.data.goodstype;
+                  this.refreshGoodsType();
                 }
                 break;
 
@@ -1146,6 +1167,14 @@ export class WebsocketDataServiceService implements OnInit {
     this._message.data = {};
     this._message.data.transaction = this.createTransaction();
     this._message.data.command = "get-product-list";
+    this.sendMsg();
+  }
+
+  getGoodsType(){
+    this._message = JSON.parse(JSON.stringify(this._client));
+    this._message.data = {};
+    this._message.data.transaction = this.createTransaction();
+    this._message.data.command = "get-goods-type";
     this.sendMsg();
   }
 }

@@ -20,7 +20,10 @@ import { ElementRef, ViewChild } from "@angular/core";
 @Component({
   selector: "app-a004-make-products",
   templateUrl: "./a004-make-products.component.html",
-  styleUrls: ["./a004-make-products.component.css"],
+  styleUrls: [
+    "./a004-make-products.component.css",
+    "./custom-selectedclass.css"
+  ],
   providers: [WebsocketDataServiceService, ChatService, WebsocketService]
 })
 export class A004MakeProductsComponent {
@@ -29,7 +32,7 @@ export class A004MakeProductsComponent {
   public now = new Date();
   public _message: Message;
   public _product: any = {};
-  public _productList: any[] = [];
+  public _productList: any = {};
   public _selectedSubUsers: any;
   @Input() _selectedTime: any[] = [{}];
   public _server_event: any[] = [];
@@ -53,6 +56,8 @@ export class A004MakeProductsComponent {
   public _isNew: boolean = false;
   public _currency: any[] = [];
   public _units: any[] = [];
+  public _goodstype: any[] = [];
+  public _selectedGoodsType: any = "";
 
   /// WEBSOCKET LAUNCHING
   constructor(
@@ -71,13 +76,14 @@ export class A004MakeProductsComponent {
         this.readClient(client);
       })
     );
+
     this._subs.push(
-      this.websocketDataServiceService.currentProduct.subscribe(prod => {
-        this.readProduct(prod);
+      this.websocketDataServiceService.currentProductList.subscribe(prod => {
+        this.readProductList(prod);
       })
     );
     this._subs.push(
-      this.websocketDataServiceService.currentProductList.subscribe(prod => {
+      this.websocketDataServiceService.currentProduct.subscribe(prod => {
         this.readProduct(prod);
       })
     );
@@ -118,6 +124,12 @@ export class A004MakeProductsComponent {
         console.log("current currency", msg);
         this._currency = msg;
         this.getRightCurrency();
+      })
+    );
+
+    this._subs.push(
+      this.websocketDataServiceService.currentGoodsType.subscribe(client => {
+        this.readGoodsType(client);
       })
     );
 
@@ -171,10 +183,11 @@ export class A004MakeProductsComponent {
     setTimeout(() => {
       this.getCurrency();
       this.getUnits();
+      this.getGoodsType();
       // console.log('currency',this._currency);
       this.getReport();
       this.getProductList();
-    }, 2000);
+    }, 1000);
   }
   ngOnDestroy() {
     console.log("STOP SERVICE");
@@ -314,14 +327,38 @@ export class A004MakeProductsComponent {
       console.log(error);
     }
   }
+  sortByLastUpdate(n1, n2) {
+    return (
+      new Date(n2.lastupdate).getTime() - new Date(n1.lastupdate).getTime()
+    );
+  }
+  readProductList(p): any {
+    // this._newUser;
+    if (p !== undefined) {
+      this._productList = p;
+      if (p.arr) {
+        this._productList.arr.sort(this.sortByLastUpdate);
+      }
+    }
+  }
+  getExistProduct(array, p) {
+    for (let index = 0; index < array.length; index++) {
+      const element = array[index];
+      if (element._id === p._id) {
+        array[index]=p;
+        return true;
+      }
+    }
+    return null;
+  }
   readProduct(p): any {
     // this._newUser;
     if (p !== undefined) {
-      if (!Array.isArray(p)) {
-        this._product = p;
-      } else {
-        this._productList = p;
+      this._product = p;
+      if(!this.getExistProduct(this._productList.arr,p)){
+        this._productList.arr.unshift(p);
       }
+      this._productList.arr.sort(this.sortByLastUpdate);
     }
   }
   readCurrentUserDetail(c: any): any {
@@ -354,6 +391,13 @@ export class A004MakeProductsComponent {
     }
   }
 
+  readGoodsType(m: any) {
+    console.log("read GoodsType", m);
+    //console.log(m);
+    if (m !== undefined) {
+      this._goodstype = m;
+    }
+  }
   /// END RECEIVING
 
   //// SENDING
@@ -413,13 +457,13 @@ export class A004MakeProductsComponent {
   }
   updateProduct() {
     if (this._product != {}) {
-      this._isNew = true;
-      this._isEdit=false;
+      this._isNew = false;
+      this._isEdit = false;
       this._product.currency = this._rightCurrency;
       this._product.unit = this._rightUnit;
-      this._product.type = "import";
+      this._product.type = this._selectedGoodsType;
       this.websocketDataServiceService.addGoods(this._product);
-      console.log(this._product);
+      //console.log(this._product);
       this._selectedProduct = null;
       this._product = {};
     }
@@ -430,7 +474,8 @@ export class A004MakeProductsComponent {
       this.websocketDataServiceService.addObsoletedGoods(this._product);
       this._selectedProduct = null;
       this._product = {};
-      this._isEdit=false;
+      this._isNew = false;
+      this._isEdit = false;
     }
   }
   getCurrency() {
@@ -446,7 +491,7 @@ export class A004MakeProductsComponent {
     this._selectedProduct = null;
     this._product = {
       name: "new product",
-      code: "new code",
+      code: "<new code>",
       price: 0,
       currency: this._rightCurrency,
       gui: "",
@@ -455,15 +500,16 @@ export class A004MakeProductsComponent {
       lastupdate: new Date(),
       isobsoleted: false,
       description: "new product",
+      type: this._selectedGoodsType,
       ownergui: "",
       qtty: 0
     };
   }
   cancle() {
-    this._isNew = false;
     this._product = {};
     this._selectedProduct = null;
-    this._isEdit=false;
+    this._isNew = false;
+    this._isEdit = false;
   }
   public _rightCurrency = "";
   getRightCurrency() {
@@ -493,10 +539,31 @@ export class A004MakeProductsComponent {
   getProductList() {
     this.websocketDataServiceService.getProductList();
   }
+  getGoodsType() {
+    this.websocketDataServiceService.getGoodsType();
+  }
+  getURL(m) {
+    return "../../assets/img/" + m;
+  }
+  selectGoodsType(g) {
+    this._selectedGoodsType = g.name;
+    // alert(this._selectedGoodsType);
+  }
+  checkSelectedGoodsType(a) {
+    return a === this._selectedGoodsType
+      ? "selectedclass"
+      : "choose-goods-type";
+  }
   _selectedProduct = null;
   selectProduct(p: any) {
     this._selectedProduct = p;
     this._product = p;
+    this._rightCurrency = p.currency;
+    this._rightUnit = p.unit;
+    this.selectUnit(this._rightUnit);
+    //this.getRightCurrency();
+    this._isNew = false;
+    this._isEdit = true;
   }
-  _isEdit=false;
+  _isEdit = false;
 }

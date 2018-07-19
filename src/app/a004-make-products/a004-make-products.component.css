@@ -16,16 +16,16 @@
 }
 
 .container-fluid{
-    background: rgb(248, 248, 220);
+    background: #badfba;
 }
 
 .container{
     color: rgb(83, 81, 81);
-    background-color: #d8dadb;
+    background-color:#c8e6c9;
     border-color: #007bff;
 }
 .card{
-    background-color: rgb(248, 248, 234);
+    background-color: #e8f5e9;
 }
 .card, .table-bordered, th, td{
     border-color:rgb(121, 118, 118) !important;
@@ -37,14 +37,14 @@
     padding:40px;
     padding-top:30px;
     color: rgb(56, 55, 55);
-    background-color: rgb(248, 248, 234);
+    background-color: #e8f5e9;
     border-color: #007bff;
 }
 .import-icon-add-pd{
     border-radius: 15px 15px 15px 15px;
     border: #1e7e34 1px solid;
     box-shadow: 0px 0px 2px 2px rgba(63, 104, 63, 0.397);
-    background-color: rgb(248, 248, 234);
+    background-color: #e0f5e2;
     width: 160px;
     height: 120px;
     font-size: 50pt;
@@ -97,10 +97,54 @@
     background-color: #218838 !important;
     border-color: #1e7e34;
   }
+  .choose-goods-type{
+      height: 140px !important;
+      width: 200px !important;
+      background: rgb(207, 207, 175);
+      color: rgb(48, 45, 45);
+      cursor: pointer;
+  }
+  .choose-goods-type:hover{
+    transition: .4s;
+    font-size: 13pt;
+    height: 140px !important;
+    width: 200px !important;
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    cursor: pointer;
+}
    
+  .selectedclass{
+    height: 140px !important;
+    width: 200px !important;
+    color: #212529;
+    background: #ffc107;
+    border-color: #ffc107;
+  }
+  .selectedclass:hover{
+    color: #212529;
+    background-color: #d6b961;
+    border-color: #d39e00;
+  }
 
+  .selectedclass:focus, .selectedclass.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+  }
+  
+  .selectedclass.disabled, .selectedclass:disabled {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  /* .width-choose-goods{
+      width: 1200px;
 
-
+  } */
+  .choose-goods-type{
+      height: 40px;
+      width: 120px;
+  }
 
 
 
@@ -128,4 +172,16 @@
       .pd-add-prod{
           padding: 30px;
       }
+      /* .selectedclass{
+        height: 140px !important;
+        width: 200px !important;
+        color: #212529;
+        background-color: #ffc107;
+        border-color: #ffc107;
+      }
+      .selectedclass:hover{
+        color: #212529;
+        background-color: #e0a800;
+        border-color: #d39e00;
+      } */
    }
