@@ -543,8 +543,8 @@ export class WebsocketDataServiceService implements OnInit {
                   // console.log(this._client.data['message']);
                 } else {
                   console.log(this._client.data["message"]);
-                  this._product = this._client.data.product;
-                  this.refreshProduct();
+                  this._stock = this._client.data.stock;
+                  this.refreshStock();
                 }
                 break;
 
@@ -556,8 +556,8 @@ export class WebsocketDataServiceService implements OnInit {
                   // console.log(this._client.data['message']);
                 } else {
                   console.log(this._client.data["message"]);
-                  this._product = this._client.data.product;
-                  this.refreshProduct();
+                  this._stock = this._client.data.stock;
+                  this.refreshStock();
                 }
                 break;
 
@@ -620,6 +620,18 @@ export class WebsocketDataServiceService implements OnInit {
                   console.log(this._client.data["message"]);
                   this._goodstype = this._client.data.goodstype;
                   this.refreshGoodsType();
+                }
+                break;
+                case "init-stock":
+                if (
+                  this._client.data["message"].toLowerCase().indexOf("error") >
+                  -1
+                ) {
+                  // console.log(this._client.data['message']);
+                } else {
+                  console.log(this._client.data["message"]);
+                  this._stock = this._client.data.stock;
+                  this.refreshStock();
                 }
                 break;
 
@@ -1124,15 +1136,15 @@ export class WebsocketDataServiceService implements OnInit {
     this._message.data = {};
     this._message.data.transaction = this.createTransaction();
     this._message.data.command = "import-goods";
-    this._message.data.product = prod;
+    this._message.data.stock = prod;
     this.sendMsg();
   }
-  exporttGoods(prod){
+  exportGoods(prod){
     this._message = JSON.parse(JSON.stringify(this._client));
     this._message.data = {};
     this._message.data.transaction = this.createTransaction();
     this._message.data.command = "export-goods";
-    this._message.data.product = prod;
+    this._message.data.stock = prod;
     this.sendMsg();
   }
   addGoods(prod){
@@ -1175,6 +1187,16 @@ export class WebsocketDataServiceService implements OnInit {
     this._message.data = {};
     this._message.data.transaction = this.createTransaction();
     this._message.data.command = "get-goods-type";
+    this.sendMsg();
+  }
+  initStock(y,m,d){
+    this._message = JSON.parse(JSON.stringify(this._client));
+    this._message.data = {};
+    this._message.data.transaction = this.createTransaction();
+    this._message.data.command = "init-stock";
+    this._message.data.d=d;
+    this._message.data.m=m;
+    this._message.data.y=y;
     this.sendMsg();
   }
 }

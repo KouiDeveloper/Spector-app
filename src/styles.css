@@ -20,7 +20,7 @@
 
 
 body{
-    background: #d8dadb;
+    background: #eeeeee;
 }
 .main-background{
     background: rgb(252, 249, 222);
@@ -56,5 +56,5 @@ body{
 }
 .icon-mounao-rotate{
     color: rgb(17, 104, 17);
-    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }

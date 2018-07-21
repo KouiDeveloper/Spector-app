@@ -17,40 +17,43 @@
           <div class="row">
               <div class="input-group mb-3 col-12">
                   <div class="input-group-prepend">
-                    <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ຊື່ສິນຄ້າ</span>
+                    <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default" >ຊື່ສິນຄ້າ</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productname?_selectedStock.productname:''" disabled>
                 </div>
         
                 <div class="input-group mb-3 col-12">
                   <div class="input-group-prepend">
                     <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ລະຫັດສິນຄ້າ</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productcode?_selectedStock.productcode:''" disabled>
                 </div>
                 
-                <div class="input-group mb-3 col-lg-8 col-12">
+                <div class="input-group mb-3 col-lg-6 col-12">
                   <span class="input-group-text ip-text-w lao-font border-right-0" id="inputGroup-sizing-default">ລາຄາ</span>
-                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.price?_selectedStock.price:''" disabled>
                   <div class="input-group-append nk0">
                     <span class="input-group-text">kip</span>
-                    <span class="input-group-text">0.00</span>
+                    <!-- <span class="input-group-text">0.00</span> -->
                   </div>
                 </div>
-                <div class="input-group mb-3 col-lg-4 col-12">
-                    <span class="input-group-text ip-text-w lao-font border-right-0" id="inputGroup-sizing-default">ຈຳນວນ</span>
-                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <div class="input-group mb-3 col-lg-6 col-12">
+                  <span class="input-group-text ip-text-w-qtty lao-font border-right-0" id="inputGroup-sizing-default">ຈຳນວນທີ່ມີໃນສະຕ໋ອກ</span>
+                  <input type="number" class="form-control " aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.qtty-_newQtty" disabled>
+                  
+                  <span class="input-group-text ip-text-w-qtty lao-font border-right-0" id="inputGroup-sizing-default">ຈຳນວນທີ່ເພີ່ມໃໝ່</span>
+                  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" (change)="updateQtty($event.target.value)" [value]="_newQtty" min="0">
                   </div>
         
                 <div class="input-group mb-3 col-12">
                   <div class="input-group-prepend">
                     <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ໝາຍເຫດ</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (change)="_selectedStock.description=$event.target.value?$event.target.value:''" [value]="_selectedStock.description?_selectedStock.description:''" />
                 </div>
           </div>
         </div>
-        <button class="btn btn-dangerous d-block mx-auto mt-4 lao-font col-md-3 col-4 text-center mb-4">ສຳເລັດ</button>
+        <button class="btn btn-dangerous d-block mx-auto mt-4 lao-font col-md-3 col-4 text-center mb-4" (click)="exportStock()">ສຳເລັດ</button>
       </div>
     </section>
     <hr class="col-10">
@@ -70,6 +73,10 @@
                     <th class="xl">ຊື່ສິນຄ້າ</th>
                     <th>ລະຫັດ</th>
                     <th>ລາຄາ</th>
+                    <th>ຈຳນວນຍັງເຫຼືອ</th>
+                    <th>ຈຳນວນອອກ</th>
+                    <th>ລາຄາ</th>
+                    <th>ມູນຄ່າ</th>
                     <th>ໝາຍເຫດ</th>
                   </tr>
                 </thead>
@@ -77,26 +84,23 @@
   
                 <!--Table body-->
                 <tbody>
-                  <tr class="lao-font text-content-center bg-list-stock">
+                  <tr class="lao-font text-content-center bg-list-stock" *ngFor="let a of _arr_stock" (click)="selectStock(a)">
                     <th scope="row" class="size-img-make-product">
                       <img src="../../assets/img/squid.jpg" alt="" class="w-100 h-100">
                     </th>
-                    <td>ປາໝຶກ</td>
-                    <td>0215778</td>
-                    <td>100.000 ກີບ</td>
-                    <td></td>
+                    <td>{{a.productname}}</td>
+                    <td>{{a.productcode}}</td>
+                    <td>{{a.price}}</td>
+                    <td>{{a.qtty}}</td>
+                    <td>{{a.lastexport}}</td>
+                    <td>{{a.price*a.lastexport}}</td>
+                    <td>{{a.price*a.qtty}}</td>
+                    <td>{{a.description}}</td>
+
                   </tr>
-  
-                  <tr class="lao-font text-content-center bg-list-stock">
-                    <th scope="row" class="size-img-make-product">
-                      <img src="../../assets/img/squid.jpg" alt="" class="w-100 h-100">
-                    </th>
-                    <td>ປາໝຶກ</td>
-                    <td>0215778</td>
-                    <td>100.000 ກີບ</td>
-                    <td></td>
-                  </tr>
-  
+
+                
+
                 </tbody>
                 <!--Table body-->
   

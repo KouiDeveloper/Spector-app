@@ -1,6 +1,4 @@
-.container-fluid{
-    background:#fff59d;
-}
+
  .w-px {
     height: 150px;
     width: 150px;
@@ -97,6 +95,9 @@
 }
 .ip-text-w{
     width: 100px;
+}
+.ip-text-w-qtty{
+    width: 160px;
 }
 
   .table-bordered th,

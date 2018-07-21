@@ -29,8 +29,10 @@ export class A002IndexComponent {
     this.arrModel.push(this.model);
     console.log(this.arrModel);
     this.sendTime.emit(this.arrModel);
+    sessionStorage.setItem('selectedTime',JSON.stringify(this.arrModel));
   }
   ngOnInit() {
    this.selectToday();
+   this.selectTime();
   }
 }
