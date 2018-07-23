@@ -152,6 +152,11 @@
     .pd-add-prod{
         padding: 10px;
     }
+    .d-block-two-one {
+        display: block !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
    }
 
   @media (min-width: 576px) { 

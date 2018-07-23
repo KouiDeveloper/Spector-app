@@ -15,14 +15,17 @@ import { WebsocketDataServiceService } from "../websocket-data-service.service";
 import { ChatService, Message } from "../chat.service";
 import { WebsocketService } from "../websocket.service";
 
+
 import { ElementRef, ViewChild } from "@angular/core";
 
 @Component({
   selector: "app-a004-make-products",
   templateUrl: "./a004-make-products.component.html",
   styleUrls: [
-    "./a004-make-products.component.css",
-    "./custom-selectedclass.css"
+    // "./custom-selectedclass.css",
+    "../a005-add-products/a005-add-products.component.css",
+    "../a005-add-products/customStyle-type-menu.css",
+    "./a004-make-products.component.css"
   ],
   providers: [WebsocketDataServiceService, ChatService, WebsocketService]
 })

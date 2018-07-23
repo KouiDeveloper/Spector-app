@@ -47,14 +47,14 @@
     color: black;
     line-height: 10px;
 }
-.list-group{
-    font-size: 11pt !important;
+/* .list-group{
+    font-size: 11pt;
     line-height: 0px !important;
     padding: none !important;
 }
 .list-group-item{
     padding: none !important;
-}
+} */
 
 
 .cursor-production-details{
@@ -113,10 +113,10 @@
     border-color: #ffc107;
   }
   .form-control3{
-    font-size: 12pt;
+    font-size: 8pt;
     display: block;
-    width: 100%;
-    padding: 0.375rem 0.75rem;
+    width: 100px;
+    padding: 0.3rem 0.4rem;
     line-height: 1.5;
     color: #495057;
     background-color: #fff;
@@ -147,35 +147,146 @@
     color: rgb(48, 45, 45);
     cursor: pointer;
   }
-  @media (min-width: 992px) { 
-    .scrolling-wrapper{
-        font-size: 10pt;
+  
+  
+  /* start new css from here  */
+  .input-group-text {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      /* padding: 0.375rem 0.75rem; */
+      margin-bottom: 0;
+      font-size: 8pt;
+      /* font-weight: 400; */
+      /* line-height: 1.5; */
+      color: #495057;
+      text-align: center;
+      white-space: nowrap;
+      background-color: #e9ecef;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
     }
- }
+    
+    .form-control-edit{
+        font-size: 8pt !;
+        color: black;
+    }
 
 
-/* start new css from here  */
-.input-group-text {
+    /* style list devicee */
+
+    
+.device-mobile .list-group {
+    font-size: 8pt;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-    align-items: center;
-    /* padding: 0.375rem 0.75rem; */
-    margin-bottom: 0;
-    font-size: 8pt;
-    /* font-weight: 400; */
-    /* line-height: 1.5; */
-    color: #495057;
-    text-align: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: none !important;
+    margin-bottom: none !important;
+  }
+
+  .list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.1rem 0.2rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+  .device-mobile{
+    background: #eee;
+    cursor: pointer;
+    font-size: 6pt;
+    padding: 1px !important;
+    margin: 0 !important;
+  }
+  ul li {
+      background: none !important;
+  }
+ul li:hove {
+    background: none !important;
+}
+  .device-mobile:hover{
+      /* padding: 14px; */
+      /* background: yellowgreen !important; */
+      transition: 0.6s;
+      cursor: pointer;
+      font-size: 7pt !important;
+  }
+  .device-in{
+      border: 2px solid rgb(177, 176, 176);
+      background: rgb(230, 233, 230);
+      /* margin-top:10px;
+      margin-bottom: 10px; */
+  }
+  .device-in:hover{
+      background: rgb(212, 212, 210);
+      border: 2px solid rgb(175, 173, 173);
+  }
+  #size-icon{
+      text-align: center;
+      color: rgb(70, 68, 68);
+      font-size: 4pt;
+      height: 12px;
+      width: 12 px;
+      background: none;
+      -ms-flex-pack: center !important;
+      justify-content: center !important;
+
+  }
+  #size-icon-edit{
+    color: rgb(70, 68, 68);
+    font-size: 9pt !important;
+    /* width: 30px; */
+    background: none;
+}
+#scrollspy-menu{
+    /* padding-right: 0px; */
+    /* padding-top:0px; */
+    margin-top:20px;
+    max-height: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
-    background-color: #e9ecef;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-  }
-  
-  .form-control-edit{
-      font-size: 8pt;
-      color: black;
-  }
+    /* height: auto; */
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: rgb(250, 10, 1);
+   /* padding: 10px; */
+}
 
+.scroll-x{
+    font-size: 8pt !important;
+    /* overflow-x: scroll; */
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom:20px;
+ 
+}
 
+.scroll-x .device{
+    display: inline-table;
+    margin-bottom: 0px;
+}
+
+.device{
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    background: red;
+}
+
+    /* stop style list devices */
+    @media (min-width: 320){
+
+    }
+    
+    @media (min-width: 992px) { 
+      .scrolling-wrapper{
+          font-size: 10pt;
+      }
+   }
+
+   

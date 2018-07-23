@@ -20,7 +20,7 @@ import { ElementRef, ViewChild } from "@angular/core";
 @Component({
   selector: 'app-a006-subtract-products',
   templateUrl: './a006-subtract-products.component.html',
-  styleUrls: ['./a006-subtract-products.component.css'],
+  styleUrls: ['./a006-subtract-products.component.css','../a005-add-products/a005-add-products.component.css','../a005-add-products/customStyle-type-menu.css'],
   providers: [WebsocketDataServiceService, ChatService, WebsocketService]
 })
 export class A006SubtractProductsComponent {
@@ -484,6 +484,25 @@ export class A006SubtractProductsComponent {
   getURL(m) {
     return "../../assets/img/" + m;
   }
+  selectGoodsType(g) {
+    if(this._selectedGoodsType){
+      if(this._selectedGoodsType === g.name){
+        this._selectedGoodsType='';
+      }
+      else{
+        this._selectedGoodsType = g.name;
+      }
+    }else{
+      this._selectedGoodsType = g.name;
+    }
+    
+    // alert(this._selectedGoodsType);
+  }
+  checkSelectedGoodsType(a) {
+    return a === this._selectedGoodsType
+      ? "selectedclass"
+      : "choose-goods-type";
+  }
 
   _selectedProduct = null;
   selectStock(p: any) {
@@ -514,7 +533,87 @@ export class A006SubtractProductsComponent {
     this._selectedStock.qtty=this._newQtty;
     this.websocketDataServiceService.exportGoods(this._selectedStock);
   }
+  
+  sumtotal(a:Array<any>,b){
+    let tt=0;
+    for (let index = 0; index < a.length; index++) {
+      tt+= a[index]*b;
+    }
+    return tt;
+  }
+  getTT(name){
+    let tt={qtty:0,ttvalue:0};
+      for (let index = 0; index < this._arr_stock.length; index++) {
+        const element = this._arr_stock[index];
+        
+        console.log(element);
+        if(name===element.type){
+          tt.qtty+=element.qtty;
+          tt.ttvalue+=element.lastexport.reduce((a, b) => a + b, 0)*element.price;
+        }
+        console.log(tt.qtty);
+      }
+      return tt;
+  }
+  sumTT(){
+    let tt={qtty:0,ttvalue:0};
+      for (let index = 0; index < this._arr_stock.length; index++) {
+        const element = this._arr_stock[index];
+          tt.qtty+=element.qtty;
+          tt.ttvalue+=element.qtty*element.price;
+      }
+      return tt;
+  }
+  sumExport(){
+    let tt={qtty:0,ttvalue:0};
+      for (let index = 0; index < this._arr_stock.length; index++) {
+        const element = this._arr_stock[index];
+          tt.qtty+=element.qtty;
+          tt.ttvalue+=element.lastexport.reduce((a, b) => a + b, 0)*element.price;
+      }
+      return tt;
+  }
+  searchStock(e){
+    if(e.keyCode==13){
+      console.log('ENTER');
+    }
+    console.log(this._search_text);
+  }
+  _search_text:string='';
+  filterArrStock():any[]{
+    let array=this._arr_stock;
+    let goodstype=this._selectedGoodsType;
+    let searchedtxt =this._search_text;
+    console.log('code',searchedtxt);
+    let arr=[];
+    for (let index = 0; index < array.length; index++) {
+      const element = array[index];
+      // goods type
+      if(goodstype){
+        if(element.type===goodstype){
+          arr.push(element);
+        }
+      }else{
+        arr.push(element);
+      }
+    }
+    // code , name
+    let arr2=[];
+    for (let index = 0; index < arr.length; index++) {
+      const element = arr[index];
+      // goods type
+      if(searchedtxt){
+        if(element.productcode.indexOf(searchedtxt)>-1 || element.productname.indexOf(searchedtxt)>-1){
+          // console.log('SEARCHING....')
+          arr2.push(element);
+        }
+      }else{
+        arr2.push(element);
+      }
+    }
 
+    return arr2;
+  }
  
 }
 

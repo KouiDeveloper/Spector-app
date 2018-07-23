@@ -1,117 +1,194 @@
-<div class="container-fluid"> <br>
-  <div class="container pt-5 mt-5">    
+<div class="container-fluid">
+  <br>
+  <div class="container pt-5 mt-5">
     <button class="btn btn-primary mb-3 home-btn" [routerLink]="['/index']">HOME</button>
     <section class="one bg-add-products pd-add-prod">
-        <h1 class="text-center text-uppercase eng-font pt-4 mb-3"><i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> MOUNAO BUFFET <i class="fas fa-feather-alt icon-mounao"></i></h1>
+      <h1 class="text-center text-uppercase eng-font pt-4 mb-3">
+        <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> MOUNAO BUFFET
+        <i class="fas fa-feather-alt icon-mounao"></i>
+      </h1>
       <button class="import-icon-add-pd d-block mx-auto mb-3">
-          <i class="fas fa-upload"></i>
-        </button>
+        <i class="fas fa-upload"></i>
+      </button>
       <h2 class="lao-font text-center mb-4">ລົບປະລິນມານສິນຄ້າອອກຈາກສາງ</h2>
-      <div class="row">
-        <div class="col-md-3 col-12">
-          <div class="photo d-flex justify-content-center mb-3">
-            <img src="../../assets/img/shrimp.jpg" alt="" class="w-px rounded-circle">
+    </section>
+    <hr class="col-10">
+
+    <section class="two bg-add-products pd-add-prod">
+      <div class="table-second">
+        <div class="card">
+          <h2 class="lao-font text-center mt-4">ລາຍການສິນຄ້າທີ່ມີໃນຄັງ</h2>
+
+          <!-- ເລືອກປະເພດສິນຄ້າ -->
+
+
+          <div class="row d-flex justify-content-center">
+            <div class="input-group mb-2 col-md-4 col-10">
+              <input type="text" class="form-control" [(ngModel)]='_search_text' (keypress)="searchStock($event)">
+              <button>Search</button>
+            </div>
+          </div>
+          <div class="row2 p-3">
+            <div class="start-test">
+              <div class="scrolling-wrapper lao-font">
+                <button class=" btn choose-goods-type ml-1" *ngFor="let m of _goodstype" [class]="checkSelectedGoodsType(m.name)" (click)="selectGoodsType(m)">
+                  <img [src]="getURL(m.src)" class="w-50 h-50 rounded-circle mb-2" alt="">
+                  <br>{{m.name}}
+                  <br>
+                  <button type="text" [value]="getTT(m.name).qtty" class="form-control2">
+                    <i class="fas fa-file-import text-success"></i> : {{getTT(m.name).qtty}}
+                    <br>
+                    <i class="fas fa-dollar-sign text-danger"></i> : {{getTT(m.name).ttvalue}}</button>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="card-body">
+            <div class="total-pending">
+              <ul class="list-group hover-list">
+                <li class="list-group-item disabled">
+                  <img src="../../assets/img/icon/name-product.png" id="size-icon"> : {{sumTT().qtty}}</li>
+                <li class="list-group-item">
+                  <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{sumTT().ttvalue | number:'1.0-0'}}</li>
+                <li class="list-group-item">
+                  <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{sumExport().ttvalue}}</li>
+              </ul>
+            </div>
+            <div class=" mb-4 lao-font">
+              <div class="row" id="scrollspy-menu">
+                <div class="col-md-2 col-xl-1 col-iphone-4 col-iphone-6 device-mobile .col-desktop mb-3" *ngFor="let a of filterArrStock( _arr_stock)"
+                  (click)="selectStock(a)" data-toggle="modal" data-target="#exampleModalCenter">
+                  <div class="device-in">
+                    <div class=" d-flex justify-content-center align-items-center">
+                      <img src="../../assets/img/shrimp.jpg" alt="" class="h-50 w-50 rounded-circle">
+                    </div>
+                    <ul class="list-group hover-list">
+                      <li class="list-group-item disabled">
+                        <img src="../../assets/img/icon/name-product.png" id="size-icon"> : {{a.productname}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{a.productcode}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{a.price}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/scale-kg.png" id="size-icon"> : {{a.qtty}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/money-ramain.png" id="size-icon"> : {{a.price*a.qtty}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/import-qtty.png" id="size-icon"> : {{a.lastexport}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/money-qtty.png" id="size-icon"> : {{sumtotal(a.lastexport,a.price)}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/description.png" id="size-icon"> : {{a.description}}</li>
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
-        <div class="col-md-9 col-12">
+      </div>
+    </section>
+    <br>
+  </div>
+  <br>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+      <div class="modal-body">
+        <section class="one bg-add-products">
+          <h1 class="text-center text-uppercase eng-font pt-4 pd-add-prod">
+            <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> MOUNAO BUFFET
+            <i class="fas fa-feather-alt icon-mounao"></i>
+          </h1>
+          <button class="import-icon-add-pd d-block mx-auto mb-3">
+            <i class="fas fa-download"></i>
+          </button>
+          <h6 class="lao-font text-center mb-4">ເພີ່ມປະລິນມານສິນຄ້າເຂົ້າສາງ</h6>
           <div class="row">
-              <div class="input-group mb-3 col-12">
+            <div class="col-md-3 col-12">
+              <div class="photo d-flex justify-content-center mb-3">
+                <label class="btn">
+                  <img src="../../assets/img/shrimp.jpg" alt="" class="h-100 w-100 rounded-circle">
+                  <input type="file" name="file_up" id="file_up" hidden>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-9 col-12 font-size-12000-up">
+              <div class="row lao-font">
+                <div class="input-group mb-3 col-12">
                   <div class="input-group-prepend">
-                    <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default" >ຊື່ສິນຄ້າ</span>
+                    <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ຊື່ສິນຄ້າ</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productname?_selectedStock.productname:''" disabled>
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productname?_selectedStock.productname:''"
+                    disabled>
                 </div>
-        
+
                 <div class="input-group mb-3 col-12">
                   <div class="input-group-prepend">
                     <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ລະຫັດສິນຄ້າ</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productcode?_selectedStock.productcode:''" disabled>
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productcode?_selectedStock.productcode:''"
+                    disabled>
                 </div>
-                
-                <div class="input-group mb-3 col-lg-6 col-12">
+
+                <div class="input-group mb-3 col-lg-6 col-md-12 col-12">
                   <span class="input-group-text ip-text-w lao-font border-right-0" id="inputGroup-sizing-default">ລາຄາ</span>
-                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.price?_selectedStock.price:''" disabled>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.price?_selectedStock.price:''"
+                    disabled>
                   <div class="input-group-append nk0">
                     <span class="input-group-text">kip</span>
                     <!-- <span class="input-group-text">0.00</span> -->
                   </div>
                 </div>
-                <div class="input-group mb-3 col-lg-6 col-12">
+                <div class="input-group mb-3 col-lg-5 col-md-12 col-12">
                   <span class="input-group-text ip-text-w-qtty lao-font border-right-0" id="inputGroup-sizing-default">ຈຳນວນທີ່ມີໃນສະຕ໋ອກ</span>
-                  <input type="number" class="form-control " aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.qtty-_newQtty" disabled>
-                  
+                  <input type="number" class="form-control " aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.qtty+_newQtty"
+                    disabled>
+
                   <span class="input-group-text ip-text-w-qtty lao-font border-right-0" id="inputGroup-sizing-default">ຈຳນວນທີ່ເພີ່ມໃໝ່</span>
-                  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" (change)="updateQtty($event.target.value)" [value]="_newQtty" min="0">
-                  </div>
-        
+                  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" (change)="updateQtty($event.target.value)"
+                    [value]="_newQtty" min="0">
+                </div>
+
+
                 <div class="input-group mb-3 col-12">
                   <div class="input-group-prepend">
                     <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ໝາຍເຫດ</span>
                   </div>
-                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (change)="_selectedStock.description=$event.target.value?$event.target.value:''" [value]="_selectedStock.description?_selectedStock.description:''" />
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (change)="_selectedStock.description=$event.target.value?$event.target.value:''"
+                    [value]="_selectedStock.description?_selectedStock.description:''" />
                 </div>
-          </div>
-        </div>
-        <button class="btn btn-dangerous d-block mx-auto mt-4 lao-font col-md-3 col-4 text-center mb-4" (click)="exportStock()">ສຳເລັດ</button>
-      </div>
-    </section>
-    <hr class="col-10">
-  
-    <section class="two bg-add-products pd-add-prod">
-        <div class="table-second">
-          <div class="card">
-            <h2 class="lao-font text-center mt-4">ລາຍການສິນຄ້າທີ່ມີໃນຄັງ</h2>
-            <div class="card-body">
-  
-              <!--Table-->
-              <table class="table table-bordered table-responsive-lg table-fixed">
-                <!--Table head-->
-                <thead>
-                  <tr class="lao-font text-center width-size-active">
-                    <th>ຮູບ</th>
-                    <th class="xl">ຊື່ສິນຄ້າ</th>
-                    <th>ລະຫັດ</th>
-                    <th>ລາຄາ</th>
-                    <th>ຈຳນວນຍັງເຫຼືອ</th>
-                    <th>ຈຳນວນອອກ</th>
-                    <th>ລາຄາ</th>
-                    <th>ມູນຄ່າ</th>
-                    <th>ໝາຍເຫດ</th>
-                  </tr>
-                </thead>
-                <!--Table head-->
-  
-                <!--Table body-->
-                <tbody>
-                  <tr class="lao-font text-content-center bg-list-stock" *ngFor="let a of _arr_stock" (click)="selectStock(a)">
-                    <th scope="row" class="size-img-make-product">
-                      <img src="../../assets/img/squid.jpg" alt="" class="w-100 h-100">
-                    </th>
-                    <td>{{a.productname}}</td>
-                    <td>{{a.productcode}}</td>
-                    <td>{{a.price}}</td>
-                    <td>{{a.qtty}}</td>
-                    <td>{{a.lastexport}}</td>
-                    <td>{{a.price*a.lastexport}}</td>
-                    <td>{{a.price*a.qtty}}</td>
-                    <td>{{a.description}}</td>
-
-                  </tr>
-
-                
-
-                </tbody>
-                <!--Table body-->
-  
-              </table>
-              <!--Table-->
-  
+              </div>
             </div>
+            <!-- ປຸ່ມກົດຄິກສຳເລັດການເພີ່ມສິນຄ້າ        -->
+            <button class="btn btn-outline-secondary d-block mx-auto mt-4 lao-font col-md-3 col-4 text-center" (click)="exportStock()">ສຳເລັດ</button>
           </div>
-        </div>
-    </section>
-    <br>
+
+          <!-- ປູ່ມປ໋ອບອັບລາຍອຽດຕ່າງໆ -->
+          <div class="row">
+            <button type="button" class="btn btn-outline-secondary d-block mx-auto mt-4 lao-font text-center" data-toggle="modal" data-target="#exampleModalCenter">
+              ລາຍລະອຽດເພີ່ມເຕີມ
+            </button>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
-  <br>
 </div>

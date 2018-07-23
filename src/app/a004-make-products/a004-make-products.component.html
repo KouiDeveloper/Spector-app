@@ -29,7 +29,7 @@
             </label>
           </div>
         </div>
-        <div class="col-md-9 col-12">
+        <div class="col-md-9 col-12 lao-font">
           <div class="input-group input-group-sm mb-3" *ngIf="_isEdit">
 
             <div class="input-group mb-3">
@@ -74,7 +74,7 @@
         </div>
 
       </div>
-      <div class="d-flex justify-content-center">
+      <div class="d-flex justify-content-center mx-auto">
         <button class="btn btn-outline-secondary col-md-2 col-6 mb-3 ml-3 lao-font" (click)="addNew()" *ngIf="!_isNew">
           <i class="far fa-plus-square"></i>
           <br>ເພີ່ມໃໝ່</button>
@@ -94,45 +94,41 @@
       <div class="table-second">
         <div class="card">
           <h2 class="lao-font text-center mt-4">ລາຍການສິນຄ້າທີ່ມີໃນຄັງ</h2>
-          <div class="card-body">
-
-            <!--Table-->
-            <table class="table table-bordered table-responsive-lg table-fixed">
-              <!--Table head-->
-              <thead>
-                <tr class="lao-font text-center width-size-active ">
-                  <th>ຮູບ</th>
-                  <th class="xl">ຊື່ສິນຄ້າ</th>
-                  <th>ລະຫັດ</th>
-                  <th>ລາຄາ</th>
-                  <th>currency</th>
-                  <th>unit</th>
-                  <th>ໝາຍເຫດ</th>
-                </tr>
-              </thead>
-              <!--Table head-->
-
-              <!--Table body-->
-              <tbody>
-                <tr class="lao-font text-content-center bg-list-stock" *ngFor="let n of _productList.arr" (click)="selectProduct(n)">
-                  <th scope="row" class="size-img-make-product">
-                    <img src="../../assets/img/squid.jpg" alt="" class="w-100 h-100">
-                  </th>
-                  <td>{{n.name}}</td>
-                  <td>{{n.code}}</td>
-                  <td>{{n.price}}</td>
-                  <td>{{n.currency}}</td>
-                  <td>{{n.unit}}</td>
-                  <td>{{n.description}}</td>
-                </tr>
-
-              </tbody>
-              <!--Table body-->
-
-            </table>
-            <!--Table-->
-
-          </div>
+          <section class="two bg-add-products pd-add-prod">
+              <div class="table-second">
+                <div class="card">                         
+                  <div class="card-body">                    
+                    <div class=" mb-4 lao-font">
+                      <div class="row" id="scrollspy-menu">
+                        <div class="col-md-2 col-xl-1 col-iphone-4 col-iphone-6 device-mobile .col-desktop mb-3" *ngFor="let n of _productList.arr" (click)="selectProduct(n)">
+                          <div class="device-in">
+                            <div class=" d-flex justify-content-center align-items-center">
+                              <img src="../../assets/img/shrimp.jpg" alt="" class="h-50 w-50 rounded-circle">
+                            </div>
+                            <ul class="list-group hover-list">
+                              <li class="list-group-item disabled">
+                                <img src="../../assets/img/icon/name-product.png" id="size-icon"> : {{n.name}}</li>
+                              <li class="list-group-item">
+                                <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{n.code}}</li>
+                              <li class="list-group-item">
+                                <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{n.price | number:'1.0-0'}}</li>
+                              <li class="list-group-item">
+                                <img src="../../assets/img/icon/currency.png" id="size-icon"> : {{n.currency}}</li>
+                              <li class="list-group-item">
+                                <img src="../../assets/img/icon/scale-kg.png" id="size-icon"> : {{n.unit}}</li>
+                              <li class="list-group-item">
+                                <img src="../../assets/img/icon/description.png" id="size-icon"> : {{n.description}}</li>
+                            </ul>
+                          </div>
+                        </div>
+        
+                      </div>
+                    </div>
+        
+                  </div>
+                </div>
+              </div>
+            </section>
         </div>
       </div>
     </section>

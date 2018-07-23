@@ -25,7 +25,7 @@
           
 
           <div class="row d-flex justify-content-center">
-            <div class="input-group mb-2 col-10">
+            <div class="input-group mb-2 col-md-4 col-10">
               <input type="text" class="form-control" [(ngModel)]='_search_text' (keypress)="searchStock($event)">
               <button>Search</button>
             </div>
@@ -35,8 +35,7 @@
                   <div class="scrolling-wrapper lao-font">
                       <button class=" btn choose-goods-type ml-1" *ngFor="let m of _goodstype" [class]="checkSelectedGoodsType(m.name)" (click)="selectGoodsType(m)"><img [src]="getURL(m.src)" class="w-50 h-50 rounded-circle mb-2" alt=""> 
                         <br>{{m.name}}
-                        <br> <button type="text" [value]="getTT(m.name).qtty" class="form-control2"> <i class="fas fa-file-import text-success"></i> : {{getTT(m.name).qtty}}  <br> <i class="fas fa-dollar-sign text-danger"></i> : {{getTT(m.name).ttvalue}}</button>
-                       <!-- <br> {{getTT(m.name).qtty+'/'+getTT(m.name).ttvalue}} -->
+                        <br> <button type="text" [value]="getTT(m.name).qtty" class="form-control2"> <i class="fas fa-file-import text-success"></i> : {{getTT(m.name).qtty}}  <br> <i class="fas fa-dollar-sign text-danger"></i> : {{getTT(m.name).ttvalue | number:'1.0-0'}}</button>
                       </button>
                   </div>
                 </div>
@@ -44,74 +43,46 @@
 
          
           <div class="card-body">
-            <button class="form-control3 col-md-2 justify-content-start">
-                <i class="fas fa-file-import text-success"></i> : {{sumTT().qtty}}
-                <br>
-                <i class="fas fa-dollar-sign text-danger"></i> : {{sumTT().ttvalue}}
-                <br>
-                <i class="fas fa-dollar-sign text-danger"></i> : {{sumImport().ttvalue}}
-
-            </button>
-            <div class="row mb-4">
-                <div class="col-6" *ngFor="let a of filterArrStock( _arr_stock)" (click)="selectStock(a)" data-toggle="modal" data-target="#exampleModalCenter">
-                    <div class="col-10 offset-2">
-                        <img src="../../assets/img/squid.jpg" alt="" class="w-100 h-100 rounded-circle">
-                    </div>
-                    <button class="form-control"><i class="fas fa-dollar-sign text-danger"></i> : {{a.productname}}</button>
-                    <input type="text" [value]="a.productname">
-                    <input type="text" [value]="a.productcode">
-                    <input type="text" [value]="a.price">
-                    <input type="text" [value]="a.qtty">
-                    <input type="text" [value]="a.price*a.qtty">
-                    <input type="text" [value]="a.lastimport">
-                    <input type="text" [value]="sumtotal(a.lastimport,a.price)">
-                    <input type="text" [value]="a.description">
+              <div class="total-pending">
+                  <ul class="list-group hover-list">
+                    <li class="list-group-item disabled">
+                      <img src="../../assets/img/icon/name-product.png" id="size-icon"> :  {{sumTT().qtty}}</li>
+                    <li class="list-group-item">
+                      <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{sumTT().ttvalue | number:'1.0-0'}}</li>
+                    <li class="list-group-item">
+                      <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{sumImport().ttvalue | number:'1.0-0'}}</li>                    
+                  </ul>
                 </div>
+            <div class=" mb-4 lao-font">
+              <div class="row" id="scrollspy-menu">
+                <div class="col-md-2 col-xl-1 col-iphone-4 col-iphone-6 device-mobile .col-desktop mb-3" *ngFor="let a of filterArrStock( _arr_stock)" (click)="selectStock(a)" data-toggle="modal" data-target="#exampleModalCenter">
+                  <div class="device-in">
+                    <div class=" d-flex justify-content-center align-items-center">
+                      <img src="../../assets/img/shrimp.jpg" alt="" class="h-50 w-50 rounded-circle">
+                    </div>
+                    <ul class="list-group hover-list">
+                      <li class="list-group-item disabled">
+                        <img src="../../assets/img/icon/name-product.png" id="size-icon"> : {{a.productname}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{a.productcode}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{a.price | number:'1.0-0'}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/scale-kg.png" id="size-icon"> : {{a.qtty}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/money-ramain.png" id="size-icon"> : {{a.price*a.qtty | number:'1.0-0'}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/import-qtty.png" id="size-icon"> : {{a.lastimport}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/money-qtty.png" id="size-icon"> : {{sumtotal(a.lastimport,a.price) | number:'1.0-0'}}</li>
+                      <li class="list-group-item">
+                        <img src="../../assets/img/icon/description.png" id="size-icon"> : {{a.description}}</li>
+                    </ul>
+                  </div>
+                </div>
+                
+              </div>
             </div>
-            <!-- {{sumTT().qtty+'/'+sumTT().ttvalue}} -->
-            <!--Table-->
-            <table class="table table-bordered table-responsive-lg table-fixed">
-              <!--Table head-->
-              <thead>
-                <tr class="lao-font text-center width-size-active">
-                  <th>ຮູບ</th>
-                  <th class="xl">ຊື່ສິນຄ້າ</th>
-                  <th>ລະຫັດ</th>
-                  <th>ລາຄາ</th>
-                  <!-- <th>QTTY</th> -->
-                  <th>ຈຳນວນຍັງເຫຼືອ</th>
-                  <th>ມູນຄ່າຍັງເຫຼືອ</th>
-                  <th>ຈຳນວນເຂົ້າ</th>
-                  <th>ມູນຄ່ານຳເຂົ້າ</th>
-                  <th>ໝາຍເຫດ</th>
-                  <!-- QTTY = ຈຳນວນ -->
-                </tr>
-              </thead>
-              <!--Table head-->
-
-              <!--Table body-->
-              <tbody>
-                <tr class="lao-font text-content-center bg-list-stock" *ngFor="let a of filterArrStock( _arr_stock)" (click)="selectStock(a)">
-                  <th scope="row" class="size-img-make-product">
-                    <img src="../../assets/img/squid.jpg" alt="" class="w-100 h-100">
-                  </th>
-                  <td>{{a.productname}}</td>
-                  <td>{{a.productcode}}</td>
-                  <td>{{a.price}}</td>
-                  <td>{{a.qtty}}</td>
-                  <td>{{a.price*a.qtty}}</td>
-                  <td>{{a.lastimport}}</td>
-                  <td>{{sumtotal(a.lastimport,a.price)}}</td>
-                  <td>{{a.description}}</td>
-                </tr>
-
-
-
-              </tbody>
-              <!--Table body-->
-
-            </table>
-            <!--Table-->
 
           </div>
         </div>
@@ -131,12 +102,12 @@
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+      <!-- <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-      </div>
+      </div> -->
       <div class="modal-body">
           <section class="one bg-add-products">
               <h1 class="text-center text-uppercase eng-font pt-4 pd-add-prod">
@@ -146,12 +117,12 @@
               <button class="import-icon-add-pd d-block mx-auto mb-3">
                 <i class="fas fa-download"></i>
               </button>
-              <h3 class="lao-font text-center mb-4">ເພີ່ມປະລິນມານສິນຄ້າເຂົ້າສາງ</h3>
+              <h6 class="lao-font text-center mb-4">ເພີ່ມປະລິນມານສິນຄ້າເຂົ້າສາງ</h6>
               <div class="row">
                 <div class="col-md-3 col-12">
                   <div class="photo d-flex justify-content-center mb-3">
                     <label class="btn">
-                      <img src="../../assets/img/shrimp.jpg" alt="" class="w-px rounded-circle">
+                      <img src="../../assets/img/shrimp.jpg" alt="" class="h-100 w-100 rounded-circle">
                       <input type="file" name="file_up" id="file_up" hidden>
                     </label>
                   </div>
@@ -217,7 +188,6 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
