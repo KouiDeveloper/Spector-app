@@ -547,7 +547,7 @@ export class A005AddProductsComponent {
         
         console.log(element);
         if(name===element.type){
-          tt.qtty+=element.qtty;
+          tt.qtty+=element.lastimport.reduce((a, b) => a + b, 0);
           tt.ttvalue+=element.lastimport.reduce((a, b) => a + b, 0)*element.price;
         }
         console.log(tt.qtty);
@@ -563,11 +563,14 @@ export class A005AddProductsComponent {
       }
       return tt;
   }
+  sumArray(arr){
+    return arr.reduce((a, b) => a + b, 0);
+  }
   sumImport(){
     let tt={qtty:0,ttvalue:0};
       for (let index = 0; index < this._arr_stock.length; index++) {
         const element = this._arr_stock[index];
-          tt.qtty+=element.qtty;
+          tt.qtty+=element.lastimport.reduce((a, b) => a + b, 0);
           tt.ttvalue+=element.lastimport.reduce((a, b) => a + b, 0)*element.price;
       }
       return tt;

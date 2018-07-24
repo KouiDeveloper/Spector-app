@@ -49,11 +49,11 @@
             <div class="total-pending">
               <ul class="list-group hover-list">
                 <li class="list-group-item disabled">
-                  <img src="../../assets/img/icon/name-product.png" id="size-icon"> : {{sumTT().qtty}}</li>
+                  <img src="../../assets/img/icon/name-product.png" id="size-icon"> :TTQTTY {{sumTT().qtty}}</li>
                 <li class="list-group-item">
-                  <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{sumTT().ttvalue | number:'1.0-0'}}</li>
+                  <img src="../../assets/img/icon/barcode.png" id="size-icon"> :TTV {{sumTT().ttvalue | number:'1.0-0'}}</li>
                 <li class="list-group-item">
-                  <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{sumExport().ttvalue}}</li>
+                  <img src="../../assets/img/icon/price-tag.png" id="size-icon"> :{{sumExport().ttvalue | number:'1.0-0'}} ({{sumExport().qtty | number:'1.0-0'}})</li>
               </ul>
             </div>
             <div class=" mb-4 lao-font">
@@ -76,7 +76,7 @@
                       <li class="list-group-item">
                         <img src="../../assets/img/icon/money-ramain.png" id="size-icon"> : {{a.price*a.qtty}}</li>
                       <li class="list-group-item">
-                        <img src="../../assets/img/icon/import-qtty.png" id="size-icon"> : {{a.lastexport}}</li>
+                        <img src="../../assets/img/icon/import-qtty.png" id="size-icon"> : {{a.lastexport}}[{{sumArray(a.lastexport)}}]</li>
                       <li class="list-group-item">
                         <img src="../../assets/img/icon/money-qtty.png" id="size-icon"> : {{sumtotal(a.lastexport,a.price)}}</li>
                       <li class="list-group-item">

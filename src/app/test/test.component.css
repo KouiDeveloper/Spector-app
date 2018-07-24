@@ -1,5 +1,26 @@
 
-.list-group {
+.go1{
+    background: rgb(175, 175, 187);
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px 25px 15px 15px;
+}
+#size-award-index{
+    font-size: 50pt;   
+}
+.go2{
+    /* background: green; */
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.test-two .list-group {
+    font-size: 8pt;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
@@ -16,79 +37,29 @@
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.125);
   }
-  .device-mobile{
-    background: #eee;
-    /* padding: 14px; */
-    cursor: pointer;
-    font-size: 6pt;
-    /* margin: 10px; */
-  }
-  ul li {
-      background: none !important;
-  }
-ul li:hove {
-    background: none !important;
-}
-  .device-mobile:hover{
-      /* padding: 14px; */
-      /* background: yellowgreen !important; */
-      transition: 0.6s;
-      cursor: pointer;
-      font-size: 7pt;
-  }
-  .device-in{
-      background: rgb(233, 230, 230);
-      margin-top:10px;
-      margin-bottom: 10px;
-  }
-  .device-in:hover{
-      background: rgb(212, 212, 210);
-      border: 2px solid red;
-  }
+
   #size-icon{
-      text-align: center;
-      color: rgb(70, 68, 68);
-      font-size: 10pt;
-      width: 30px;
-      background: none;
-  }
-  #size-icon-edit{
+    text-align: center;
     color: rgb(70, 68, 68);
-    font-size: 9pt;
-    /* width: 30px; */
+    font-size: 4pt;
+    height: 12px;
+    width: 12 px;
     background: none;
-}
-#scrollspy-menu{
-    /* padding-right: 0px; */
-    /* padding-top:0px; */
-    max-height: 400px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    /* height: auto; */
-    overflow: hidden;
-    overflow-y: auto;
-    background-color: #1E88E5;
-   padding: 10px;
-}
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
 
-.scroll-x{
-    font-size: 8pt;
-    /* overflow-x: scroll; */
-    overflow-y: hidden;
-    white-space: nowrap;
-    padding-bottom:20px;
- 
 }
-
-.scroll-x .device{
-    display: inline-table;
-    margin-bottom: 0px;
+#size-icon-edit{
+  color: rgb(70, 68, 68);
+  font-size: 9pt !important;
+  /* width: 30px; */
+  background: none;
 }
-
-.device{
-    margin: 10px;
-    height: 100px;
-    width: 100px;
-    background: red;
+.list-group{
+    background: red !important;
+}
+.list-group-item{
+    border-left: 0px !important;
+    background: rgb(175, 175, 187);
+    border-radius: 0px !important;
 }
