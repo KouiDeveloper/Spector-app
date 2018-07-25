@@ -11,15 +11,16 @@
 
 
 .test-one{
-  margin-bottom: 60px !important;
+  margin-bottom: 10px !important;
 }
 .go1{
-  background: rgb(175, 175, 187);
+  background: #e9ecef;
   height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 2px 15px 15px 2px;
+  border: 1px solid #d2d5d8 !important;
 }
 #size-award-index{
   font-size: 50pt;   
@@ -48,8 +49,8 @@
   display: block;
   padding: 0.1rem 0.2rem;
   margin-bottom: -1px;
-  background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  background-color: #e9ecef !important;
+  border: 1px solid rgba(15, 12, 12, 0.125) !important;
 }
 
 #size-icon{
@@ -70,13 +71,43 @@ font-size: 9pt !important;
 background: none;
 }
 .list-group{
-  background: red !important;
+  /* background: red !important; */
 }
 .list-group-item{
-  border-left: 0px !important;
+  border: 1px solid #d2d5d8 !important;
   background: rgb(175, 175, 187);
   border-radius: 0px !important;
+  border-left: none !important;
+}
+.border-report-icon{
+  border: 1px solid #d2d5d8 !important;
 }
 .text-report{
   font-size: 9pt;
+}
+
+.sf-report{
+  font-size: 6pt;
+}
+.w-input-report{
+  width: 84px;
+}
+.w-input-report-btn{
+  width: 65px;
+}
+.size-img-report{
+  width: 70px;
+  height: 60px;
+}
+
+@media (min-width: 700px) and (max-width: 2000px) {
+  .sf-report{
+    font-size: 10pt;
+  }
+  .w-input-report{
+    width: 160px;
+  }
+  .w-input-report-btn{
+    width: 130px;
+  }
 }

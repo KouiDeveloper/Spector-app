@@ -1,5 +1,5 @@
 <br>
-<div class="container mt-5 pt-5">
+<div class="container mt-3 pt-5">
   <div class="col card pd-container">
     <h1 class="text-center text-uppercase eng-font">
       <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> Welcome to MOUNAO BUFFET
@@ -15,7 +15,7 @@
                      name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (ngModelChange)="selectTime()" >
               <div class="input-group-append">
                 <button class="btn bg-select-days"  (click)="d.toggle()"  type="button">
-                    <i class="far fa-calendar-alt" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
+                    <i class="far fa-calendar-alt color-index-icon" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
                 </button>
               </div>
             </div>
@@ -37,7 +37,7 @@
   </div>
 </div>
 
-<div class="mb-5">
+<div class="mb-3">
   <app-a003-report 
   [_selectedTime]="arrModel"
   ></app-a003-report>

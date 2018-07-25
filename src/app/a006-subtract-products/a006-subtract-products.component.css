@@ -129,6 +129,11 @@
     background-color: #218838 !important;
     border-color: #1e7e34;
   }
+  #active-title-list-export{
+      color:whitesmoke;
+      background: green !important;
+      text-align: center
+  }
    
 
 

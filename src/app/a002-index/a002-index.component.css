@@ -1,19 +1,22 @@
 
 .pd-container{
     padding-top: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 
 .select-day-month-years{
     background: rgb(255, 255, 255);
 }
+.color-index-icon{
+    color: orange;
+}
 .h-main-menu{
     margin-top:20px;
     margin-bottom:20px;
-    border: 1px solid rgb(17, 104, 17);
-    box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+    border: 1px solid #d3d7db;
+    box-shadow: 0px 2px #d3d7db;
     border-radius: 30px 00px 30px 0px;
-    background: rgb(221, 221, 208) !important;
+    background: #e9ecef !important;
     color: rgb(32, 32, 32);
     font-size: 10pt;
     /* font-weight: normal !important; */
@@ -30,8 +33,8 @@
 }
 
 .btn-primary{
-    border: 1px solid rgb(17, 104, 17);
-    box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+    border: 1px solid #d3d7db;
+    box-shadow: 0px 2px #d3d7db;
     border-radius: 10px 00px 10px 0px;
     background: rgb(221, 221, 208) !important;
     color: rgb(32, 32, 32);
@@ -41,10 +44,10 @@
 
 
 .bg-select-days{
-    border: 1px solid rgb(17, 104, 17);
-    box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+    border: 1px solid #d3d7db;
+    box-shadow: 0px 2px #d3d7db;
     border-radius: 10px 00px 10px 0px;
-    background: rgb(221, 221, 208) !important;
+    background: #e9ecef !important;
     color: rgb(32, 32, 32);
     font-size: 13pt;
 }
@@ -86,17 +89,18 @@
 
 @media( min-width:900px){
     h1, .h1 {
-        font-size: 2rem;
+        font-size: 1.2rem;
       }
       .h-main-menu{
         margin-top:50px;
         height: 80px;
-        border: 1px solid rgb(17, 104, 17);
-        box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+        border: 1px solid #d3d7db;
+        box-shadow: 0px 2px #d3d7db;
         border-radius: 30px 00px 30px 0px;
-        background: rgb(221, 221, 208) !important;
+        background: #e9ecef !important;
+        border-radius: 30px 00px 30px 0px;
         color: rgb(32, 32, 32);
-        font-size: 17pt;
+        font-size: 11pt;
         /* font-weight: normal !important; */
     }
     .h-main-menu:hover{
@@ -104,30 +108,31 @@
         height: 80px;
         border: 1px solid rgb(17, 104, 17);
         box-shadow: 2px 2px 2px 2px rgba(104, 139, 104, 0.63);
-        border-radius: 30px 00px 30px 0px;
         background: rgb(240, 240, 208) !important;
+        border-radius: 30px 00px 30px 0px;
         color: rgb(32, 32, 32);
-        font-size: 18pt;
+        font-size: 12pt;
         transition: .5s
     }  
 }
-@media (min-width: 1200px) { 
+@media (min-width: 1500px) { 
     .pd-main-menu{
         padding-left: 150px !important;
         padding-right: 150px !important; 
     }
     h1, .h1 {
-        font-size: 2.5rem;
+        font-size: 1.3rem;
       }
     .h-main-menu{
     margin-top:50px;
     height: 100px;
-    border: 1px solid rgb(17, 104, 17);
-    box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+    border: 1px solid #d3d7db;
+    box-shadow: 0px 2px #d3d7db;
     border-radius: 30px 00px 30px 0px;
-    background: rgb(221, 221, 208) !important;
+    background: #e9ecef !important;
+    border-radius: 30px 00px 30px 0px;
     color: rgb(32, 32, 32);
-    font-size: 18pt;
+    font-size: 12pt;
     /* font-weight: normal !important; */
 }
     .h-main-menu:hover{
@@ -138,15 +143,16 @@
         border-radius: 30px 00px 30px 0px;
         background: rgb(240, 240, 208) !important;
         color: rgb(32, 32, 32);
-        font-size: 19pt;
+        font-size: 13pt;
     }
     .bg-select-days{
-        border: 1px solid rgb(17, 104, 17);
-        box-shadow: 0px 2px rgba(72, 99, 72, 0.63);
+        border: 1px solid #d3d7db;
+        box-shadow: 0px 2px #d3d7db;
+        border-radius: 30px 00px 30px 0px;
+        background: #e9ecef !important;
         border-radius: 10px 00px 10px 0px;
-        background: rgb(221, 221, 208) !important;
         color: rgb(32, 32, 32);
-        font-size: 16pt;
+        font-size: 11pt;
     }
     .bg-select-days:hover{
         border: 1px solid rgb(17, 104, 17);
@@ -154,6 +160,6 @@
         /* border-radius: 30px 00px 30px 0px; */
         background: rgb(240, 240, 208) !important;
         color: rgb(32, 32, 32);
-        font-size: 17pt;
+        font-size: 12pt;
     }
 }

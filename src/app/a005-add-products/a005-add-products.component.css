@@ -184,7 +184,7 @@ td {
   }
 }
 
-@media (min-width: 413px) and (max-width: 600px) {
+@media (min-width: 413px) and (max-width: 800px) {
   .pd-add-prod {
     padding: 10px;
   }
@@ -231,7 +231,7 @@ td {
   }
 }
 
-@media (min-width: 601px) and (max-width: 1000px) {
+@media (min-width: 1000px) and (max-width: 2000px) {
   .ip-text-w {
     width: 140px;
   }
@@ -279,8 +279,8 @@ td {
     border-color: #007bff;
   }
   .col-iphone-6 {
-    -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
-    max-width: 25%;
+    -ms-flex: 0 0 12%;
+    flex: 0 0 12%;
+    max-width: 12%;
   }
 }

@@ -522,11 +522,10 @@ export class A003ReportComponent {
     let tt={qtty:0,ttvalue:0};
       for (let index = 0; index < this._arr_stock.length; index++) {
         const element = this._arr_stock[index];
-          tt.qtty+=element.lastexport.reduce((a, b) => a + b, 0);
+          tt.qtty+=element.lastimport.reduce((a, b) => a + b, 0);
           tt.ttvalue+=element.lastimport.reduce((a, b) => a + b, 0)*element.price;
       }
-      // return tt;edtxt =this._search_text;
-    console.log("");
+      return tt;
   }
   getTTExport(name){
     let tt={qtty:0,ttvalue:0};
@@ -549,9 +548,11 @@ export class A003ReportComponent {
           tt.qtty+=element.lastexport.reduce((a, b) => a + b, 0);
           tt.ttvalue+=element.lastexport.reduce((a, b) => a + b, 0)*element.price;
       }
-      // return tt;edtxt =this._search_text;
-    console.log("");
+      return tt;
   }
-}
+      // return tt;edtxt =this._search_text;
+    // console.log("");
+  }
+
 
 
