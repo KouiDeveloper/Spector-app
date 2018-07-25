@@ -549,7 +549,17 @@ export class A004MakeProductsComponent {
     return "../../assets/img/" + m;
   }
   selectGoodsType(g) {
-    this._selectedGoodsType = g.name;
+    if(this._selectedGoodsType){
+      if(this._selectedGoodsType === g.name){
+        this._selectedGoodsType='';
+      }
+      else{
+        this._selectedGoodsType = g.name;
+      }
+    }else{
+      this._selectedGoodsType = g.name;
+    }
+    
     // alert(this._selectedGoodsType);
   }
   checkSelectedGoodsType(a) {
@@ -561,6 +571,7 @@ export class A004MakeProductsComponent {
   selectProduct(p: any) {
     this._selectedProduct = p;
     this._product = p;
+    this._selectedGoodsType=p.type;
     this._rightCurrency = p.currency;
     this._rightUnit = p.unit;
     this.selectUnit(this._rightUnit);
@@ -568,5 +579,50 @@ export class A004MakeProductsComponent {
     this._isNew = false;
     this._isEdit = true;
   }
+  
+  searchStock(e){
+    if(e.keyCode==13){
+      console.log('ENTER');
+    }
+    console.log(this._search_text);
+  }
   _isEdit = false;
+  _search_text='';
+  filterArrStock():any[]{
+    if(!this._productList.arr){
+      return;
+    }
+    let array=this._productList.arr;
+    let goodstype=this._selectedGoodsType;
+    let searchedtxt =this._search_text;
+    //console.log('code',searchedtxt);
+    let arr=[];
+    for (let index = 0; index < array.length; index++) {
+      const element = array[index];
+      // goods type
+      if(goodstype){
+        if(element.type===goodstype){
+          arr.push(element);
+        }
+      }else{
+        arr.push(element);
+      }
+    }
+    // code , name
+    let arr2=[];
+    for (let index = 0; index < arr.length; index++) {
+      const element = arr[index];
+      // goods type
+      if(searchedtxt){
+        if(element.code.indexOf(searchedtxt)>-1 || element.name.indexOf(searchedtxt)>-1){
+          // console.log('SEARCHING....')
+          arr2.push(element);
+        }
+      }else{
+        arr2.push(element);
+      }
+    }
+
+    return arr2;
+  }
 }

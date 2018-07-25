@@ -88,6 +88,11 @@ td {
 .btn-outline-secondary {
   font-size: 14pt;
 }
+.color-search-add-pd{
+  color: rgb(110, 109, 109);
+  padding: 0px;
+  margin: 0px;
+}
 
 /* css screen */
 
