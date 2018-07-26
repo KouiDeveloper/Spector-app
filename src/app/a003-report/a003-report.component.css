@@ -42,6 +42,7 @@
   flex-direction: column;
   padding-left: none !important;
   margin-bottom: none !important;
+  color:rgb(58, 56, 56);
 }
 
 .list-group-item {
