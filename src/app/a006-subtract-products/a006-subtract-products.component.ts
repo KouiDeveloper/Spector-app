@@ -531,6 +531,10 @@ export class A006SubtractProductsComponent {
   exportStock(){
     console.log('IMPORT ',this._selectedStock);
     this._selectedStock.qtty=this._newQtty;
+    let d=this._selectedTime[0].day;
+    let m=this._selectedTime[0].month - 1;
+    let y=this._selectedTime[0].year;
+    this._selectedStock.lastupdate=new Date(y,m,d,0,0,0,0);
     this.websocketDataServiceService.exportGoods(this._selectedStock);
   }
   

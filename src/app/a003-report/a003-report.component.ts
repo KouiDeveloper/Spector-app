@@ -158,10 +158,11 @@ export class A003ReportComponent {
     if (changes) {
       //console.log(changes);
       this.getReport();
+      this.initStock();
     }
   }
 
-  /// OTHER FUNCTIONS
+  /// OTHER FUNCTIONS)
   public clearJSONValue(u) {
     for (const key in u) {
       if (u.hasOwnProperty(key)) {
@@ -433,7 +434,8 @@ export class A003ReportComponent {
     selectedTime.month = this._selectedTime[0].month;
     selectedTime.year = this._selectedTime[0].year;
     this.websocketDataServiceService.getReport(selectedTime);
-  }getGoodsType() {
+  }
+  getGoodsType() {
     this.websocketDataServiceService.getGoodsType();
   }
   getURL(m) {
@@ -486,6 +488,9 @@ export class A003ReportComponent {
   importStock(){
     console.log('IMPORT ',this._selectedStock);
     this._selectedStock.qtty=this._newQtty;
+    let d=this._selectedTime[0].day;
+    let m=this._selectedTime[0].month;
+    let y=this._selectedTime[0].year;
     this.websocketDataServiceService.importGoods(this._selectedStock);
   }
   sumtotal(a:Array<any>,b){
@@ -500,12 +505,12 @@ export class A003ReportComponent {
       for (let index = 0; index < this._arr_stock.length; index++) {
         const element = this._arr_stock[index];
         
-        console.log(element); 
+        // console.log(element); 
         if(name===element.type){
           tt.qtty+=element.lastimport.reduce((a, b) => a + b, 0);
           tt.ttvalue+=element.lastimport.reduce((a, b) => a + b, 0)*element.price;
         }
-        console.log(tt.qtty);
+        // console.log(tt.qtty);
       }
       return tt;
   }
@@ -532,12 +537,12 @@ export class A003ReportComponent {
       for (let index = 0; index < this._arr_stock.length; index++) {
         const element = this._arr_stock[index];
         
-        console.log(element);
+        // console.log(element);
         if(name===element.type){
           tt.qtty+=element.lastexport.reduce((a, b) => a + b, 0);
           tt.ttvalue+=element.lastexport.reduce((a, b) => a + b, 0)*element.price;
         }
-        console.log(tt.qtty);
+        // console.log(tt.qtty);
       }
       return tt;
   }

@@ -71,9 +71,6 @@ font-size: 9pt !important;
 /* width: 30px; */
 background: none;
 }
-.list-group{
-  /* background: red !important; */
-}
 .list-group-item{
   border: 1px solid #d2d5d8 !important;
   background: rgb(175, 175, 187);

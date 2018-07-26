@@ -77,13 +77,16 @@
     background: rgb(207, 207, 175);
     color: rgb(48, 45, 45);
     cursor: pointer;
+    transition: transform 2s;
 }
 .choose-goods-type:hover{
     position: relative;
-  transition: .7s;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
   font-size: 13pt;
   height: 130px !important;
-  width: 160px !important;
+  width: 150px !important;
   color: #212529;
   background-color: #ffc107;
   border-color: #ffc107;
@@ -91,16 +94,20 @@
 }
 
 .selectedclass{
-    height: 140px !important;
-    width: 170px !important;
+    height: 120px !important;
+    width: 140px !important;
     color: #212529;
     background: #ffc107;
     border-color: #ffc107;
+    transition: transform 2s;
   }
   .selectedclass:hover{
     color: #212529;
     background-color: #d6b961;
     border-color: #d39e00;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
   }
 
   .selectedclass:focus, .selectedclass.focus {
