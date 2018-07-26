@@ -130,9 +130,10 @@
     border-color: #1e7e34;
   }
   #active-title-list-export{
-      color:whitesmoke;
-      background: green !important;
-      text-align: center
+      color:rgb(68, 66, 66);
+      background: #e5e7e9 !important;
+      text-align: center;
+      font-size: 10pt;
   }
    
 
