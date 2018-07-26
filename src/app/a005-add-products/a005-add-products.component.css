@@ -166,7 +166,7 @@ td {
     width: 60px;
     height: 50px;
     font-size: 15pt;
-    color: #1e7e34;
+    color: #1e7e34 !important;
     background-color: #eceff1;
     border-color: #007bff;
   }

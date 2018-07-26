@@ -43,15 +43,9 @@
 
 .import-icon-add-pd{
     border-radius: 15px 15px 15px 15px;
-    border: #f7f32d 1px solid;
-    box-shadow: 0px 0px 2px 2px rgba(45, 53, 45, 0.726);
-    background-color: #fdd835;
     width: 160px;
     height: 120px;
-    font-size: 50pt;
-    color: rgb(252, 69, 69);
-  
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    font-size: 50pt; /* Will override color (regardless of order) */
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
@@ -135,7 +129,6 @@
       text-align: center;
       font-size: 10pt;
   }
-   
 
 
 
