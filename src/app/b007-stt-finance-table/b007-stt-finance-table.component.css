@@ -1,0 +1,55 @@
+
+
+.btn span.glyphicon {    			
+	opacity: 0;				
+}
+.btn.active span.glyphicon {				
+	opacity: 1;				
+}
+
+@media (min-width: 200px) and (max-width: 375px){
+    .one-tilte-fn-tb, h1{
+        font-size: 11pt;
+        text-align: center;
+    }
+    .two-table-fn-tb .table th{
+        font-size: 8pt;
+        text-align: center
+    }
+    .two-table-fn-tb .table td{
+        font-size: 7pt;
+        text-align: center;
+    }
+    .three-table-fn-tb .table th{
+        font-size: 8pt;
+        text-align: center
+    }
+    .three-table-fn-tb .table td{
+        font-size: 7pt;
+        text-align: center;
+    }
+    .three-table-fn-tb .select-date-fn-tb .three-font-size {
+        font-size: 9pt;
+    }
+    .three-table-fn-tb .select-date-fn-tb .select-all{
+        margin-top: 2px;
+    }
+    .three-table-fn-tb .table .table-bordered ul.list-group{
+        text-align: left;
+        list-style-type: square;
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px){
+    .one-tilte-fn-tb, h1{
+        font-size: 11pt;
+        text-align: center;
+    }
+    .two-table-fn-tb .table th{
+        font-size: 8pt;
+    }
+    .two-table-fn-tb .table td{
+        font-size: 7pt;
+    }
+}

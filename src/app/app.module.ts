@@ -13,6 +13,9 @@ import { A004MakeProductsComponent } from './a004-make-products/a004-make-produc
 import { A005AddProductsComponent } from './a005-add-products/a005-add-products.component';
 import { A006SubtractProductsComponent } from './a006-subtract-products/a006-subtract-products.component';
 import { ZFooterComponent } from './z-footer/z-footer.component';
+import { B007SttFinanceTableComponent } from './b007-stt-finance-table/b007-stt-finance-table.component';
+import { B008SttFinanceTrafficComponent } from './b008-stt-finance-traffic/b008-stt-finance-traffic.component';
+import { B009SttFinanceCompareComponent } from './b009-stt-finance-compare/b009-stt-finance-compare.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { ZFooterComponent } from './z-footer/z-footer.component';
     A004MakeProductsComponent,
     A005AddProductsComponent,
     A006SubtractProductsComponent,
-    ZFooterComponent
+    ZFooterComponent,
+    B007SttFinanceTableComponent,
+    B008SttFinanceTrafficComponent,
+    B009SttFinanceCompareComponent
   ],
   imports: [
     BrowserModule,
