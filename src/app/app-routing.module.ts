@@ -11,6 +11,10 @@ import { A006SubtractProductsComponent } from './a006-subtract-products/a006-sub
 import { B007SttFinanceTableComponent } from './b007-stt-finance-table/b007-stt-finance-table.component';
 import { B008SttFinanceTrafficComponent } from './b008-stt-finance-traffic/b008-stt-finance-traffic.component';
 import { B009SttFinanceCompareComponent } from './b009-stt-finance-compare/b009-stt-finance-compare.component';
+import { C001LoginComponent } from './c001-login/c001-login.component';
+import { C002RegisterComponent } from './c002-register/c002-register.component';
+import { C003ProfileComponent } from './c003-profile/c003-profile.component';
+import { C004SaleComponent } from './c004-sale/c004-sale.component';
 
 const routes: Routes = [
   { path: '', component: A002IndexComponent },
@@ -22,7 +26,11 @@ const routes: Routes = [
   { path: 'subtract-products', component: A006SubtractProductsComponent},
   { path: 'stt-finance-table', component: B007SttFinanceTableComponent},
   { path: 'stt-finance-traffic', component: B008SttFinanceTrafficComponent},
-  { path: 'stt-finance-compare', component: B009SttFinanceCompareComponent}
+  { path: 'stt-finance-compare', component: B009SttFinanceCompareComponent},
+  { path: 'login', component: C001LoginComponent},
+  { path: 'register', component: C002RegisterComponent},
+  { path: 'profile', component: C003ProfileComponent},
+  { path: 'sale', component: C004SaleComponent}
 ]
 
 @NgModule({

@@ -16,6 +16,10 @@ import { ZFooterComponent } from './z-footer/z-footer.component';
 import { B007SttFinanceTableComponent } from './b007-stt-finance-table/b007-stt-finance-table.component';
 import { B008SttFinanceTrafficComponent } from './b008-stt-finance-traffic/b008-stt-finance-traffic.component';
 import { B009SttFinanceCompareComponent } from './b009-stt-finance-compare/b009-stt-finance-compare.component';
+import { C001LoginComponent } from './c001-login/c001-login.component';
+import { C002RegisterComponent } from './c002-register/c002-register.component';
+import { C003ProfileComponent } from './c003-profile/c003-profile.component';
+import { C004SaleComponent } from './c004-sale/c004-sale.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { B009SttFinanceCompareComponent } from './b009-stt-finance-compare/b009-
     ZFooterComponent,
     B007SttFinanceTableComponent,
     B008SttFinanceTrafficComponent,
-    B009SttFinanceCompareComponent
+    B009SttFinanceCompareComponent,
+    C001LoginComponent,
+    C002RegisterComponent,
+    C003ProfileComponent,
+    C004SaleComponent
   ],
   imports: [
     BrowserModule,

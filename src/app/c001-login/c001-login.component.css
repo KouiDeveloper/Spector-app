@@ -1,0 +1,121 @@
+.c-margin-top-login-page{
+    margin-top:10%;
+}
+.card{
+    background: #e7fafd4b !important;
+}
+.a-photo-login-size{
+    height: 120px;
+    width: 120px;
+}
+h1{
+    font-size: 1.2rem;
+}
+h3{
+    font-size: 1rem;
+}
+h6{
+    font-size: 0.7rem;
+}
+.c-font-size-form{
+    font-size: 9pt;
+}
+.c-width-form-icon{
+    width: 40px;
+}
+.input-group-text{
+    border-radius: 20px 0px 0px 20px !important;
+}
+.form-control{
+    border-radius: 0px 20px 20px 0px !important;
+    height: 30px;
+}
+.card{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+} 
+
+
+@media (min-width: 1px) and (max-width: 375px){
+    .a-photo-login-size{
+        height: 100px;
+        width: 100px;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    h6{
+        font-size: 0.6rem;
+    }
+    .c-font-size-form{
+        font-size: 8pt;
+    }
+    .c-width-form-icon{
+        width: 50px;
+    }
+    .input-group-text{
+        border-radius: 20px 0px 0px 20px !important;
+    }
+    .form-control{
+        border-radius: 0px 20px 20px 0px !important;
+        height: 40px;
+    }
+    .card{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 500px){
+    .a-photo-login-size{
+        height: 100px;
+        width: 100px;
+    }
+    h1{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 0.8rem;
+    }
+    h6{
+        font-size: 0.6rem;
+    }
+    .c-font-size-form{
+        font-size: 8pt;
+    }
+    .c-width-form-icon{
+        width: 50px;
+    }
+    .input-group-text{
+        border-radius: 20px 0px 0px 20px !important;
+    }
+    .form-control{
+        border-radius: 0px 20px 20px 0px !important;
+        height: 40px;
+    }
+    .c-center-page{
+        margin-top:50%;
+        margin-bottom: 50%;
+    }
+    .card{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}  
+@media (min-width: 501px) and (max-width: 650px){}  
+@media (min-width: 651px) and (max-width: 800px){} 
+@media (min-width: 801px) and (max-width: 950px){}
+@media (min-width: 951px) and (max-width: 1024px){}
+@media (min-width: 1025px) and (max-width: 1200px){}
+@media (min-width: 1201x) and (max-width: 1500px){}
+@media (min-width: 1501x) and (max-width: 1800px){}
+@media (min-width: 1801x) and (max-width: 2000px){}
