@@ -196,6 +196,9 @@
         flex: 0 0 33.333333%;
         max-width: 0 0 33.333333%;
       }
+      .btn-outline-secondary{
+        font-size: 9pt;
+      }
 }
 
 
@@ -207,6 +210,9 @@
         -ms-flex: 0 0 20%;
         flex: 0 0 20%;
         max-width: 20%;
+      }
+      .btn-outline-secondary{
+        font-size: 9pt;
       }
 }
 
@@ -226,64 +232,73 @@
         background-color: #e0a800;
         border-color: #d39e00;
       } */
+      .btn-outline-secondary{
+        font-size: 9pt;
+      }
    }
 
    @media (min-width: 1000px) and (max-width: 1500px) {
     .ip-text-w {
       width: 140px;
     }
-   @media (min-width: 1000px) and (max-width: 1500px) {
-    .ip-text-w {
-      width: 140px;
+    .btn-outline-secondary{
+      font-size: 9pt;
     }
-    .input-group-text {
-      font-size: 10pt !important;
-    }
-    .pd-add-prod {
-      padding: 10px;
-    }
-    h1 {
-      font-size: 1.9rem;
-    }
-    h2 {
-      font-size: 1.2rem;
-    }
-    .bg-add-products {
-      padding-top: 10px;
-      padding-bottom: 10px;
-      color: rgb(56, 55, 55);
-      background-color: #e5e7e9;
-      border-color: #007bff;
-    }
-    .form-control {
-      display: block;
-      padding: 0.3rem 0.5rem;
-      font-size: 0.6rem;
-      line-height: 0.1;
-      color: #495057;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
-      border-radius: 0.25rem;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    }
-    
-    .import-icon-add-pd {
-      border-radius: 15px 15px 15px 15px;
-      border: #1e7e34 1px solid;
-      box-shadow: 0px 0px 2px 2px rgba(63, 104, 63, 0.397);
-      width: 120px;
-      height: 60px;
-      font-size: 22pt;
-      color: #1e7e34;
-      background-color: #eceff1;
-      border-color: #007bff;
-    }
-    .col-iphone-6 {
-      -ms-flex: 0 0 14%;
-      flex: 0 0 14%;
-      max-width: 14%;
-    }
+}
+@media (min-width: 1000px) and (max-width: 1500px) {
+  .ip-text-w {
+    width: 140px;
+  }
+  .input-group-text {
+    font-size: 10pt !important;
+  }
+  .pd-add-prod {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .bg-add-products {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(56, 55, 55);
+    background-color: #e5e7e9;
+    border-color: #007bff;
+  }
+  .form-control {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.6rem;
+    line-height: 0.1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .import-icon-add-pd {
+    border-radius: 15px 15px 15px 15px;
+    border: #1e7e34 1px solid;
+    box-shadow: 0px 0px 2px 2px rgba(63, 104, 63, 0.397);
+    width: 120px;
+    height: 60px;
+    font-size: 22pt;
+    color: #1e7e34;
+    background-color: #eceff1;
+    border-color: #007bff;
+  }
+  .col-iphone-6 {
+    -ms-flex: 0 0 14%;
+    flex: 0 0 14%;
+    max-width: 14%;
+  }
+  .btn-outline-secondary{
+    font-size: 10pt;
   }
 }
 
@@ -293,5 +308,8 @@
         -ms-flex: 0 0 11%;
         flex: 0 0 11%;
         max-width: 11%;
+      }
+      .btn-outline-secondary{
+        font-size: 10pt;
       }
 }
