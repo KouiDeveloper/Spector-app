@@ -76,16 +76,16 @@
 
       </div>
       <div class="d-flex justify-content-center mx-auto">
-        <button class="btn btn-outline-secondary col-md-2 col-6 mb-3 ml-3 lao-font" (click)="addNew()" *ngIf="!_isNew">
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" (click)="addNew()" *ngIf="!_isNew">
           <i class="far fa-plus-square"></i>
           <br>ເພີ່ມໃໝ່</button>
-        <button class="btn btn-outline-secondary col-md-2 col-6 mb-3 ml-3 lao-font" *ngIf="_isEdit" (click)="updateProduct()">
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" *ngIf="_isEdit" (click)="updateProduct()">
           <i class="far fa-edit"></i>
           <br>ອັບເດດ</button>
-        <button class="btn btn-outline-secondary col-md-2 col-6 mb-3 ml-3 lao-font" (click)="cancle()" *ngIf="_isEdit">
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" (click)="cancle()" *ngIf="_isEdit">
           <i class="fas fa-sign-out-alt"></i>
           <br>ຍົກເລີກ</button>
-        <button class="btn btn-outline-secondary col-md-2 col-6 mb-3 ml-3 lao-font" (click)="addObsoletedProduct()" *ngIf="_isEdit&&!_isNew ">
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" (click)="addObsoletedProduct()" *ngIf="_isEdit&&!_isNew ">
           <i class="far fa-trash-alt"></i>
           <br>ລົບລ້າງ</button>
       </div>

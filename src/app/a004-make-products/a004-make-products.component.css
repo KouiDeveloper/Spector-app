@@ -162,6 +162,9 @@
   flex: 0 0 100%;
   max-width: 100%;
       }
+      .btn-outline-secondary{
+        font-size: 8pt;
+      }
    }
 
    @media (min-width: 321px) and (max-width: 459px) {
@@ -177,6 +180,9 @@
         -ms-flex: 0 0 50%;
         flex: 0 0 50%;
         max-width: 50%;
+      }
+      .btn-outline-secondary{
+        font-size: 8pt;
       }
    }
 
