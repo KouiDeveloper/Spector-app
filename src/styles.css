@@ -12,22 +12,22 @@
 }
 
 .eng-font{
-    font-family: 'OldStandard-Italic';
+    font-family: 'COMIC';
     font-weight: normal;
-    font-style: normal;
-    src: url('assets/css/fonts/OldStandard-Italic.ttf');
+    /* font-style: normal; */
+    src: url('assets/css/fonts/COMIC.ttf');
 }
 
 
 body{
-    background: #eeeeee;
+    background: #e7fafd4b;
 }
-.main-background{
-    background: rgb(252, 249, 222);
+.main-bg{
+    background: #e7fafd4b !important;
 }
 
-.main-color{
-    color: rgb(245, 245, 245);
+.main-font-color{
+    color: rgb(119, 117, 117);
 }
 
 .home-btn{

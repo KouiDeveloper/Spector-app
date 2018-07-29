@@ -1,3 +1,214 @@
-<p>
-  c004-sale works!
-</p>
+<div class="container c-margin-top-sale-page">
+  <section class="c-one-logo-sale-page mb-3">
+    <!-- ຮູບໂລໂກໜ້າຂາຍສິນຄ້າ -->
+    <div class="logo-sale-page c-laptop-screen-sale-page col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <div class="card main-bg c-padding-sale-page row">
+        <!-- ຫົວຂໍ້ໜັງສື Welcome Mounao -->
+        <div class="c-title-slae-page mb-2">
+          <div class="text-center">
+            <h1 class="text-center text-uppercase eng-font">
+              <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> Welcome to MOUNAO BUFFET
+              <i class="fas fa-feather-alt icon-mounao"></i>
+            </h1>
+          </div>
+        </div>
+
+        <div class="c-report-order lao-font" [routerLink]="['/register']">
+          <div class="report-button">
+            <div class="input-group c-font-size-form">
+              <div class="input-group-prepend">
+                <span class="input-group-text lao-font c-font-size-form c-width-form-icon color-red-report-icon">
+                  <i class="far fa-times-circle mx-auto "></i>
+                </span>
+              </div>
+              <input type="text" id="" class="form-control c-font-size-form my-auto text-center main-bg" value="ຈຳນວນບິນຍັງບໍ່ທັນຊຳລະ"
+                style="width:130px;" disabled>
+              <input type="text" id="" class="form-control c-font-size-form text-center main-bg" value="15 ບິນ" disabled>
+            </div>
+
+            <div class="input-group c-font-size-form mb-2 border-top-0">
+              <div class="input-group-prepend border-top-0">
+                <span class="input-group-text border-top-0 lao-font c-font-size-form c-width-form-icon color-green-report-icon">
+                  <i class="far fa-check-circle mx-auto "></i>
+                </span>
+              </div>
+              <input type="text" id="" class="form-control border-top-0 c-font-size-form text-center main-bg" value="ຈຳນວນບິນທີ່ຊຳລະແລ້ວ"
+                style="width:130px;" disabled>
+              <input type="text" id="" class="form-control border-top-0 c-font-size-form text-center main-bg" value="15 ບິນ" disabled>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-two c-menu-sale-page">
+    <div class="justify-content-center main-bg c-padding-sale-page col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+      <div class="row justify-content-center ">
+        <div class="col-md-4 col-sm-6 col-12">
+          <button class="btn lao-font w-100 h-main-menu">
+            <i class="fas fa-list-ul"></i>
+            <br>ລາຍການສັ່ງສິນຄ້າ</button>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+          <button class="btn lao-font mr-auto w-100 h-main-menu" data-target="#select_make_order" data-toggle="modal">
+            <i class="fab fa-medrt"></i>
+            <br>ສ້າງສິນຄ້າ</button>
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+          <button class="btn lao-font mr-auto w-100 h-main-menu">
+            <i class="fas fa-user-circle"></i>
+            <br>ຂໍ້ມູນສ່ວນຕົວ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+<!-- Modal-select-to-make-order -->
+<div class="container">
+  <div class="modal fade" id="select_make_order" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <h4 class="text-center lao-font pt-3">ລະບົບການສ້າງສິນຄ້າ</h4>
+        <div class="modal-body">
+          <div class="justify-content-center main-bg c-padding-sale-page col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <div class="row justify-content-center ">
+              <div class="col-md-4 col-sm-6 col-12">
+                <button class="btn lao-font w-100 h-main-menu">
+                  <i class="fas fa-list-ul"></i>
+                  <br>ສ້າງໃຫ້ຕົນເອງ</button>
+              </div>
+              <div class="col-md-4 col-sm-6 col-12">
+                <button class="btn lao-font mr-auto w-100 h-main-menu" data-target="#choose_friend" data-toggle="modal">
+                  <i class="fab fa-medrt"></i>
+                  <br>ສ້າງໃຫ້ທີມງານ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal-select-to-make-order -->
+<div class="container">
+  <div class="modal fade" id="choose_friend" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <h5 class="text-center lao-font pt-3">ກະລຸນາພິມຊື່ ຫຼື ເລືອກຊື່ທີມງານ</h5>
+        <div class="modal-body lao-font">
+          <!-- ສ້າງໃຫ້ທີມງານປ໋ອບອັບ -->
+          <div class="input-group d-flex justify-content-center">
+            <!-- ບ່ອນພິມຊອກທີມງານ -->
+            <div class="input-group d-flex justify-content-center mb-3">
+              <input type="text" class="form-control form-search-sale-page m-0 col-md-6 offset-md-3 col-8 offset-2" placeholder="Search"
+                name="search">
+              <div class="input-group-btn">
+                <button class="form-control border-left-0 btn-radius-sale-page" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="list-employ mb-2 col-md-4">
+              <!-- ໂປລຟາຍທີມງານທັງໝົດ -->
+              <div class="row p-2">
+                <div class="col-4 m-0 text-center my-auto" style="background: rgb(54, 54, 54);">
+                  <img src="../../assets/img/person.png" alt="" class="size-photo-employ-list mx-auto">
+                </div>
+                <div class="col-8 m-0 p-0 my-auto">
+                  <div class="input-group c-font-size-form">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
+                        <i class="far fa-id-card mx-auto"></i>
+                      </span>
+                    </div>
+                    <input type="number" class="form-control c-font-size-form" value="0123" disabled>
+                  </div>
+
+                  <div class="input-group c-font-size-form">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
+                        <i class="fas fa-user mx-auto"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control c-font-size-form" value="Mr:ABC" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-employ mb-2 col-md-4">
+              <!-- ໂປລຟາຍທີມງານທັງໝົດ -->
+              <div class="row p-2">
+                <div class="col-4 m-0 text-center my-auto" style="background: rgb(54, 54, 54);">
+                  <img src="../../assets/img/person.png" alt="" class="size-photo-employ-list mx-auto">
+                </div>
+                <div class="col-8 m-0 p-0 my-auto">
+                  <div class="input-group c-font-size-form">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
+                        <i class="far fa-id-card mx-auto"></i>
+                      </span>
+                    </div>
+                    <input type="number" class="form-control c-font-size-form" value="0123" disabled>
+                  </div>
+
+                  <div class="input-group c-font-size-form">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
+                        <i class="fas fa-user mx-auto"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control c-font-size-form" value="Mr:ABC" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="list-employ mb-2 col-md-4">
+              <!-- ໂປລຟາຍທີມງານທັງໝົດ -->
+              <div class="row p-2">
+                <div class="col-4 m-0 text-center my-auto" style="background: rgb(54, 54, 54);">
+                  <img src="../../assets/img/person.png" alt="" class="size-photo-employ-list mx-auto">
+                </div>
+                <div class="col-8 m-0 p-0 my-auto">
+                  <div class="input-group c-font-size-form">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
+                        <i class="far fa-id-card mx-auto"></i>
+                      </span>
+                    </div>
+                    <input type="number" class="form-control c-font-size-form" value="0123" disabled>
+                  </div>
+
+                  <div class="input-group c-font-size-form">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
+                        <i class="fas fa-user mx-auto"></i>
+                      </span>
+                    </div>
+                    <input type="text" class="form-control c-font-size-form" value="Mr:ABC" disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 
-<div class="containe pt-5">
+<div class="containe mt-3">
   <div class="col card pd-container">
     <h1 class="text-center text-uppercase eng-font">
       <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> Welcome to MOUNAO BUFFET
@@ -35,10 +35,11 @@
       </div>
     </section>
   </div>
+  <div class="mb-3">
+      <app-a003-report 
+      [_selectedTime]="arrModel"
+      ></app-a003-report>
+    </div>
 </div>
 
-<div class="mb-3">
-  <app-a003-report 
-  [_selectedTime]="arrModel"
-  ></app-a003-report>
-</div>
+
