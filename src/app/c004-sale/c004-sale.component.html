@@ -13,7 +13,7 @@
           </div>
         </div>
 
-        <div class="c-report-order lao-font" [routerLink]="['/register']">
+        <div class="c-report-order lao-font" [routerLink]="['/order-list-details']">
           <div class="report-button">
             <div class="input-group c-font-size-form">
               <div class="input-group-prepend">
@@ -46,7 +46,7 @@
     <div class="justify-content-center main-bg c-padding-sale-page col-lg-8 offset-lg-2 col-md-10 offset-md-1">
       <div class="row justify-content-center ">
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn lao-font w-100 h-main-menu">
+          <button class="btn lao-font w-100 h-main-menu" [routerLink]="['/order-list-details']">
             <i class="fas fa-list-ul"></i>
             <br>ລາຍການສັ່ງສິນຄ້າ</button>
         </div>
@@ -66,7 +66,7 @@
 </div>
 
 
-<!-- Modal-select-to-make-order -->
+<!-- ປ໋ອບອັບສ້າງສິນຄ້າໃຫ້ຕົນເອງ ຫຼື ທີມງານ Modal-select-to-make-order -->
 <div class="container">
   <div class="modal fade" id="select_make_order" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -98,7 +98,7 @@
 </div>
 
 
-<!-- Modal-select-to-make-order -->
+<!-- ປ໋ອບອັບເລືອກທີມງານທີ່ຕ້ອງການສ້າງໃຫ້ Modal-select-to-make-order -->
 <div class="container">
   <div class="modal fade" id="choose_friend" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -118,7 +118,7 @@
               </div>
             </div>
 
-            <div class="list-employ mb-2 col-md-4">
+            <div class="list-employ mb-2 col-md-4" data-toggle="modal" data-target="#chooseTableNumber">
               <!-- ໂປລຟາຍທີມງານທັງໝົດ -->
               <div class="row p-2">
                 <div class="col-4 m-0 text-center my-auto" style="background: rgb(54, 54, 54);">
@@ -201,7 +201,7 @@
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
         <div class="modal-footer">
@@ -212,3 +212,36 @@
     </div>
   </div>
 </div>
+
+<!-- ປ໋ອບອັບເລືອກໂຕະ popup to choose a table -->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#chooseTableNumber">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="chooseTableNumber" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-body">
+          <h5 class="lao-font text-center">ກະລຸນາເລືອກໂຕະ</h5>
+          <div class="input-group lao-font">
+            <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+              <option selected>ເລືອກໂຕະ----</option>
+              <option value="1">ໂຕະ 1</option>
+              <option value="2">ໂຕະ 2</option>
+              <option value="3">ໂຕະ 3</option>
+            </select>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+          <div class="modal-footer justify-content-center lao-font">
+            <button type="button" class="btn btn-primary">ໄປຂັ້ນຕອນຕໍ່ໄປ</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">ອອກ</button>
+          </div>
+    </div>
+  </div>

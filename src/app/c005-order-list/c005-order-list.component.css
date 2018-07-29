@@ -1,0 +1,16 @@
+.c-font-size-order-list th{
+    font-size: 8pt;
+    text-align: center;
+  vertical-align: middle;
+
+}
+
+.c-font-size-order-list td{
+    font-size: 8pt;
+    text-align: center;
+  vertical-align: middle;
+}
+
+.c-width-button-order-list{
+    min-width: 100px;
+}

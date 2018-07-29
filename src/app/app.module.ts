@@ -20,6 +20,8 @@ import { C001LoginComponent } from './c001-login/c001-login.component';
 import { C002RegisterComponent } from './c002-register/c002-register.component';
 import { C003ProfileComponent } from './c003-profile/c003-profile.component';
 import { C004SaleComponent } from './c004-sale/c004-sale.component';
+import { C005OrderListComponent } from './c005-order-list/c005-order-list.component';
+import { C006MakeOrderComponent } from './c006-make-order/c006-make-order.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { C004SaleComponent } from './c004-sale/c004-sale.component';
     C001LoginComponent,
     C002RegisterComponent,
     C003ProfileComponent,
-    C004SaleComponent
+    C004SaleComponent,
+    C005OrderListComponent,
+    C006MakeOrderComponent
   ],
   imports: [
     BrowserModule,
