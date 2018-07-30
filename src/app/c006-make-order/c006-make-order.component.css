@@ -1,4 +1,130 @@
+/* Start css global */
 .c-width-form-icon-make-order{
     width: 120px;
     text-align: center !important;
+}
+.c-one-make-order h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    background: none !important;
+}
+.c-two-make-order h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.c-one-make-order .scrolling-wrapper button{
+    font-size: 10pt;
+}
+.c-one-make-order .select-list button{
+    font-size: 9pt;
+}
+.c-one-make-order .btn{
+    background: none;
+}
+.c-one-make-order .c-bg-goods-type{
+    background: white; 
+    border: solid 1px black;
+}
+.c-two-make-order #c-size-name-product-make-order{
+    min-width: 120px;
+    text-align: center;
+}
+.c-two-make-order th{
+    text-align: center;
+}
+.c-two-make-order .input-group-prepend span{
+    font-size: 10pt;
+}
+.c-two-make-order .input-group input{
+    font-size: 9pt;
+    word-spacing: -4px;
+}
+.c-two-make-order .table th{
+    font-size: 9pt;
+}
+.c-two-make-order .table td{
+    font-size: 9pt;
+    text-align: center;
+    vertical-align: middle;
+}
+.c-two-make-order .table .btn-danger{
+    font-size: 9pt;
+}
+.modal-body th{
+    font-size: 9pt;
+}
+.modal-body td{
+    font-size: 9pt;
+}
+.modal-body .c-size-input-popup input{
+    font-size: 9pt;
+}
+
+/* stop css global */
+
+
+@media (min-width: 1px) and (max-width: 375px){
+    .c-one-make-order h3{
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: underline;
+        background: none !important;
+    }
+    .c-two-make-order h3{
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .c-one-make-order .scrolling-wrapper button{
+        font-size: 10pt;
+    }
+    .c-one-make-order .select-list button{
+        font-size: 9pt;
+    }
+    .c-one-make-order .btn{
+        background: none;
+    }
+    .c-one-make-order .c-bg-goods-type{
+        background: white; 
+        border: solid 1px black;
+    }
+    .c-width-form-icon-make-order{
+        width: 80px;
+        text-align: center !important;
+    }
+    .c-two-make-order th{
+        text-align: center;
+    }
+    .c-two-make-order #c-size-name-product-make-order{
+        min-width: 100px;
+    }
+    .c-two-make-order .input-group-prepend span{
+        font-size: 9pt;
+    }
+    .c-two-make-order .input-group input{
+        font-size: 8pt;
+        word-spacing: -4px;
+    }
+    .c-two-make-order .table th{
+        font-size: 8pt;
+    }
+    .c-two-make-order .table td{
+        font-size: 8pt;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .c-two-make-order .table .btn-danger{
+        font-size: 8pt;
+    }
+    .modal-body th{
+        font-size: 8pt;
+    }
+    .modal-body td{
+        font-size: 8pt;
+    }
+    .modal-body .c-size-input-popup input{
+        font-size: 8pt;
+    }
 }

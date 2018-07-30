@@ -5,36 +5,38 @@
         <h6 class="lao-font text-center">
           <u>ລາຍງານການເຄື່ອນໄຫວປະຈຳວັນ</u>
         </h6>
-        <div class="row col-lg-8 offset-lg-2 col-md-10 offset-md-1">
-          <div class="row input-group  col-12 p-0 m-0">
-            <div class="input-group-prepend">
-              <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າເຂົ້າ</span>
-            </div>
-            <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().qtty | number:'1.0-0'}}</button>
-            <div class="input-group-prepend">
-              <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳເຂົ້າ</span>
-            </div>
-            <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().ttvalue | number:'1.0-0'}}</button>
-          </div>
-          <div class="row2 input-group col-12 p-0 m-0">
-            <div class="input-group-prepend">
-              <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າອອກ</span>
-            </div>
-            <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().qtty}}</button>
-            <div class="input-group-prepend">
-              <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳອອກ</span>
-            </div>
-            <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().ttvalue | number:'1.0-0'}}</button>
-          </div>
-          <div class="row2 input-group col-12 p-0 m-0 mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ສິນຄ້າຄ້າງສາງ</span>
-            </div>
-            <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().qtty)-(sumExport().qtty) | number:'1.0-0'}}</button>
-            <div class="input-group-prepend">
-              <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ລວມມູນຄ່າ</span>
-            </div>
-            <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().ttvalue)-(sumExport().ttvalue) | number:'1.0-0'}}</button>
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-12">
+              <div class="row input-group  col-12 p-0 m-0">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າເຂົ້າ</span>
+                  </div>
+                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().qtty | number:'1.0-0'}}</button>
+                  <div class="input-group-prepend">
+                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳເຂົ້າ</span>
+                  </div>
+                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().ttvalue | number:'1.0-0'}}</button>
+                </div>
+                <div class="row2 input-group col-12 p-0 m-0">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າອອກ</span>
+                  </div>
+                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().qtty}}</button>
+                  <div class="input-group-prepend">
+                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳອອກ</span>
+                  </div>
+                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().ttvalue | number:'1.0-0'}}</button>
+                </div>
+                <div class="row2 input-group col-12 p-0 m-0 mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ສິນຄ້າຄ້າງສາງ</span>
+                  </div>
+                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().qtty)-(sumExport().qtty) | number:'1.0-0'}}</button>
+                  <div class="input-group-prepend">
+                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ລວມມູນຄ່າ</span>
+                  </div>
+                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().ttvalue)-(sumExport().ttvalue) | number:'1.0-0'}}</button>
+                </div>
           </div>
         </div>
 

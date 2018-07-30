@@ -30,13 +30,6 @@
     -webkit-overflow-scrolling: touch;
 
 }
-
-.color-head-transfer {
-    font-size: 12pt;
-    color: red;
-    line-height: 10px;
-}
-
 .color-content-transfer {
     font-size: 12pt;
     color: black;
@@ -62,11 +55,3 @@
     width: 25px !important;
 }
 
-.c-size-photo-type-make-order{
-    height: 60px;
-    width: 60px;
-}
-.c-size-photo-list-make-order{
-    height: 40px;
-    width: 40px
-}

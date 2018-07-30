@@ -1,5 +1,5 @@
 <div class="container c-margin-top-sale-page">
-  <section class="c-one-logo-sale-page mb-3">
+  <section class="c-one-logo-sale-page">
     <!-- ຮູບໂລໂກໜ້າຂາຍສິນຄ້າ -->
     <div class="logo-sale-page c-laptop-screen-sale-page col-lg-8 offset-lg-2 col-md-10 offset-md-1">
       <div class="card main-bg c-padding-sale-page row">
@@ -48,22 +48,30 @@
         <div class="col-md-4 col-sm-6 col-12">
           <button class="btn lao-font w-100 h-main-menu" [routerLink]="['/order-list-details']">
             <i class="fas fa-list-ul"></i>
-            <br>ລາຍການສັ່ງສິນຄ້າ</button>
+            <br>ລາຍຊື່ພະນັກງານທັງໝົດ</button>
         </div>
         <div class="col-md-4 col-sm-6 col-12">
           <button class="btn lao-font mr-auto w-100 h-main-menu" data-target="#select_make_order" data-toggle="modal">
             <i class="fab fa-medrt"></i>
-            <br>ສ້າງສິນຄ້າ</button>
+            <br>ສ້າງອໍເດີ້</button>
         </div>
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn lao-font mr-auto w-100 h-main-menu">
+          <button class="btn lao-font mr-auto w-100 h-main-menu" [routerLink]="['/profile']">
             <i class="fas fa-user-circle"></i>
             <br>ຂໍ້ມູນສ່ວນຕົວ</button>
         </div>
       </div>
     </div>
   </section>
+
 </div>
+    <section class="c-three-sale-page">
+      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col">
+          <app-c005-order-list></app-c005-order-list>
+      </div>        
+      </section>
+
+
 
 
 <!-- ປ໋ອບອັບສ້າງສິນຄ້າໃຫ້ຕົນເອງ ຫຼື ທີມງານ Modal-select-to-make-order -->

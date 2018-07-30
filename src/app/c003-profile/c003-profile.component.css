@@ -43,6 +43,9 @@ h6{
 
 
 @media (min-width: 1px) and (max-width: 375px){
+    .c-margin-top-login-page{
+        margin-top:15%;
+    }
     .a-photo-login-size{
         height: 100px;
         width: 100px;
