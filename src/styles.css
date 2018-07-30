@@ -12,10 +12,10 @@
 }
 
 .eng-font{
-    font-family: 'COMIC';
+    font-family: 'OldStandard';
     font-weight: normal;
     /* font-style: normal; */
-    src: url('assets/css/fonts/COMIC.ttf');
+    src: url('assets/css/fonts/OldStandard-Italic2.ttf');
 }
 
 
