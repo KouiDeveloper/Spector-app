@@ -23,6 +23,7 @@ import { C004SaleComponent } from './c004-sale/c004-sale.component';
 import { C005OrderListComponent } from './c005-order-list/c005-order-list.component';
 import { C006MakeOrderComponent } from './c006-make-order/c006-make-order.component';
 import { C007ListEmployeeComponent } from './c007-list-employee/c007-list-employee.component';
+import { C008ChangePasswordComponent } from './c008-change-password/c008-change-password.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { C007ListEmployeeComponent } from './c007-list-employee/c007-list-employ
     C004SaleComponent,
     C005OrderListComponent,
     C006MakeOrderComponent,
-    C007ListEmployeeComponent
+    C007ListEmployeeComponent,
+    C008ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

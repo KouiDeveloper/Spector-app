@@ -61,6 +61,9 @@
 .modal-body .c-size-input-popup input{
     font-size: 9pt;
 }
+.c-two-make-order .c-button-make-order button{
+    font-size: 10pt;
+}
 
 /* stop css global */
 
@@ -118,6 +121,10 @@
     .c-two-make-order .table .btn-danger{
         font-size: 8pt;
     }
+    .c-two-make-order .c-button-make-order button{
+        font-size: 8pt;
+    }
+    
     .modal-body th{
         font-size: 8pt;
     }

@@ -32,7 +32,7 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text lao-font c-font-size-form c-width-form-icon"><i class="fas fa-user mx-auto"></i></span>
                   </div>
-                  <input type="number" for="name" class="form-control c-font-size-form" placeholder="ID">
+                  <input type="number" id="name" class="form-control c-font-size-form" placeholder="ID">
                 </div>
 
                 <!-- ປ້ອນລະຫັດຜ່ານ -->
@@ -41,14 +41,14 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text lao-font c-font-size-form c-width-form-icon"><i class="fas fa-unlock-alt mx-auto"></i></span>
                   </div>
-                  <input type="password" class="form-control c-font-size-form" placeholder="PASSWORD">
+                  <input type="password" id="password" class="form-control c-font-size-form" placeholder="PASSWORD">
                 </div>
             </div>
             <!-- ປຸ່ມກົດຢືນຢັນເຂົ້າສູ່ລະບົບ -->
             <button class="btn mb-3 d-block mx-auto c-font-size-form col-4" [routerLink]="['/sale']">ເຂົ້າສູ່ລະບົບ</button>            
           </form>
           <hr class="col-6 mt-0">
-          <h6 class="text-center m-0 p-0">ລືມລະຫັດຜ່ານ?<a href="#">ກູ້ລະຫັດຜ່ານ</a></h6>
+          <h6 class="text-center m-0 p-0">ລືມລະຫັດຜ່ານ?<a [routerLink]="['/change-password']">ກູ້ລະຫັດຜ່ານ</a></h6>
         </div>
 
       </div>

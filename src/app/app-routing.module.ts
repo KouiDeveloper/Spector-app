@@ -18,6 +18,7 @@ import { C004SaleComponent } from './c004-sale/c004-sale.component';
 import { C005OrderListComponent } from './c005-order-list/c005-order-list.component';
 import { C006MakeOrderComponent } from './c006-make-order/c006-make-order.component';
 import { C007ListEmployeeComponent } from './c007-list-employee/c007-list-employee.component';
+import { C008ChangePasswordComponent } from './c008-change-password/c008-change-password.component';
 
 const routes: Routes = [
   { path: '', component: A002IndexComponent },
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: 'sale', component: C004SaleComponent},
   { path: 'order-list-details', component: C005OrderListComponent},
   { path: 'make-order',component:C006MakeOrderComponent},
-  { path: 'list-employee', component:C007ListEmployeeComponent}
+  { path: 'list-employee', component:C007ListEmployeeComponent},
+  { path: 'change-password', component:C008ChangePasswordComponent}
 ];
 
 @NgModule({
