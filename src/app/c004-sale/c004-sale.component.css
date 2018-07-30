@@ -130,7 +130,16 @@ h1{
         width: 60px
         
     }
-  
+    .select-list button{
+        font-size: 9pt;
+    }
+    .c-bg-goods-type{
+        background: white; 
+        border: solid 1px black;
+    }
+    .select-list .btn{
+        background: none;
+    }
 
 
 
