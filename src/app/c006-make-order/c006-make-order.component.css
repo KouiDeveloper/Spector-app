@@ -19,6 +19,7 @@
 }
 .c-one-make-order .select-list button{
     font-size: 9pt;
+    word-spacing: -4px;
 }
 .c-one-make-order .btn{
     background: none;
@@ -26,6 +27,9 @@
 .c-one-make-order .c-bg-goods-type{
     background: white; 
     border: solid 1px black;
+}
+.c-one-make-order h5{
+    font-size: 1.1rem;
 }
 .c-two-make-order #c-size-name-product-make-order{
     min-width: 120px;
@@ -84,7 +88,8 @@
         font-size: 10pt;
     }
     .c-one-make-order .select-list button{
-        font-size: 9pt;
+        font-size: 7pt;
+        word-spacing: -3px;
     }
     .c-one-make-order .btn{
         background: none;
@@ -92,6 +97,9 @@
     .c-one-make-order .c-bg-goods-type{
         background: white; 
         border: solid 1px black;
+    }
+    .c-one-make-order h5{
+        font-size: 0.9rem;
     }
     .c-width-form-icon-make-order{
         width: 80px;

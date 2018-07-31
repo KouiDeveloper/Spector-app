@@ -1,0 +1,144 @@
+<div class="container-fluid">
+  <div class="container mt-5 pt-3">
+    <button class="btn btn-primary mb-3 home-btn" [routerLink]="['/index']">HOME</button>
+    <section class="one bg-add-products pd-add-prod">
+      <h1 class="text-center text-uppercase pt-4 eng-font">
+        <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> MOUNAO BUFFET
+        <i class="fas fa-feather-alt icon-mounao"></i>
+      </h1>
+      <button class="import-icon-add-pd d-block mx-auto mb-3">
+        <i class="fab fa-medrt"></i>
+      </button>
+      <h2 class="lao-font text-center mb-4">ສ້າງສິນຄ້າ</h2>
+      <div class="start-test">
+        <div class="scrolling-wrapper lao-font">
+          <button class=" btn choose-goods-type ml-1" *ngFor="let m of _goodstype" [class]="checkSelectedGoodsType(m.name)" (click)="selectGoodsType(m)">
+            <img [src]="getURL(m.src)" class="w-50 h-50 rounded-circle mb-2" alt="">
+            <br>{{m.name}}</button>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-md-3 col-12">
+          <div class="photo d-flex justify-content-center">
+            <label class="btn">
+              <img src="../../assets/img/shrimp.jpg" alt="" class="w-px rounded-circle">
+              <input type="file" name="file_up" id="file_up" hidden>
+            </label>
+          </div>
+        </div>
+        <div class="col-md-9 col-12 lao-font">
+          <div class="input-group input-group-sm mb-3" *ngIf="_isEdit">
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ຊື່ສິນຄ້າ</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="_product.name"
+                (Change)="_product.name=$event.target?$event.target.value:''">
+              <div class="input-group-append lao-font">
+                <select name="" id="" (change)="selectUnit($event.target.value)" class="form-control">
+                  <option class="lao-font" [value]="s" [selected]="s === _rightUnit" *ngFor="let s of _units">{{s}}</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ລະຫັດສິນຄ້າ</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="_product.code"
+                (Change)="_product.code=$event.target?$event.target.value:''" disabled>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text ip-text-w lao-font border-right-0" id="inputGroup-sizing-default">ລາຄາ</span>
+              <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)]="_product.price" (Change)="_product.price=$event.target?$event.target.value:''">
+              <div class="input-group-append">
+                <span class="input-group-text" (click)="getRightCurrency()">
+                  <button class="btn btn-default">{{_rightCurrency}}</button>
+                </span>
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ໝາຍເຫດ</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="_product.description"
+                (Change)="_product.description=$event.target?$event.target.value:''">
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="d-flex justify-content-center mx-auto">
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" (click)="addNew()" *ngIf="!_isNew">
+          <i class="far fa-plus-square"></i>
+          <br>ເພີ່ມໃໝ່</button>
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" *ngIf="_isEdit" (click)="updateProduct()">
+          <i class="far fa-edit"></i>
+          <br>ອັບເດດ</button>
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" (click)="cancle()" *ngIf="_isEdit">
+          <i class="fas fa-sign-out-alt"></i>
+          <br>ຍົກເລີກ</button>
+        <button class="btn btn-outline-secondary col-md-2 col-3 mb-3 ml-3 lao-font" (click)="addObsoletedProduct()" *ngIf="_isEdit&&!_isNew ">
+          <i class="far fa-trash-alt"></i>
+          <br>ລົບລ້າງ</button>
+      </div>
+    </section>
+
+    <hr class="col-10">
+    <section class="two bg-add-products pd-add-prod">
+      <div class="table-second">
+        <div class="card">
+          <h2 class="lao-font text-center mt-4">ລາຍການສິນຄ້າທີ່ມີໃນຄັງ</h2>
+          <div class=" row input-group mb-2 col-md-4 offset-md-4 col-8 offset-2 ">
+              <input type="text" class="form-control" [(ngModel)]='_search_text' (keypress)="searchStock($event)">
+              <button>
+                <i class="fas fa-search color-search-add-pd"></i>
+              </button>
+            </div>
+          <section class="two bg-add-products pd-add-prod">
+            <div class="table-second">
+              <div class="card">
+                <div class="card-body">
+                  <div class=" mb-4 lao-font">
+                    <div class="row" id="scrollspy-menu">
+
+                      <div class="col-md-3 col-xl-1  col-iphone-6 device-mobile .col-desktop mb-3" *ngFor="let n of filterArrStock()"
+                        (click)="selectProduct(n)">
+                        <div class="device-in">
+                          <div class=" d-flex justify-content-center align-items-center">
+                            <img src="../../assets/img/shrimp.jpg" alt="" class="h-50 w-50 rounded-circle">
+                          </div>
+                          <ul class="list-group hover-list">
+                            <li class="list-group-item disabled">
+                              <img src="../../assets/img/icon/name-product.png" id="size-icon"> : {{n.name}}</li>
+                            <li class="list-group-item">
+                              <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{n.code}}</li>
+                            <li class="list-group-item">
+                              <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{n.price | number:'1.0-0'}}</li>
+                            <li class="list-group-item">
+                              <img src="../../assets/img/icon/currency.png" id="size-icon"> : {{n.currency}}</li>
+                            <li class="list-group-item">
+                              <img src="../../assets/img/icon/scale-kg.png" id="size-icon"> : {{n.unit}}</li>
+                            <li class="list-group-item">
+                              <img src="../../assets/img/icon/description.png" id="size-icon"> : {{n.description}}</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <br>   
+  </div>
+  <br>
+</div>

@@ -1,0 +1,315 @@
+
+ .w-px {
+    height: 160px;
+    width: 160px;
+}
+.size-img-make-product{
+    height: 80px;
+    width: 80px;
+}
+.text-content-center td{
+    text-align: center;
+    vertical-align:middle;
+}
+.ip-text-w{
+    width: 100px;
+}
+
+
+
+.container{
+    color: rgb(83, 81, 81);
+    background-color:#c8e6c9;
+    border-color: #007bff;
+}
+.card{
+    background-color: #e8f5e9;
+}
+.card, .table-bordered, th, td{
+    border-color:rgb(121, 118, 118) !important;
+    color: rgb(56, 55, 55);
+    
+    border-color: rgb(248, 248, 234);
+}
+.bg-add-products{
+    padding:40px;
+    padding-top:30px;
+    color: rgb(56, 55, 55);
+    background-color: #e8f5e9;
+    border-color: #007bff;
+}
+.import-icon-add-pd{
+    border-radius: 15px 15px 15px 15px;
+    border: #1e7e34 1px solid;
+    box-shadow: 0px 0px 2px 2px rgba(63, 104, 63, 0.397);
+    background-color: #e0f5e2;
+    width: 160px;
+    height: 120px;
+    font-size: 50pt;
+    color: #272927;
+}
+
+ .w-px {
+    height: 150px;
+    width: 150px;
+}
+
+.size-img-make-product{
+    height: 80px;
+    width: 80px;
+}
+.text-content-center td{
+    text-align: center;
+    vertical-align:middle;
+}
+.ip-text-w{
+    width: 100px;
+}
+
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #d0d2d3;
+  }
+  
+  .table-bordered thead th,
+  .table-bordered thead td {
+    border-bottom-width: 1px;
+  }
+
+.bg-list-stock:hover{
+    font-size: 13pt;
+    transition: 0.5s;
+    color: rgb(100, 90, 90);
+    cursor: pointer;
+    background:rgba(245, 245, 209, 0.767) !important;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #3a9951 !important;
+    border-color: #28a745;
+  }
+  
+  .btn-success:hover {
+    color: #fff;
+    background-color: #218838 !important;
+    border-color: #1e7e34;
+  }
+  .choose-goods-type{
+      height: 140px !important;
+      width: 200px !important;
+      background: rgb(207, 207, 175);
+      color: rgb(48, 45, 45);
+      cursor: pointer;
+  }
+  .choose-goods-type:hover{
+    transition: .4s;
+    font-size: 13pt;
+    height: 140px !important;
+    width: 200px !important;
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    cursor: pointer;
+}
+   
+  .selectedclass{
+    height: 140px !important;
+    width: 200px !important;
+    color: #212529;
+    background: #ffc107;
+    border-color: #ffc107;
+  }
+  .selectedclass:hover{
+    color: #212529;
+    background-color: #d6b961;
+    border-color: #d39e00;
+  }
+
+  .selectedclass:focus, .selectedclass.focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+  }
+  
+  .selectedclass.disabled, .selectedclass:disabled {
+    color: #212529;
+    background-color: #ffc107;
+    border-color: #ffc107;
+  }
+  /* .width-choose-goods{
+      width: 1200px;
+
+  } */
+  .choose-goods-type{
+      height: 40px;
+      width: 120px;
+  }
+
+
+
+  /* css screen */
+
+  @media (min-width: 300px) and (max-width: 320px) {
+    .pd-add-prod{
+        padding: 10px;
+    }
+    .d-block-two-one {
+        display: block !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
+      .col-iphone-6 {
+        -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+      }
+      .btn-outline-secondary{
+        font-size: 8pt;
+      }
+   }
+
+   @media (min-width: 321px) and (max-width: 459px) {
+    .pd-add-prod{
+        padding: 10px;
+    }
+    .d-block-two-one {
+        display: block !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+      }
+      .col-iphone-6 {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+      .btn-outline-secondary{
+        font-size: 8pt;
+      }
+   }
+
+
+   @media (min-width: 460px) and (max-width: 600px) {
+    .pd-add-prod{
+        padding: 10px;
+    }
+    .col-iphone-6 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 0 0 33.333333%;
+      }
+      .btn-outline-secondary{
+        font-size: 9pt;
+      }
+}
+
+
+   @media (min-width: 601px) and (max-width: 800px) {
+    .pd-add-prod{
+        padding: 10px;
+    }
+    .col-iphone-6 {
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+      }
+      .btn-outline-secondary{
+        font-size: 9pt;
+      }
+}
+
+  @media (min-width: 992px) { 
+      .pd-add-prod{
+          padding: 30px;
+      }
+      /* .selectedclass{
+        height: 140px !important;
+        width: 200px !important;
+        color: #212529;
+        background-color: #ffc107;
+        border-color: #ffc107;
+      }
+      .selectedclass:hover{
+        color: #212529;
+        background-color: #e0a800;
+        border-color: #d39e00;
+      } */
+      .btn-outline-secondary{
+        font-size: 9pt;
+      }
+   }
+
+   @media (min-width: 1000px) and (max-width: 1500px) {
+    .ip-text-w {
+      width: 140px;
+    }
+    .btn-outline-secondary{
+      font-size: 9pt;
+    }
+}
+@media (min-width: 1000px) and (max-width: 1500px) {
+  .ip-text-w {
+    width: 140px;
+  }
+  .input-group-text {
+    font-size: 10pt !important;
+  }
+  .pd-add-prod {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 1.9rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .bg-add-products {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(56, 55, 55);
+    background-color: #e5e7e9;
+    border-color: #007bff;
+  }
+  .form-control {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.6rem;
+    line-height: 0.1;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .import-icon-add-pd {
+    border-radius: 15px 15px 15px 15px;
+    border: #1e7e34 1px solid;
+    box-shadow: 0px 0px 2px 2px rgba(63, 104, 63, 0.397);
+    width: 120px;
+    height: 60px;
+    font-size: 22pt;
+    color: #1e7e34;
+    background-color: #eceff1;
+    border-color: #007bff;
+  }
+  .col-iphone-6 {
+    -ms-flex: 0 0 14%;
+    flex: 0 0 14%;
+    max-width: 14%;
+  }
+  .btn-outline-secondary{
+    font-size: 10pt;
+  }
+}
+
+
+@media (min-width: 1501px) and (max-width: 2500px) {
+    .col-iphone-6 {
+        -ms-flex: 0 0 11%;
+        flex: 0 0 11%;
+        max-width: 11%;
+      }
+      .btn-outline-secondary{
+        font-size: 10pt;
+      }
+}

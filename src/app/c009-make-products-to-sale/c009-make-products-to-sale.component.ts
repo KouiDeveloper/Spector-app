@@ -19,17 +19,12 @@ import { WebsocketService } from "../websocket.service";
 import { ElementRef, ViewChild } from "@angular/core";
 
 @Component({
-  selector: "app-a004-make-products",
-  templateUrl: "./a004-make-products.component.html",
-  styleUrls: [
-    "./custom-selectedclass.css",
-    "../a005-add-products/a005-add-products.component.css",
-    "../a005-add-products/customStyle-type-menu.css",
-    "./a004-make-products.component.css"
-  ],
+  selector: 'app-c009-make-products-to-sale',
+  templateUrl: './c009-make-products-to-sale.component.html',
+  styleUrls: ['./c009-make-products-to-sale.component.css','./custom-selectedclass.css'],
   providers: [WebsocketDataServiceService, ChatService, WebsocketService]
 })
-export class A004MakeProductsComponent {
+export class C009MakeProductsToSaleComponent {
   closeResult: string;
   @ViewChild("Alert_update_details") Alert_update_details: ElementRef;
   public now = new Date();
