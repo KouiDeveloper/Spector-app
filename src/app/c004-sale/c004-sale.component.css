@@ -1,5 +1,5 @@
 h1{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 .c-margin-top-sale-page{
    margin-top: 3%;
@@ -54,12 +54,12 @@ h1{
 
 
 
-@media (min-width: 1px) and (max-width: 376px){
+@media (min-width: 1px) and (max-width: 400px){
     .c-margin-top-sale-page{
         margin-top: 15%;
      }
     h1{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
     .c-width-form-icon{
         width: 40px !important;

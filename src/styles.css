@@ -58,3 +58,15 @@ body{
     color: rgb(17, 104, 17);
     transform: rotate(-90deg);
 }
+
+#a-size-logo-mounao-index-page {
+    height: 120px;
+    width: 120px;
+}
+
+
+@media (min-width:1px) and ( max-width:310px){
+    .container{
+        display: none !important;
+    }
+}

@@ -76,19 +76,27 @@
 .c-two-make-order .c-button-make-order button{
     font-size: 10pt;
 }
-
+.zero h1{
+    font-size: 1.5rem;
+    -webkit-text-stroke: 0.1px green;
+}
   
 
 /* stop css global */
 
-@media (min-width:1px) and ( max-width:310px){
+@media (min-width:1px) and ( max-width:319px){
     .container{
         display: none !important;
     }
 }
 @media (min-width: 320px) and (max-width: 375px){
+    .zero h1{
+        font-size: 0.9rem;
+        -webkit-text-stroke: 0.1px green;
+        font-weight: bold;
+    }
     .c-one-make-order h3{
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: bold;
         text-decoration: underline;
         background: none !important;
@@ -158,8 +166,18 @@
     }
 }
 
-@media (min-width: 768px) and (max-width:1200px){
+@media (min-width:376px) and (max-width: 767px){
+    .zero h1{
+        font-size: 1.2rem;
+        -webkit-text-stroke: 0.1px green;
+    }
+}
 
+@media (min-width: 768px) and (max-width:1200px){
+    .zero h1{
+        font-size: 1.1rem;
+        -webkit-text-stroke: 0.1px green;
+    }
   
     .c-width-form-icon-make-order{
         width: 70px;
