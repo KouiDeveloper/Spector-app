@@ -21,6 +21,14 @@
     font-size: 9pt;
     word-spacing: -4px;
 }
+.c-one-make-order .select-list-medium button{
+    font-size: 8pt;
+    word-spacing: -4px;
+}
+.c-one-make-order .select-list-small button{
+    font-size: 7pt;
+    word-spacing: -4px;
+}
 .c-one-make-order .btn{
     background: none;
 }
@@ -69,10 +77,16 @@
     font-size: 10pt;
 }
 
+  
+
 /* stop css global */
 
-
-@media (min-width: 1px) and (max-width: 375px){
+@media (min-width:1px) and ( max-width:310px){
+    .container{
+        display: none !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 375px){
     .c-one-make-order h3{
         font-size: 1rem;
         font-weight: bold;
@@ -141,5 +155,92 @@
     }
     .modal-body .c-size-input-popup input{
         font-size: 8pt;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1200px){
+
+  
+    .c-width-form-icon-make-order{
+        width: 70px;
+        text-align: center !important;
+    }
+    .c-one-make-order h3{
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: underline;
+        background: none !important;
+    }
+    .c-two-make-order h3{
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+    .c-one-make-order .scrolling-wrapper button{
+        font-size: 10pt;
+    }
+    .c-one-make-order .select-list button{
+        font-size: 9pt;
+        word-spacing: -4px;
+    }
+    .c-one-make-order .select-list-medium button{
+        font-size: 8pt;
+        word-spacing: -4px;
+    }
+    .c-one-make-order .select-list-small button{
+        font-size: 7pt;
+        word-spacing: -4px;
+    }
+    .c-one-make-order .btn{
+        background: none;
+    }
+    .c-one-make-order .c-bg-goods-type{
+        background: white; 
+        border: solid 1px black;
+    }
+    .c-one-make-order h5{
+        font-size: 1.1rem;
+    }
+    .c-two-make-order #c-size-name-product-make-order{
+        min-width: 80px;
+        text-align: center;
+    }
+    .c-two-make-order th{
+        text-align: center;
+    }
+    .c-two-make-order .input-group-prepend span{
+        font-size: 7pt;
+    }
+    .c-two-make-order .input-group input{
+        font-size: 7pt;
+        word-spacing: -4px;
+    }
+    .c-two-make-order .table th{
+        font-size: 7pt;
+    }
+    .c-two-make-order .table td{
+        font-size: 7pt;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .c-two-make-order .table .btn-danger{
+        font-size: 9pt;
+    }
+    .c-two-make-order .width-medium-button-make-order-page button{
+        padding: none !important;
+        margin: none !important;
+        font-size: 1pt !important;
+    }
+    .modal-body th{
+        font-size: 9pt;
+    }
+    .modal-body td{
+        font-size: 9pt;
+    }
+    .modal-body .c-size-input-popup input{
+        font-size: 9pt;
+    }
+    .c-two-make-order .c-button-make-order button{
+        font-size: 10pt;
     }
 }

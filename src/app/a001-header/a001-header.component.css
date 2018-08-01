@@ -14,7 +14,10 @@
 .navbar-toggler-icon{
     color: #ffffff !important;
 }
-
+.btn-secondary{
+    border-radius: 20px 20px 20px 20px;
+    background: black !important;
+}
 
 @media (min-width: 990px) and (max-width: 2024px){
     .a-nav-login-header-page {
