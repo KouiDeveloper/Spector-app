@@ -57,6 +57,6 @@ import { C009MakeProductsToSaleComponent } from './c009-make-products-to-sale/c0
     NgbModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,A001HeaderComponent,ZFooterComponent]
 })
 export class AppModule { }

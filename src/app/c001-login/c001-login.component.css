@@ -1,5 +1,6 @@
 .c-margin-top-login-page{
-    margin-top:10%;
+    margin-top:6%;
+    margin-bottom: 6%;
 }
 .card{
     background: #e7fafd4b !important;
@@ -39,6 +40,9 @@ h6{
 
 
 @media (min-width: 1px) and (max-width: 375px){
+    .c-margin-top-login-page{
+        margin-top:15%;
+    }
     .a-photo-login-size{
         height: 100px;
         width: 100px;
@@ -111,11 +115,3 @@ h6{
         padding-right: 10px;
     }
 }  
-@media (min-width: 501px) and (max-width: 650px){}  
-@media (min-width: 651px) and (max-width: 800px){} 
-@media (min-width: 801px) and (max-width: 950px){}
-@media (min-width: 951px) and (max-width: 1024px){}
-@media (min-width: 1025px) and (max-width: 1200px){}
-@media (min-width: 1201x) and (max-width: 1500px){}
-@media (min-width: 1501x) and (max-width: 1800px){}
-@media (min-width: 1801x) and (max-width: 2000px){}

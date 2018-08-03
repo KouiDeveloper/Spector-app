@@ -34,7 +34,8 @@
 }
 .c-one-make-order .c-bg-goods-type{
     background: white; 
-    border: solid 1px black;
+    border: solid 1px #88888888;
+    box-shadow: 0px 0px 1px 0px #cccaca;
 }
 .c-one-make-order h5{
     font-size: 1.1rem;
@@ -80,6 +81,30 @@
     font-size: 1.5rem;
     -webkit-text-stroke: 0.1px green;
 }
+.c-bg-goods-type:hover{
+    color: #212529;
+    background-color: #d6b961 !important;
+    border-color: 2px solid #d39e00 !important;
+    box-shadow: 0px 4px 0px 0px  #888888 !important;
+    transition: box-shadow 500ms !important;
+}
+.selectedclass{
+    color: #212529;
+    background: #ffc107 !important;
+    border-color: 2px solid #d39e00 !important;
+    box-shadow: 0px 4px 0px 0px  #61615f !important;
+  }
+  .selectedclass:hover{
+    color: #212529;
+    background-color: #d6b961 !important;
+    border-color: 2px solid #d39e00 !important;
+    box-shadow: 0px 4px 0px 0px  #888888 !important;
+    transition: box-shadow 500ms !important; 
+  }
+  .btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
   
 
 /* stop css global */
@@ -118,7 +143,8 @@
     }
     .c-one-make-order .c-bg-goods-type{
         background: white; 
-        border: solid 1px black;
+    border: solid 1px #88888888;
+    box-shadow: 0px 0px 1px 0px #cccaca;
     }
     .c-one-make-order h5{
         font-size: 0.9rem;
@@ -214,7 +240,8 @@
     }
     .c-one-make-order .c-bg-goods-type{
         background: white; 
-        border: solid 1px black;
+    border: solid 1px #88888888;
+    box-shadow: 0px 0px 1px 0px #cccaca;
     }
     .c-one-make-order h5{
         font-size: 1.1rem;
