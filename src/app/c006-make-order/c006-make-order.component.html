@@ -52,7 +52,7 @@
         <div class="select-list text-center lao-font">
           <h5 class="lao-font text-center btn-info p-3 mt-3">
             <i class="fab fa-drupal mr-1"></i>ຊະນິດເຄື່ອງດື່ມຂະໜາດໃຫຍ່</h5>
-          <button class=" btn choose-goods-type p-1 col-xl-2 col-lg-2 col-md-3 col-3">
+          <button class=" btn choose-goods-type p-1 col-xl-2 col-lg-2 col-md-3 col-3" data-toggle="modal" data-target="#selectPrice">
             <div class="c-bg-goods-type">
               <img src="../../assets/img/icon-sale/Mirinda-green.png" class="h-100 w-100 mb-1" alt="">
               <br>ນ້ຳຂຽວໃຫຍ່
@@ -384,7 +384,7 @@
             </div>
 
             <div class="col-md-4 col-sm-6 col-12 mb-3">
-              <button class="btn btn-sm btn-success lao-font w-100">
+              <button class="btn btn-sm btn-success lao-font w-100" [routerLink]="['/print-bill']">
                 <i class="fas fa-list-ul"></i>
                 <br>ພິມບິນ</button>
             </div>
@@ -416,19 +416,19 @@
                 <thead class="thead-light">
                   <tr>
                     <th scope="col" style="min-width: 70px;">ຊື່ສິນຄ້າ</th>
-                    <th scope="col" style="min-width: 80px;">ລາຄາ</th>
                     <th scope="col" style="min-width: 60px;">ຈຳນວນ</th>
-                    <th scope="col" style="min-width: 60px;">ລວມ</th>
+                    <th scope="col" style="min-width: 80px;">ລາຄາ</th>
+                    <th scope="col" style="min-width: 60px;">ລາຄາລວມ</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr class="c-size-input-popup">
                     <td>ນ້ຳແປບຊີ້</td>
                     <td>
-                      <input type="number" class="form-control" value="5000">
+                      <input type="number" class="form-control" value="4">
                     </td>
                     <td>
-                      <input type="number" class="form-control">
+                      <input type="number" class="form-control" value="5000">
                     </td>
                     <td>20.000</td>
                   </tr>

@@ -17,6 +17,11 @@
     font-size: 1.5rem;
     -webkit-text-stroke: 0.1px green;
 }
+.c-width-form-icon{ 
+    width: 50px;
+}
+
+
 @media (min-width: 320px) and (max-width: 375px){
     .zero h1{
         font-size: 0.9rem;

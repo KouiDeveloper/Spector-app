@@ -20,6 +20,7 @@ import { C006MakeOrderComponent } from './c006-make-order/c006-make-order.compon
 import { C007ListEmployeeComponent } from './c007-list-employee/c007-list-employee.component';
 import { C008ChangePasswordComponent } from './c008-change-password/c008-change-password.component';
 import { C009MakeProductsToSaleComponent } from './c009-make-products-to-sale/c009-make-products-to-sale.component';
+import { C010PrintBillComponent } from './c010-print-bill/c010-print-bill.component';
 
 const routes: Routes = [
   { path: '', component: A002IndexComponent },
@@ -40,7 +41,8 @@ const routes: Routes = [
   { path: 'make-order',component:C006MakeOrderComponent},
   { path: 'list-employee', component:C007ListEmployeeComponent},
   { path: 'change-password', component:C008ChangePasswordComponent},
-  { path: 'make-products-to-sale', component:C009MakeProductsToSaleComponent}
+  { path: 'make-products-to-sale', component:C009MakeProductsToSaleComponent},
+  { path: 'print-bill', component: C010PrintBillComponent}
 ];
 
 @NgModule({

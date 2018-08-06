@@ -25,6 +25,7 @@ import { C006MakeOrderComponent } from './c006-make-order/c006-make-order.compon
 import { C007ListEmployeeComponent } from './c007-list-employee/c007-list-employee.component';
 import { C008ChangePasswordComponent } from './c008-change-password/c008-change-password.component';
 import { C009MakeProductsToSaleComponent } from './c009-make-products-to-sale/c009-make-products-to-sale.component';
+import { C010PrintBillComponent } from './c010-print-bill/c010-print-bill.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { C009MakeProductsToSaleComponent } from './c009-make-products-to-sale/c0
     C006MakeOrderComponent,
     C007ListEmployeeComponent,
     C008ChangePasswordComponent,
-    C009MakeProductsToSaleComponent
+    C009MakeProductsToSaleComponent,
+    C010PrintBillComponent
   ],
   imports: [
     BrowserModule,
