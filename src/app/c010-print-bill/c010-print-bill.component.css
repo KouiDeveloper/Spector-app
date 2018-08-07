@@ -51,3 +51,11 @@
     font-size: 1.4rem;
     word-spacing: -8px;
 }
+   @media print 
+{
+   @page
+   {
+    size: 8.5in 5.5in !important;
+    size: landscape !important; 
+  }
+}

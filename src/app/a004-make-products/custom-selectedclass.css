@@ -57,12 +57,13 @@
     line-height: 10px;
 }
 .list-group{
-    font-size: 11pt !important;
+    font-size: 11pt;
     line-height: 0px !important;
     padding: none !important;
 }
 .list-group-item{
     padding: none !important;
+    
 }
 
 

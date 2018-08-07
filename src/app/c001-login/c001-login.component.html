@@ -29,12 +29,13 @@
           <form>
             <!-- ບ່ອນພິມຊື່ ຫຼື ໄອດີ -->
             <div class="for-typing-name p-4">
-                <label for="name" class="c-font-size-form m-0"> * ປ້ອນໄອດີ</label>
+                <label for="name" class="c-font-size-form m-0"> * ປ້ອນຊື່</label>
                 <div class="input-group mb-2 c-font-size-form">
                   <div class="input-group-prepend">
                     <span class="input-group-text lao-font c-font-size-form c-width-form-icon"><i class="fas fa-user mx-auto"></i></span>
                   </div>
-                  <input type="number" id="name" class="form-control c-font-size-form" placeholder="ID">
+                  <input type="text" id="name" class="form-control c-font-size-form" placeholder="YOURNAME" [value]="_loginUser.username===undefined?'':_loginUser.username" (input)="_loginUser.username=$event.target.value"
+                  name="loginUsername" required>
                 </div>
 
                 <!-- ປ້ອນລະຫັດຜ່ານ -->
@@ -43,11 +44,12 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text lao-font c-font-size-form c-width-form-icon"><i class="fas fa-unlock-alt mx-auto"></i></span>
                   </div>
-                  <input type="password" id="password" class="form-control c-font-size-form" placeholder="PASSWORD">
+                  <input type="password" id="password" class="form-control c-font-size-form" placeholder="PASSWORD" [value]="_loginUser.password===undefined? '' :_loginUser.password" (input)="_loginUser.password=$event.target.value"
+                  name="loginPassword" required>
                 </div>
             </div>
             <!-- ປຸ່ມກົດຢືນຢັນເຂົ້າສູ່ລະບົບ -->
-            <button class="btn mb-3 d-block mx-auto c-font-size-form col-4" [routerLink]="['/sale']">ເຂົ້າສູ່ລະບົບ</button>            
+            <button class="btn mb-3 d-block mx-auto c-font-size-form col-4" (click)="login()">ເຂົ້າສູ່ລະບົບ</button>            
           </form>
           <hr class="col-6 mt-0">
           <h6 class="text-center m-0 p-0">ລືມລະຫັດຜ່ານ?<a [routerLink]="['/change-password']">ກູ້ລະຫັດຜ່ານ</a></h6>

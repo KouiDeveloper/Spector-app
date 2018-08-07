@@ -12,4 +12,8 @@ export class C010PrintBillComponent implements OnInit {
   ngOnInit() {
   }
 
+  printMe(){
+    window.print();
+ }
+
 }

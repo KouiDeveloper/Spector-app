@@ -165,6 +165,9 @@
       .btn-outline-secondary{
         font-size: 8pt;
       }
+      .device-in .list-group .list-group-item{
+        font-size: 8pt;
+      }
    }
 
    @media (min-width: 321px) and (max-width: 459px) {

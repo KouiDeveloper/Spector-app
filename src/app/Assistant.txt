@@ -1,4 +1,4 @@
-export interface stockowner {
+﻿export interface stockowner {
     _rev: string,
     _id: string,
     name: string,
@@ -83,3 +83,8 @@ screen css :
 @media (min-width: 1201x) and (max-width: 1500px){}
 @media (min-width: 1501x) and (max-width: 1800px){}
 @media (min-width: 1801x) and (max-width: 2000px){}
+
+
+Chart !
+
+https://apexcharts.com/docs/creating-first-javascript-chart/

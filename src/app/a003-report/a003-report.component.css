@@ -98,6 +98,7 @@ background: none;
   height: 60px;
 }
 
+
 @media (min-width: 700px) and (max-width: 2000px) {
   .sf-report{
     font-size: 10pt;

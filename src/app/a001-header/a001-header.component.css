@@ -1,12 +1,13 @@
 
 .a-color-Mounao-Header{
-    color: #ffffff;
+    color: #ffffff !important;
 }
 .bg-header{
     background: black !important;
 }
 .bg-header a:hover{
-    color:red;
+    transition: .5s;
+    color:red !important;
 }
 .navbar-toggler{
     color: #ffffff;

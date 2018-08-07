@@ -35,18 +35,7 @@
                     <i class="fas fa-user mx-auto"></i>
                   </span>
                 </div>
-                <input type="text" id="name" class="form-control c-font-size-form" placeholder="ຊື່">
-              </div>
-
-              <!-- ປ້ອນໄອດີ -->
-              <label for="code_id" class="c-font-size-form m-0"> * ປ້ອນໄອດີ</label>
-              <div class="input-group c-font-size-form mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
-                    <i class="far fa-id-card mx-auto"></i>
-                  </span>
-                </div>
-                <input type="number" id="code_id" class="form-control c-font-size-form" placeholder="ໄອດີ">
+                <input type="text" id="name" class="form-control c-font-size-form" placeholder="ຊື່" (value)="_newUser.data['user']===undefined? '' : _newUser.data['user'].username" (input)="_newUser.data['user'].username=$event.target.value" required>
               </div>
 
               <!-- ປ້ອນເບີໂທ -->
@@ -57,7 +46,8 @@
                     <i class="fas fa-mobile mx-auto"></i>
                   </span>
                 </div>
-                <input type="number" id="phone" class="form-control c-font-size-form" placeholder="ເບີໂທ">
+                <input type="number" id="phone" class="form-control c-font-size-form" placeholder="ເບີໂທ" (value)="_newUser.data['user'].phonenumber===undefined? '' : _newUser.data['user'].phonenumber"
+                (input)="_newUser.data['user'].phonenumber=$event.target.value" required>
               </div>
 
               <!-- ປ້ອນລະຫັດຜ່ານ -->
@@ -68,7 +58,8 @@
                     <i class="fas fa-unlock-alt mx-auto"></i>
                   </span>
                 </div>
-                <input type="password" id="password" class="form-control c-font-size-form" placeholder="ລະຫັດຜ່ານ">
+                <input type="password" id="password" class="form-control c-font-size-form" placeholder="ລະຫັດຜ່ານ" (value)="_newUser.data['user'].password===undefined? '' : _newUser.data['user'].password"
+                (input)="_newUser.data['user'].password=$event.target.value" required>
               </div>
 
               <!-- ຢັ້ງລະຫັດຜ່ານ -->
@@ -79,33 +70,12 @@
                     <i class="fas fa-redo-alt mx-auto"></i>
                   </span>
                 </div>
-                <input type="password" id="password-confirm" class="form-control c-font-size-form" placeholder="ລະຫັດຜ່ານ">
-              </div>
-
-              <!-- ຄະແນນ -->
-              <label for="score" class="c-font-size-form m-0"> * ຄະແນນ</label>
-              <div class="input-group c-font-size-form mb-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
-                    <i class="fas fa-star mx-auto"></i>
-                  </span>
-                </div>
-                <input type="number" id="score" class="form-control c-font-size-form" placeholder="ຄະແນນ">
-              </div>
-
-              <!-- ໝາຍເຫດ -->
-              <label for="description" class="c-font-size-form m-0"> * ໝາຍເຫດ</label>
-              <div class="input-group c-font-size-form">
-                <div class="input-group-prepend">
-                  <span class="input-group-text lao-font c-font-size-form c-width-form-icon">
-                    <i class="far fa-comment-alt mx-auto"></i>
-                  </span>
-                </div>
-                <input type="text" id="description" class="form-control c-font-size-form" placeholder="ໝາຍເຫດ">
+                <input type="password" id="password-confirm" class="form-control c-font-size-form" placeholder="ລະຫັດຜ່ານ" (value)="_newUser.data['user'].confirmpassword===undefined? '' : _newUser.data['user'].confirmpassword"
+                (input)="_newUser.data['user'].confirmpassword=$event.target.value" required>
               </div>
 
               <!-- ປຸ່ມກົດຢືນຢັນການລົງທະບຽນ -->
-              <button class="btn mt-3 d-block mx-auto c-font-size-form col-4">ສຳເລັດ</button>
+              <button class="btn mt-3 d-block mx-auto c-font-size-form col-4" (click)='registerNewUser()'>ສຳເລັດ</button>
 
             </div>
           </form>

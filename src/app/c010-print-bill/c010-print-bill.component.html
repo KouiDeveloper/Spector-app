@@ -3,7 +3,7 @@
         <section class="c-two-make-order lao-font mb-3 pb-3" style="background: rgba(153, 175, 175, 0.123)">
             <div class="logo-bill text-center">
                 <img src="../../assets/img/Logo-Mounao.png" alt="" class="h-25 w-25">
-                <h2 class="lao-font">ຮ້ານອາຫານ ໝູໜາວ ບຸບເຟ່</h2>
+                <h2 class="lao-font">ບິນຮັບເງິນ</h2>
                 <h6 class="text-center">***********************************</h6>
             </div>
           <h3 class="text-center lao-font mt-3">
@@ -73,8 +73,6 @@
                     <th scope="col" style="min-width: 60px;">ລາຄາ</th>
                     <th scope="col" style="min-width: 40px;">ຈຳນວນ</th>
                     <th scope="col" style="min-width: 60px;">ລວມ</th>
-                    <th scope="col" style="min-width: 40px;">ACTION</th>
-                    <th scope="col" style="min-width: 60px;">ໝາຍເຫດ</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -83,10 +81,6 @@
                     <td>5.000</td>
                     <td>4</td>
                     <td>20.000</td>
-                    <td class="width-medium-button-make-order-page">
-                      <button class="btn btn-sm btn-danger">ຍົກເລີກບິນ</button>
-                    </td>
-                    <td></td>
                   </tr>
       
                   <tr>
@@ -94,10 +88,6 @@
                     <td>7.000</td>
                     <td>5</td>
                     <td>35.000</td>
-                    <td class="width-medium-button-make-order-page">
-                      <button class="btn btn-sm btn-danger">ຍົກເລີກບິນ</button>
-                    </td>
-                    <td></td>
                   </tr>
       
                   <tr>
@@ -105,26 +95,21 @@
                     <td>7.000</td>
                     <td>5</td>
                     <td>35.000</td>
-                    <td class="width-medium-button-make-order-page">
-                      <button class="btn btn-sm btn-danger">ຍົກເລີກບິນ</button>
-                    </td>
-                    <td></td>
                   </tr>
                   <tr>
                     <td>ນ້ຳແປບຊີ້</td>
                     <td>5.000</td>
                     <td>4</td>
                     <td>20.000</td>
-                    <td></td>
-                    <td></td>
                   </tr>
                   <tr>
-                    <td colspan="4" class="text-center">ລວມ</td>
-                    <td colspan="2">205.000</td>
+                    <td colspan="3" class="text-center">ລວມ</td>
+                    <td colspan="1">205.000</td>
                   </tr>
                 </tbody>
               </table>
             </table>
+            <hr class="col-8">
             <h3 class="lao-font text-center mb-3">ຂອບໃຈລູກຄ້າທຸກທ່ານທີ່ມາອຸດໜຸນ</h3>
             <h6 class="text-center">******************************</h6>
             <div class="logo-thank-print-bill text-center">
@@ -135,7 +120,7 @@
   
       
                 <div class="col-md-10 col-12 mb-3">
-                  <button class="btn btn-sm btn-success lao-font w-100">
+                  <button class="btn btn-sm btn-success lao-font w-100" (click)="printMe()">
                     <i class="fas fa-list-ul"></i>
                     <br>ພິມບິນ</button>
                 </div>
