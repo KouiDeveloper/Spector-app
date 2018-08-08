@@ -32,12 +32,11 @@
         <a class="nav-link dropdown-toggle btn btn-secondary" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff !important;">
           Login
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: #ffffff !important;">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" [routerLink]="['/login']">LOGIN</a>
           <a class="dropdown-item" [routerLink]="['/register']">REGISTER</a>
-          <!-- <a class="dropdown-item" [routerLink]="['/register']">LOGOUT</a> -->
           <hr>
-          <a class="dropdown-item" href="#">FOR ADMIN</a>
+          <a class="dropdown-item" (click)="logout()">LOGOUT</a>
         </div>
       </li>
     </ul> 

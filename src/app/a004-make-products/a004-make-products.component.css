@@ -96,8 +96,8 @@
     border-color: #1e7e34;
   }
   .choose-goods-type{
-      height: 140px !important;
-      width: 200px !important;
+      height: 120px !important;
+      width: 130px !important;
       background: rgb(207, 207, 175);
       color: rgb(48, 45, 45);
       cursor: pointer;
@@ -105,8 +105,8 @@
   .choose-goods-type:hover{
     transition: .4s;
     font-size: 13pt;
-    height: 140px !important;
-    width: 200px !important;
+    height: 120px !important;
+    width: 130px !important;
     color: #212529;
     background-color: #ffc107;
     border-color: #ffc107;
@@ -114,8 +114,8 @@
 }
    
   .selectedclass{
-    height: 140px !important;
-    width: 200px !important;
+    height: 120px !important;
+    width: 130px !important;
     color: #212529;
     background: #ffc107;
     border-color: #ffc107;

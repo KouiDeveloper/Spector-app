@@ -42,7 +42,7 @@ h6{
 } 
 
 
-@media (min-width: 1px) and (max-width: 375px){
+@media (min-width: 1px) and (max-width: 405px){
     .c-margin-top-login-page{
         margin-top:15%;
     }
@@ -51,7 +51,7 @@ h6{
         width: 100px;
     }
     h1{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     h3{
         font-size: 0.8rem;

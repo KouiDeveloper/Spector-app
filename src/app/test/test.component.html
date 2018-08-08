@@ -1,55 +1,14 @@
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-  <div class="test-one">
-    <div class="row">
-      <div class="col-4 m-0 p-0">
-        <div class="go1 lao-font">
-          <button>
-              <i class="fas fa-award my-auto" id="size-award-index"></i> <br> <span>ອາຫານທະເລ</span>
-          </button>
-        </div>
-      </div>
-   
-    <div class="col-8 m-0 p-0">
-        <div class="go2">
-          <div class="test-two col-12 m-0 p-0" style=" background: rgb(175, 175, 187) !important;">
-              <ul class="list-group hover-list lao-font" style=" background: rgb(175, 175, 187) !important;">
-                  <li class="list-group-item disabled">
-                    <img src="../../assets/img/icon/name-product.png" id="size-icon"> : ຈຳນວນນຳເຂົ້າທັງໝົດ 120 kg {{a.productname}}</li>
-                  <li class="list-group-item">
-                    <img src="../../assets/img/icon/barcode.png" id="size-icon"> : ມູນຄ່ານຳເຂົ້າທັງໝົດ 1,900,000 ກີບ {{a.productcode}}</li>
-                  <li class="list-group-item">
-                    <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : ຈຳນວນນຳອອກທັງໝົດ 90 kg {{a.price | number:'1.0-0'}}</li>
-                  <li class="list-group-item">
-                    <img src="../../assets/img/icon/scale-kg.png" id="size-icon"> : ມູນຄ່ານຳອອກທັງໝົດ 1,500,000 ກີບ {{a.qtty}}</li>
-                  <li class="list-group-item">
-                    <img src="../../assets/img/icon/money-ramain.png" id="size-icon"> : ໝາຍເຫດ {{a.price*a.qtty | number:'1.0-0'}}</li>
-                </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="comtainer">
-    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on top
-      </button>
-      
-      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on right
-      </button>
-      
-      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
-      sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on bottom
-      </button>
-      
-      <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-        Popover on left
-      </button>
-</div>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+      <a class="nav-link active" (click)="pageProduct()">Main-page</a>
+    </li>
+<li class="nav-item">
+  <a class="nav-link" (click)="pageProduct()">ProductPage</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" (click)="pageOrder()">OrderPage</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" (click)="pageReport()">Report</a>
+</li>
+</ul>

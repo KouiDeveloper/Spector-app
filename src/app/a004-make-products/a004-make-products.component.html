@@ -93,11 +93,11 @@
         <div class="card">
           <h2 class="lao-font text-center mt-4">ລາຍການສິນຄ້າທີ່ມີໃນຄັງ</h2>
           <div class=" row input-group mb-2 col-md-4 offset-md-4 col-8 offset-2 ">
-              <input type="text" class="form-control" [(ngModel)]='_search_text' (keypress)="searchStock($event)">
-              <button>
-                <i class="fas fa-search color-search-add-pd"></i>
-              </button>
-            </div>
+            <input type="text" class="form-control" [(ngModel)]='_search_text' (keypress)="searchStock($event)">
+            <button>
+              <i class="fas fa-search color-search-add-pd"></i>
+            </button>
+          </div>
           <section class="two bg-add-products pd-add-prod">
             <div class="table-second">
               <div class="card">
@@ -105,8 +105,7 @@
                   <div class=" mb-4 lao-font">
                     <div class="row" id="scrollspy-menu">
 
-                      <div class="col-md-3 col-xl-1  col-iphone-6 device-mobile .col-desktop mb-3" *ngFor="let n of filterArrStock()"
-                        (click)="selectProduct(n)">
+                      <div class="col-md-3 col-xl-1  col-iphone-6 device-mobile .col-desktop mb-3" *ngFor="let n of filterArrStock()" (click)="selectProduct(n)">
                         <div class="device-in">
                           <div class=" d-flex justify-content-center align-items-center">
                             <img src="../../assets/img/shrimp.jpg" alt="" class="h-50 w-50 rounded-circle">
@@ -138,7 +137,7 @@
         </div>
       </div>
     </section>
-    <br>   
+    <br>
   </div>
   <br>
 </div>

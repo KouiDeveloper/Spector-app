@@ -560,8 +560,9 @@ export class C009MakeProductsToSaleComponent {
   checkSelectedGoodsType(a) {
     return a === this._selectedGoodsType
       ? "selectedclass"
-      : "choose-goods-type";
+      : "c-bg-goods-type";
   }
+
   _selectedProduct = null;
   selectProduct(p: any) {
     this._selectedProduct = p;

@@ -8,6 +8,7 @@
 .bg-header a:hover{
     transition: .5s;
     color:red !important;
+    cursor: pointer;
 }
 .navbar-toggler{
     color: #ffffff;
