@@ -1,5 +1,7 @@
 /* Start css global */
-
+.margin-top-make-product-to-sale-page{
+    margin-top: 6%;
+}
 .c-width-form-icon-make-order{
   width: 120px;
   text-align: center !important;
@@ -142,11 +144,16 @@
 .c-two-make-order .table .btn-danger{
   font-size: 9pt;
 }
+.c-two-make-order .device-in .border-image-list{
+    background: #17a2b8;
+    padding: 6px;
+    border:1px solid #10bddb;
+}
 .c-two-make-order .device-in:hover{
     cursor: pointer;
     border-bottom: 2px solid #17a2b8;
-    transition: all 0.3s ease-out;
-    position: relative;
+    border-radius: 2px 2px 2px 2px;
+    transition: 0.1s;
 }
 .modal-body th{
   font-size: 9pt;
@@ -194,6 +201,7 @@
 
 
 /* stop css global */
+
 
 @media (min-width:1px) and ( max-width:319px){
   .container{

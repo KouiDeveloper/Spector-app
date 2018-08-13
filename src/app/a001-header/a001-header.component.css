@@ -1,6 +1,7 @@
 
 .a-color-Mounao-Header{
     color: #ffffff !important;
+    vertical-align: middle;
 }
 .bg-header{
     background: black !important;
@@ -27,9 +28,64 @@
     width: 50px;
     height: 50px;
 }
+.fixed-top {
+    position: fixed !important;
+        padding-top: 0px !important;
+        right: none !important ;
+        left: none !important;
+        border-bottom: 5px;
+        border-style: solid;
+        border-bottom-color:  coral;
+        z-index: 1030;
+  }
 @media (min-width: 990px) and (max-width: 2024px){
     .a-nav-login-header-page {
         margin-left: auto !important;
         margin-right: 200px;
     }
+    .fixed-top {
+        position: fixed !important;
+        padding-top: 24px !important;
+        right: none !important ;
+        left: none !important;
+        bottom: 780px;
+        border-bottom: 5px;
+        border-style: solid;
+        border-bottom-color:  coral;
+        z-index: 1030;
+      }
+}
+
+.margin-top-make-product-to-sale-page{
+    margin-top: 4%;
+}
+@media (min-width: 319px) and  (max-width: 989px){
+    .margin-top-make-product-to-sale-page{
+        margin-top: 10%;
+    }
+
+}
+@media (min-width: 319px) and  (max-width: 860px){
+    .margin-top-make-product-to-sale-page{
+        margin-top: 13%;
+    }
+
+}
+@media (min-width: 319px) and  (max-width: 660px){
+    .margin-top-make-product-to-sale-page{
+        margin-top: 15%;
+    }
+
+}
+@media (min-width: 319px) and  (max-width: 555px){
+    .margin-top-make-product-to-sale-page{
+        margin-top: 18%;
+    }
+
+}
+@media (min-width: 319px) and  (max-width: 460px){
+    .margin-top-make-product-to-sale-page{
+        margin-top: 24%;
+    }
+
 }
