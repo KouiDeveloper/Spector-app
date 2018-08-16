@@ -1,4 +1,4 @@
-
+<!-- ໜ້າທຳອິດ ໜ້າອິນເດັສຂອງເວັບໄຊທ໌ -->
 <div class="containe mt-3">
   <div class="col card pd-container">
     <h1 class="text-center text-uppercase eng-font">
@@ -14,11 +14,11 @@
         <form class="form-inline">
           <div class="form-group">
             <div class="input-group">
-              <input class="form-control btn btn-primary d-flex mx-auto bg-select-days" placeholder="yyyy-mm-dd"
-                     name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (ngModelChange)="selectTime()" >
+              <input class="form-control btn btn-primary d-flex mx-auto bg-select-days" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
+                ngbDatepicker #d="ngbDatepicker" (click)="d.toggle()" (ngModelChange)="selectTime()">
               <div class="input-group-append">
-                <button class="btn bg-select-days"  (click)="d.toggle()"  type="button">
-                    <i class="far fa-calendar-alt color-index-icon" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
+                <button class="btn bg-select-days" (click)="d.toggle()" type="button">
+                  <i class="far fa-calendar-alt color-index-icon" style="width: 1.2rem; height: 1rem; cursor: pointer;"></i>
                 </button>
               </div>
             </div>
@@ -27,22 +27,26 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn lao-font w-100 h-main-menu" [routerLink]="['/add-products']"><i class="fas fa-download"></i> <br>ເພີ່ມເຂົ້າ</button>
+          <button class="btn lao-font w-100 h-main-menu" [routerLink]="['/add-products']">
+            <i class="fas fa-download"></i>
+            <br>ເພີ່ມເຂົ້າ</button>
         </div>
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn lao-font mr-auto w-100 h-main-menu" [routerLink]="['/subtract-products']"><i class="fas fa-upload"></i> <br>ນຳອອກ</button>
+          <button class="btn lao-font mr-auto w-100 h-main-menu" [routerLink]="['/subtract-products']">
+            <i class="fas fa-upload"></i>
+            <br>ນຳອອກ</button>
         </div>
         <div class="col-md-4 col-sm-6 col-12">
-          <button class="btn lao-font mr-auto w-100 h-main-menu" [routerLink]="['/make-product']"><i class="fab fa-medrt"></i> <br>ສ້າງສິນຄ້າ</button>
-        </div>  
+          <button class="btn lao-font mr-auto w-100 h-main-menu" [routerLink]="['/make-product']">
+            <i class="fab fa-medrt"></i>
+            <br>ສ້າງສິນຄ້າ</button>
+        </div>
       </div>
     </section>
   </div>
+
+  <!-- ດຶງຂໍ້ມູນຈາກ component report ມາສະແດງໃນຫນ້າ index -->
   <div class="mb-3">
-      <app-a003-report 
-      [_selectedTime]="arrModel"
-      ></app-a003-report>
-    </div>
+    <app-a003-report [_selectedTime]="arrModel"></app-a003-report>
+  </div>
 </div>
-
-

@@ -21,12 +21,7 @@ import { ElementRef, ViewChild } from "@angular/core";
 @Component({
   selector: "app-a004-make-products",
   templateUrl: "./a004-make-products.component.html",
-  styleUrls: [
-    "./custom-selectedclass.css",
-    "../a005-add-products/a005-add-products.component.css",
-    "../a005-add-products/customStyle-type-menu.css",
-    "./a004-make-products.component.css"
-  ],
+  styleUrls: ["./a004-make-products.component.css","../main-css/scroll.css"],
   providers: [WebsocketDataServiceService, ChatService, WebsocketService]
 })
 export class A004MakeProductsComponent {
@@ -565,7 +560,7 @@ export class A004MakeProductsComponent {
   checkSelectedGoodsType(a) {
     return a === this._selectedGoodsType
       ? "selectedclass"
-      : "choose-goods-type";
+      : "c-bg-goods-type";
   }
   _selectedProduct = null;
   selectProduct(p: any) {

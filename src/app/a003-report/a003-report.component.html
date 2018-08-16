@@ -7,79 +7,81 @@
         </h6>
         <div class="row">
           <div class="col-lg-8 offset-lg-2 col-12">
-              <div class="row input-group  col-12 p-0 m-0">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າເຂົ້າ</span>
-                  </div>
-                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().qtty | number:'1.0-0'}}</button>
-                  <div class="input-group-prepend">
-                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳເຂົ້າ</span>
-                  </div>
-                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().ttvalue | number:'1.0-0'}}</button>
-                </div>
-                <div class="row2 input-group col-12 p-0 m-0">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າອອກ</span>
-                  </div>
-                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().qtty}}</button>
-                  <div class="input-group-prepend">
-                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳອອກ</span>
-                  </div>
-                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().ttvalue | number:'1.0-0'}}</button>
-                </div>
-                <div class="row2 input-group col-12 p-0 m-0 mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ສິນຄ້າຄ້າງສາງ</span>
-                  </div>
-                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().qtty)-(sumExport().qtty) | number:'1.0-0'}}</button>
-                  <div class="input-group-prepend">
-                    <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ລວມມູນຄ່າ</span>
-                  </div>
-                  <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().ttvalue)-(sumExport().ttvalue) | number:'1.0-0'}}</button>
-                </div>
+            <div class="row input-group  col-12 p-0 m-0">
+              <div class="input-group-prepend">
+                <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າເຂົ້າ</span>
+              </div>
+              <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().qtty | number:'1.0-0'}}</button>
+              <div class="input-group-prepend">
+                <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳເຂົ້າ</span>
+              </div>
+              <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumImport().ttvalue | number:'1.0-0'}}</button>
+            </div>
+            <div class="row2 input-group col-12 p-0 m-0">
+              <div class="input-group-prepend">
+                <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ຈຳນວນສິນຄ້າອອກ</span>
+              </div>
+              <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().qtty}}</button>
+              <div class="input-group-prepend">
+                <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ມູນຄ່ານຳອອກ</span>
+              </div>
+              <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{sumExport().ttvalue | number:'1.0-0'}}</button>
+            </div>
+            <div class="row2 input-group col-12 p-0 m-0 mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report" id="inputGroup-sizing-default">ສິນຄ້າຄ້າງສາງ</span>
+              </div>
+              <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().qtty)-(sumExport().qtty) | number:'1.0-0'}}</button>
+              <div class="input-group-prepend">
+                <span class="input-group-text sf-report lao-font p-1 m-0 w-input-report-btn" id="inputGroup-sizing-default">ລວມມູນຄ່າ</span>
+              </div>
+              <button class="form-control sf-report" aria-label="Default" aria-describedby="inputGroup-sizing-default">{{(sumImport().ttvalue)-(sumExport().ttvalue) | number:'1.0-0'}}</button>
+            </div>
           </div>
         </div>
 
         <!-- *ngFor="let ar of _arrayReport; let i = index" -->
-      </div>          
+      </div>
     </div>
   </section>
 
   <section class="three">
     <div class="">
-            <div class="test-one" *ngFor="let m of _goodstype" [class]="checkSelectedGoodsType(m.name)" (click)="selectGoodsType(m)">
-              <div class="row mb-3 justify-content-center">
-                <div class="col-md-2 col-4 m-0 p-0">
-                  <div class="go1 lao-font p-2">
-                    <button class="border-0" style="background: rgba(193, 193, 204, 0.055) !important;">
-                      <img [src]="getURL(m.src)" class="size-img-report" alt="">
-                      <br>
-                      <span class="text-report">{{m.name}}</span>
-                    </button>
-                  </div>
-                </div>
-    
-                <div class="col-md-3 col-8 m-0 p-0">
-                  <div class="go2">
-                    <div class="test-two col-12 m-0 p-0">
-                      <ul class="list-group hover-list lao-font ">
-                        <li class="list-group-item">
-                          <img src="../../assets/img/icon/import-qtty.png" id="size-icon"> : ຈຳນວນນຳເຂົ້າທັງໝົດ {{getTT(m.name).qtty}} </li>
-                        <li class="list-group-item">
-                          <img src="../../assets/img/icon/money-qtty.png" id="size-icon"> : ມູນຄ່ານຳເຂົ້າທັງໝົດ {{getTT(m.name).ttvalue | number:'1.0-0'}}</li>
-                        <li class="list-group-item">
-                          <img src="../../assets/img/icon/export.png" id="size-icon"> : ຈຳນວນນຳອອກທັງໝົດ {{getTTExport(m.name).qtty}}</li>
-                        <li class="list-group-item">
-                          <img src="../../assets/img/icon/money-qtty-out.png" id="size-icon"> : ມູນຄ່ານຳອອກທັງໝົດ {{getTTExport(m.name).ttvalue | number:'1.0-0'}}</li>
-                        <li class="list-group-item">
-                          <img src="../../assets/img/icon/description.png" id="size-icon"> : ໝາຍເຫດ {{m.description}}</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-    
+      <div class="test-one" *ngFor="let m of _goodstype" [class]="checkSelectedGoodsType(m.name)" (click)="selectGoodsType(m)">
+        <div class="row mb-3 justify-content-center">
+          <div class="col-md-2 col-4 m-0 p-0">
+            <div class="go1 lao-font p-2">
+              <!-- main-photo loop here -->
+              <button class="border-0" style="background: rgba(193, 193, 204, 0.055) !important;">
+                <img [src]="getURL(m.src)" class="size-img-report" alt="">
+                <br>
+                <span class="text-report">{{m.name}}</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-8 m-0 p-0">
+            <!-- icon-photo loop here -->
+            <div class="go2">
+              <div class="test-two col-12 m-0 p-0">
+                <ul class="list-group hover-list lao-font ">
+                  <li class="list-group-item">
+                    <img src="../../assets/img/icon/import-qtty.png" id="size-icon"> : ຈຳນວນນຳເຂົ້າທັງໝົດ {{getTT(m.name).qtty}} </li>
+                  <li class="list-group-item">
+                    <img src="../../assets/img/icon/money-qtty.png" id="size-icon"> : ມູນຄ່ານຳເຂົ້າທັງໝົດ {{getTT(m.name).ttvalue | number:'1.0-0'}}</li>
+                  <li class="list-group-item">
+                    <img src="../../assets/img/icon/export.png" id="size-icon"> : ຈຳນວນນຳອອກທັງໝົດ {{getTTExport(m.name).qtty}}</li>
+                  <li class="list-group-item">
+                    <img src="../../assets/img/icon/money-qtty-out.png" id="size-icon"> : ມູນຄ່ານຳອອກທັງໝົດ {{getTTExport(m.name).ttvalue | number:'1.0-0'}}</li>
+                  <li class="list-group-item">
+                    <img src="../../assets/img/icon/description.png" id="size-icon"> : ໝາຍເຫດ {{m.description}}</li>
+                </ul>
               </div>
             </div>
           </div>
+
+        </div>
+      </div>
+    </div>
   </section>
 </div>

@@ -1,10 +1,12 @@
+<!-- ໜ້າເພີ່ມສິນຄ້າເຂົ້າຄັງ -->
+
 <div class="container-fluid">
   <div class="container mt-5 pt-3">
     <button class="btn btn-primary mb-3 home-btn" [routerLink]="['/index']">HOME</button>
     <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
         Launch demo modal
       </button> -->
-    <section class="one bg-add-products">
+    <section class="one_add_product_page bg-add-products">
       <h1 class="text-center text-uppercase eng-font pt-4 pd-add-prod">
         <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> MOUNAO BUFFET
         <i class="fas fa-feather-alt icon-mounao"></i>
@@ -13,16 +15,16 @@
         <i class="fas fa-download"></i>
       </button>
     </section>
+    
+    <!-- ຂີດຂັ້ນຄອນເທນ -->
     <hr class="col-10">
 
-    <section class="two bg-add-products pd-add-prod">
+    <section class="two_add_product_page bg-add-products pd-add-prod">
       <div class="table-second">
         <div class="card">
           <h2 class="lao-font text-center mt-4">ລາຍການສິນຄ້າທີ່ມີໃນຄັງ</h2>
 
           <!-- ເລືອກປະເພດສິນຄ້າ -->
-
-
           <div class="row d-flex justify-content-center">
             <div class="input-group mb-2 col-md-4 col-10">
               <input type="text" class="form-control" [(ngModel)]='_search_text' (keypress)="searchStock($event)">

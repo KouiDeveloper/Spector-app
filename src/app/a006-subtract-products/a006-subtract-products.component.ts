@@ -20,7 +20,7 @@ import { ElementRef, ViewChild } from "@angular/core";
 @Component({
   selector: 'app-a006-subtract-products',
   templateUrl: './a006-subtract-products.component.html',
-  styleUrls: ['./a006-subtract-products.component.css','../a005-add-products/a005-add-products.component.css','../a005-add-products/customStyle-type-menu.css'],
+  styleUrls: ['./a006-subtract-products.component.css'],
   providers: [WebsocketDataServiceService, ChatService, WebsocketService]
 })
 export class A006SubtractProductsComponent {
@@ -501,7 +501,7 @@ export class A006SubtractProductsComponent {
   checkSelectedGoodsType(a) {
     return a === this._selectedGoodsType
       ? "selectedclass"
-      : "choose-goods-type";
+      : "c-bg-goods-type";
   }
 
   _selectedProduct = null;

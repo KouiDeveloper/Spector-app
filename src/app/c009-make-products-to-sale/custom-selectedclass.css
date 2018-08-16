@@ -19,20 +19,6 @@
     margin-right: 3px;
 }
 
-/* .card {
-    border:none;
-    background: none;
-    padding: 10px;
-    margin-bottom: 20px !important;
-    margin-left:20px;
-} */
-/* .card:hover{
-    background:rgba(0, 188, 212, 0.1);
-    transition: 0.8s;
-    border:2px double #1df30a;
-    box-shadow: 0 0 0 0.2rem #19a0fac9;
-} */
-
 .scrolling-wrapper,
 .scrolling-wrapper-flexbox {
     width: 100%;
@@ -43,12 +29,6 @@
 .scrolling-wrapper-flexbox::-webkit-scrollbar {
     -webkit-overflow-scrolling: touch;
 
-}
-
-.color-head-transfer {
-    font-size: 12pt;
-    color: red;
-    line-height: 10px;
 }
 
 .color-content-transfer {

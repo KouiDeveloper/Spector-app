@@ -1,14 +1,282 @@
-<ul class="nav nav-tabsv test-margin-top bg-dark ">
-  <li class="nav-item">
-      <a class="nav-link active" (click)="pageProduct()">Main-page</a>
-    </li>
-<li class="nav-item">
-  <a class="nav-link" (click)="pageProduct()">ProductPage</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" (click)="pageOrder()">OrderPage</a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" (click)="pageReport()">Report</a>
-</li>
-</ul>
+<div class="container margin-top-make-product-to-sale-page">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <section class="zero">
+        <div class="text-center">
+          <button class="btn bg-text-header-export">
+              <h1 class="text-center text-uppercase lao-font mt-2">
+                  <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> ນຳສິນຄ້າອອກຈາກຄັງ
+                  <i class="fas fa-feather-alt icon-mounao"></i>
+                </h1>
+          </button>
+        </div>
+        <div class="text-center">
+          <img src="../../assets/img/Logo-Mounao.png " id="a-size-logo-mounao-index-page" alt="">
+        </div>
+        <div class="total-pending mb-4">
+          <ul class="list-group lao-font">
+            <li class="list-group-item" id="active-title-list-export">ລາຍການເຄື່ອນໄຫວ</li>
+            <li class="list-group-item disabled">
+              <img src="../../assets/img/icon/TTGoods.png" id="size-icon"> :TTQTTY {{sumTT().qtty}}</li>
+            <li class="list-group-item">
+              <img src="../../assets/img/icon/barcode.png" id="size-icon"> :TTV {{sumTT().ttvalue | number:'1.0-0'}}</li>
+            <li class="list-group-item">
+              <img src="../../assets/img/icon/TTMoney.png" id="size-icon"> :{{sumExport().ttvalue | number:'1.0-0'}} ({{sumExport().qtty | number:'1.0-0'}})</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="row">
+    <section class="c-one-make-order lao-font mb-3 pb-3 col-xl-6 col-lg-6 col-md-6" style="background: rgba(147, 165, 165, 0.068)">
+      <div class="scrolling-wrapper choose-goods-for-customer mt-3">
+        <h3 class="lao-font text-center">
+          <i class="far fa-lightbulb mr-1"></i>ເລືອກປະເພດສິນຄ້າທີ່ມີໃນຄັງ</h3>
+        <div class="select-type mb-3">
+          <div class="lao-font text-center">
+            <button class="btn choose-goods-type p-1 col-xl-3 col-lg-3 col-md-4 col-4" *ngFor="let m of _goodstype" (click)="selectGoodsType(m)">
+              <div class="c-bg-goods-type" [class]="checkSelectedGoodsType(m.name)">
+                <img [src]="getURL(m.src)" class="h-100 w-100 mb-1 p-1" alt="">
+                <br>{{m.name}}
+                <br>
+                <button class="btn-sub btn-border p-1 col-12">
+                  <img src="../../assets/img/icon/export.png" id="size-icon">: {{getTT(m.name).qtty}}
+                  <br>
+                  <img src="../../assets/img/icon/money-qtty.png" id="size-icon">: {{getTT(m.name).ttvalue}}
+                </button>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="c-two-make-order lao-font mb-3 pb-3 col-xl-6 col-lg-6 col-md-6" style="background: rgba(153, 175, 175, 0.123)">
+
+      <h3 class="text-center lao-font mt-3">
+        <i class="far fa-lightbulb mr-1"></i>ລາຍການສິນຄ້າທີ່ມີໃນຄັງ</h3>
+      <div class=" row input-group mb-2 col-8 offset-2 ">
+        <input type="text" class="form-control" [(ngModel)]='_search_text' (keypress)="searchStock($event)">
+        <button>
+          <i class="fas fa-search color-search-add-pd"></i>
+        </button>
+      </div>
+      <div class="row mt-4">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4 col-6 mb-3" *ngFor="let a of filterArrStock( _arr_stock)" (click)="selectStock(a)" data-toggle="modal" data-target="#Popup_edit_export_page">
+          <div class="device-in">
+            <div class=" d-flex justify-content-center align-items-center border-image-list">
+              <img src="../../assets/img/shrimp.jpg" alt="" class="h-50 w-50 rounded-circle">
+            </div>
+            <ul class="list-group hover-list">
+              <li class="list-group-item disabled">
+                <img src="../../assets/img/icon/name-product.png" id="size-icon"> : {{a.productname}}</li>
+              <li class="list-group-item">
+                <img src="../../assets/img/icon/barcode.png" id="size-icon"> : {{a.productcode}}</li>
+              <li class="list-group-item">
+                <img src="../../assets/img/icon/price-tag.png" id="size-icon"> : {{a.price | number:'1.0-0'}}</li>
+              <li class="list-group-item">
+                <img src="../../assets/img/icon/currency.png" id="size-icon"> : {{a.qtty}}</li>
+              <li class="list-group-item">
+                <img src="../../assets/img/icon/scale-kg.png" id="size-icon"> : {{a.price*a.qtty | number:'1.0-0'}}</li>
+              <li class="list-group-item">
+                <img src="../../assets/img/icon/description.png" id="size-icon"> : {{a.lastexport}}[{{sumArray(a.lastexport)}}]</li>
+              <li class="list-group-item">
+                <img src="../../assets/img/icon/money-qtty.png" id="size-icon"> : {{sumtotal(a.lastexport,a.price) | number:'1.0-0'}}</li>
+              <li class="list-group-item">
+                <img src="../../assets/img/icon/description.png" id="size-icon"> : {{a.description}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<!-- ໜ້າປ໋ອບອັບ a006-subtract-products -->
+<!-- Modal -->
+<div class="modal fade" id="Popup_edit_export_page" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div> -->
+      <div class="modal-body">
+        <section class="one-export-page bg-add-products">
+          <h1 class="text-center text-uppercase eng-font pt-4 pd-add-prod">
+            <i class="fas fa-feather-alt mr-1 icon-mounao-rotate"></i> MOUNAO BUFFET
+            <i class="fas fa-feather-alt icon-mounao"></i>
+          </h1>
+          <button class="import-icon-add-pd d-block mx-auto mb-3">
+            <i class="fas fa-download"></i>
+          </button>
+          <h6 class="lao-font text-center mb-4">ລົບປະລິນມານສິນຄ້າອອກຈາກເຂົ້າສາງ</h6>
+          <div class="row">
+            <div class="col-md-3 col-12">
+              <div class="photo d-flex justify-content-center mb-3">
+                <label class="btn">
+                  <img src="../../assets/img/shrimp.jpg" alt="" class="h-100 w-100 rounded-circle">
+                  <input type="file" name="file_up" id="file_up" hidden>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-9 col-12 font-size-12000-up">
+              <div class="row lao-font">
+                <div class="input-group mb-3 col-12">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ຊື່ສິນຄ້າ</span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productname?_selectedStock.productname:''"
+                    disabled>
+                </div>
+
+                <div class="input-group mb-3 col-12">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ລະຫັດສິນຄ້າ</span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [value]="_selectedStock.productcode?_selectedStock.productcode:''"
+                    disabled>
+                </div>
+
+                <div class="input-group mb-3 col-md-12 col-12">
+                  <span class="input-group-text ip-text-w lao-font border-right-0" id="inputGroup-sizing-default">ລາຄາ</span>
+                  <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.price?_selectedStock.price:''"
+                    disabled>
+                  <div class="input-group-append nk0">
+                    <span class="input-group-text">kip</span>
+                    <!-- <span class="input-group-text">0.00</span> -->
+                  </div>
+                </div>
+
+                <div class="input-group mb-3  col-md-12 col-12 main-font-size">
+                  <span class="input-group-text ip-text-w-qtty lao-font border-right-0" id="inputGroup-sizing-default">ຈຳນວນທີ່ມີໃນສະຕ໋ອກ</span>
+                  <input type="number" class="form-control " aria-label="Amount (to the nearest dollar)" [value]="_selectedStock.qtty+_newQtty"
+                    disabled>
+
+                  <span class="input-group-text ip-text-w-qtty lao-font border-right-0" id="inputGroup-sizing-default">ຈຳນວນທີ່ນຳອອກ</span>
+                  <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" (change)="updateQtty($event.target.value)"
+                    [value]="_newQtty" min="0">
+                </div>
+
+
+                <div class="input-group mb-3 col-12">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ໝາຍເຫດ</span>
+                  </div>
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" (change)="_selectedStock.description=$event.target.value?$event.target.value:''"
+                    [value]="_selectedStock.description?_selectedStock.description:''" />
+                </div>
+              </div>
+            </div>
+            <!-- ປຸ່ມກົດຄິກສຳເລັດການເພີ່ມສິນຄ້າ        -->
+            <button class="btn btn-outline-secondary d-block mx-auto mt-4 lao-font col-md-3 col-4 text-center" (click)="exportStock()">ສຳເລັດ</button>
+          </div>
+
+          <!-- ປູ່ມປ໋ອບອັບລາຍອຽດຕ່າງໆ -->
+          <div class="row">
+            <button type="button" class="btn btn-outline-secondary d-block mx-auto mt-4 lao-font text-center" data-toggle="modal" data-target="#exampleModalCenter">
+              ລາຍລະອຽດເພີ່ມເຕີມ
+            </button>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ປ໋ອບອັບເພື່ອແກ້ໄຂຂໍ້ມູນ -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Popup_edit_build_page">
+    Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="Popup_edit_build_page" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="lao-font">
+                <div class="input-group input-group-sm mb-3" *ngIf="_isEdit">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ຊື່ສິນຄ້າ</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="_product.name"
+                      (Change)="_product.name=$event.target?$event.target.value:''">
+                    <div class="input-group-append lao-font">
+                      <select name="" id="" (change)="selectUnit($event.target.value)" class="form-control">
+                        <option class="lao-font" [value]="s" [selected]="s === _rightUnit" *ngFor="let s of _units">{{s}}</option>
+                      </select>
+                    </div>
+                  </div>
+        
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ລະຫັດສິນຄ້າ</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="_product.code"
+                      (Change)="_product.code=$event.target?$event.target.value:''" disabled>
+                  </div>
+        
+                  <div class="input-group mb-3">
+                    <span class="input-group-text ip-text-w lao-font border-right-0" id="inputGroup-sizing-default">ລາຄາ</span>
+                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" [(ngModel)]="_product.price" (Change)="_product.price=$event.target?$event.target.value:''">
+                    <div class="input-group-append">
+                      <span class="input-group-text" (click)="getRightCurrency()">
+                        <button class="btn btn-default">{{_rightCurrency}}</button>
+                      </span>
+                    </div>
+                  </div>
+        
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text ip-text-w lao-font" id="inputGroup-sizing-default">ໝາຍເຫດ</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" [(ngModel)]="_product.description"
+                      (Change)="_product.description=$event.target?$event.target.value:''">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->

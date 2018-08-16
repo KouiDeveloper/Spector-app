@@ -1,4 +1,4 @@
-
+/* ສີຕົວໜັງສືໄກ້ກັບໂລໂກໝູຫນາວ */
 .a-color-Mounao-Header{
     color: #ffffff !important;
     vertical-align: middle;
@@ -38,10 +38,10 @@
         border-bottom-color:  coral;
         z-index: 1030;
   }
-@media (min-width: 990px) and (max-width: 2024px){
+@media (min-width: 1000px) and (max-width: 2024px){
     .a-nav-login-header-page {
         margin-left: auto !important;
-        margin-right: 200px;
+        margin-right: 140px;
     }
     .fixed-top {
         position: fixed !important;

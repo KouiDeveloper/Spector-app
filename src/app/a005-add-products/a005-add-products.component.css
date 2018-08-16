@@ -1,21 +1,22 @@
-.container-fluid {
-  background: #eeeeee !important;
-}
-h1{
+
+.one_add_product_page h1{
   color: rgb(20, 20, 20);
+  font-size: 1.6rem;
 }
-.import-icon-add-pd {
+.one_add_product_page .import-icon-add-pd {
   border-radius: 15px 15px 15px 15px;
   border: #1e7e34 1px solid;
   box-shadow: 0px 0px 2px 2px rgba(63, 104, 63, 0.397);
-  width: 160px;
-  height: 70px;
-  font-size: 22pt;
+  width: 120px;
+  height: 40px;
+  font-size: 16pt;
   color: #1e7e34;
   background-color: #eceff1;
   border-color: #007bff;
 }
-
+.two_add_product_page h2{
+  font-size: 1.2rem;
+}
 
 .container {
   font-size: 8pt !important;
@@ -93,6 +94,7 @@ td {
   padding: 0px;
   margin: 0px;
 }
+
 
 /* css screen */
 
@@ -236,7 +238,7 @@ td {
   }
 }
 
-@media (min-width: 1000px) and (max-width: 2000px) {
+@media (min-width: 999) and (max-width: 2000px) {
   .ip-text-w {
     width: 140px;
   }
