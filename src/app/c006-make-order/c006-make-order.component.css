@@ -1,294 +1,383 @@
 /* Start css global */
 
-.c-width-form-icon-make-order{
-    width: 120px;
-    text-align: center !important;
+.c-width-form-icon-make-order {
+  width: 120px;
+  text-align: center !important;
 }
-.c-one-make-order h3{
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: underline;
-    background: none !important;
+
+.c-one-make-order h3 {
+  font-size: 1rem;
+  text-decoration: underline;
 }
-.c-two-make-order h3{
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: underline;
+
+
+
+.c-one-make-order .scrolling-wrapper button {
+  font-size: 10pt;
 }
-.c-one-make-order .scrolling-wrapper button{
-    font-size: 10pt;
+
+.c-one-make-order .select-list button {
+  font-size: 9pt;
+  word-spacing: -4px;
 }
-.c-one-make-order .select-list button{
-    font-size: 9pt;
-    word-spacing: -4px;
+
+.c-one-make-order .select-list-medium button {
+  font-size: 8pt;
+  word-spacing: -4px;
 }
-.c-one-make-order .select-list-medium button{
-    font-size: 8pt;
-    word-spacing: -4px;
+
+.c-one-make-order .select-list-small button {
+  font-size: 7pt;
+  word-spacing: -4px;
 }
-.c-one-make-order .select-list-small button{
-    font-size: 7pt;
-    word-spacing: -4px;
+
+.c-one-make-order .btn {
+  background: none;
 }
-.c-one-make-order .btn{
-    background: none;
+
+.c-one-make-order .c-bg-goods-type {
+  background: white;
+  border: solid 1px #88888888;
+  box-shadow: 0px 0px 1px 0px #cccaca;
 }
-.c-one-make-order .c-bg-goods-type{
-    background: white; 
-    border: solid 1px #88888888;
-    box-shadow: 0px 0px 1px 0px #cccaca;
+
+.c-one-make-order h5 {
+  font-size: 1.1rem;
 }
-.c-one-make-order h5{
-    font-size: 1.1rem;
+.c-two-make-order h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 0px !important;
 }
-.c-two-make-order #c-size-name-product-make-order{
-    min-width: 120px;
-    text-align: center;
+
+.c-two-make-order #c-size-name-product-make-order {
+  min-width: 120px;
+  text-align: center;
 }
-.c-two-make-order th{
-    text-align: center;
+
+.c-two-make-order th {
+  text-align: center;
 }
-.c-two-make-order .input-group-prepend span{
-    font-size: 10pt;
+
+.c-two-make-order .input-group-prepend span {
+  font-size: 10pt;
 }
-.c-two-make-order .input-group input{
-    font-size: 9pt;
-    word-spacing: -4px;
+
+.c-two-make-order .input-group input {
+  font-size: 9pt;
+  word-spacing: -4px;
 }
-.c-two-make-order .table th{
-    font-size: 9pt;
+
+.c-two-make-order .table th {
+  font-size: 9pt;
 }
-.c-two-make-order .table td{
-    font-size: 9pt;
-    text-align: center;
-    vertical-align: middle;
+
+.c-two-make-order .table td {
+  font-size: 9pt;
+  text-align: center;
+  vertical-align: middle;
 }
-.c-two-make-order .table .btn-danger{
-    font-size: 9pt;
+
+.c-two-make-order .table .btn-danger {
+  font-size: 9pt;
 }
-.modal-body th{
-    font-size: 9pt;
+
+.modal-body th {
+  font-size: 9pt;
 }
-.modal-body td{
-    font-size: 9pt;
+
+.modal-body td {
+  font-size: 9pt;
 }
-.modal-body .c-size-input-popup input{
-    font-size: 9pt;
+
+.modal-body .c-size-input-popup input {
+  font-size: 9pt;
 }
-.c-two-make-order .c-button-make-order button{
-    font-size: 10pt;
+
+.c-two-make-order .c-button-make-order button {
+  font-size: 9pt !important;
 }
-.zero h1{
-    font-size: 1.5rem;
-    -webkit-text-stroke: 0.1px green;
+.c-two-make-order .head-text-make-order-page h6{
+  font-size: 9pt;
 }
-.c-bg-goods-type:hover{
-    color: #212529;
-    background-color: #d6b961 !important;
-    border-color: 2px solid #d39e00 !important;
-    box-shadow: 0px 4px 0px 0px  #888888 !important;
-    transition: box-shadow 500ms !important;
+.c-two-make-order .border-split-right-make-order-page{
+  border-left: 2px solid rgba(255, 255, 255, 0.349);
 }
-.selectedclass{
-    color: #212529;
-    background: #ffc107 !important;
-    border-color: 2px solid #d39e00 !important;
-    box-shadow: 0px 4px 0px 0px  #61615f !important;
+.c-two-make-order .size-icon-table-make-order{
+  width: 12px;
+}
+
+.zero h1 {
+  font-size: 1.5rem;
+  -webkit-text-stroke: 0.1px green;
+}
+
+.c-bg-goods-type:hover {
+  color: #212529;
+  background-color: #d6b961 !important;
+  border-color: 2px solid #d39e00 !important;
+  box-shadow: 0px 4px 0px 0px #888888 !important;
+  transition: box-shadow 500ms !important;
+}
+
+.selectedclass {
+  color: #212529;
+  background: #ffc107 !important;
+  border-color: 2px solid #d39e00 !important;
+  box-shadow: 0px 4px 0px 0px #61615f !important;
+}
+
+.selectedclass:hover {
+  color: #212529;
+  background-color: #d6b961 !important;
+  border-color: 2px solid #d39e00 !important;
+  box-shadow: 0px 4px 0px 0px #888888 !important;
+  transition: box-shadow 500ms !important;
+}
+
+.btn:focus,
+.btn.focus {
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.c-size-input-popup td {
+  vertical-align: middle;
+}
+
+.fixed-bottom{
+    position: relative;
+}
+.table{
+    margin-bottom: 0 !important;
+}
+.scrolly {
+ 
+    max-height: 500px;
+    height: auto;
+    overflow:initial;
+    overflow-y: auto;
+   
   }
-  .selectedclass:hover{
-    color: #212529;
-    background-color: #d6b961 !important;
-    border-color: 2px solid #d39e00 !important;
-    box-shadow: 0px 4px 0px 0px  #888888 !important;
-    transition: box-shadow 500ms !important; 
-  }
-  .btn:focus, .btn.focus {
-    outline: 0;
-    box-shadow: none !important;
-  }
-.c-size-input-popup td{
-    vertical-align: middle;
-}
 
 /* stop css global */
 
-@media (min-width:1px) and ( max-width:319px){
-    .container{
-        display: none !important;
-    }
-}
-@media (min-width: 320px) and (max-width: 375px){
-    .zero h1{
-        font-size: 0.9rem;
-        -webkit-text-stroke: 0.1px green;
-        font-weight: bold;
-    }
-    .c-one-make-order h3{
-        font-size: 0.9rem;
-        font-weight: bold;
-        text-decoration: underline;
-        background: none !important;
-    }
-    .c-two-make-order h3{
-        font-size: 1rem;
-        font-weight: bold;
-        text-decoration: underline;
-    }
-    .c-one-make-order .scrolling-wrapper button{
-        font-size: 10pt;
-    }
-    .c-one-make-order .select-list button{
-        font-size: 7pt;
-        word-spacing: -3px;
-    }
-    .c-one-make-order .btn{
-        background: none;
-    }
-    .c-one-make-order .c-bg-goods-type{
-        background: white; 
-    border: solid 1px #88888888;
-    box-shadow: 0px 0px 1px 0px #cccaca;
-    }
-    .c-one-make-order h5{
-        font-size: 0.9rem;
-    }
-    .c-width-form-icon-make-order{
-        width: 80px;
-        text-align: center !important;
-    }
-    .c-two-make-order th{
-        text-align: center;
-    }
-    .c-two-make-order #c-size-name-product-make-order{
-        min-width: 100px;
-    }
-    .c-two-make-order .input-group-prepend span{
-        font-size: 9pt;
-    }
-    .c-two-make-order .input-group input{
-        font-size: 8pt;
-        word-spacing: -4px;
-    }
-    .c-two-make-order .table th{
-        font-size: 8pt;
-    }
-    .c-two-make-order .table td{
-        font-size: 8pt;
-        text-align: center;
-        vertical-align: middle;
-    }
-    .c-two-make-order .table .btn-danger{
-        font-size: 8pt;
-    }
-    .c-two-make-order .c-button-make-order button{
-        font-size: 8pt;
-    }
-    
-    .modal-body th{
-        font-size: 8pt;
-    }
-    .modal-body td{
-        font-size: 8pt;
-    }
-    .modal-body .c-size-input-popup input{
-        font-size: 8pt;
-    }
+@media (min-width:1px) and ( max-width:319px) {
+  .container {
+    display: none !important;
+  }
 }
 
-@media (min-width:376px) and (max-width: 767px){
-    .zero h1{
-        font-size: 1.2rem;
-        -webkit-text-stroke: 0.1px green;
-    }
-}
-
-@media (min-width: 768px) and (max-width:1200px){
-    .zero h1{
-        font-size: 1.1rem;
-        -webkit-text-stroke: 0.1px green;
-    }
-  
-    .c-width-form-icon-make-order{
-        width: 70px;
-        text-align: center !important;
-    }
-    .c-one-make-order h3{
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-decoration: underline;
-        background: none !important;
-    }
-    .c-two-make-order h3{
-        font-size: 1.2rem;
-        font-weight: bold;
-        text-decoration: underline;
-    }
-    .c-one-make-order .scrolling-wrapper button{
-        font-size: 10pt;
-    }
-    .c-one-make-order .select-list button{
-        font-size: 9pt;
-        word-spacing: -4px;
-    }
-    .c-one-make-order .select-list-medium button{
-        font-size: 8pt;
-        word-spacing: -4px;
-    }
-    .c-one-make-order .select-list-small button{
-        font-size: 7pt;
-        word-spacing: -4px;
-    }
-    .c-one-make-order .btn{
-        background: none;
-    }
-    .c-one-make-order .c-bg-goods-type{
-        background: white; 
+@media (min-width: 320px) and (max-width: 375px) {
+  .zero h1 {
+    font-size: 0.9rem;
+    -webkit-text-stroke: 0.1px green;
+    font-weight: bold;
+  }
+  .c-one-make-order h3 {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .c-two-make-order h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .c-one-make-order .scrolling-wrapper button {
+    font-size: 10pt;
+  }
+  .c-one-make-order .select-list button {
+    font-size: 7pt;
+    word-spacing: -3px;
+  }
+  .c-one-make-order .btn {
+    background: none;
+  }
+  .c-one-make-order .c-bg-goods-type {
+    background: white;
     border: solid 1px #88888888;
     box-shadow: 0px 0px 1px 0px #cccaca;
-    }
-    .c-one-make-order h5{
-        font-size: 1.1rem;
-    }
-    .c-two-make-order #c-size-name-product-make-order{
-        min-width: 80px;
-        text-align: center;
-    }
-    .c-two-make-order th{
-        text-align: center;
-    }
-    .c-two-make-order .input-group-prepend span{
-        font-size: 7pt;
-    }
-    .c-two-make-order .input-group input{
-        font-size: 7pt;
-        word-spacing: -4px;
-    }
-    .c-two-make-order .table th{
-        font-size: 7pt;
-    }
-    .c-two-make-order .table td{
-        font-size: 7pt;
-        text-align: center;
-        vertical-align: middle;
-    }
-    .c-two-make-order .table .btn-danger{
-        font-size: 9pt;
-    }
-    .c-two-make-order .width-medium-button-make-order-page button{
-        padding: none !important;
-        margin: none !important;
-        font-size: 1pt !important;
-    }
-    .modal-body th{
-        font-size: 9pt;
-    }
-    .modal-body td{
-        font-size: 9pt;
-    }
-    .modal-body .c-size-input-popup input{
-        font-size: 9pt;
-    }
-    .c-two-make-order .c-button-make-order button{
-        font-size: 10pt;
-    }
+  }
+  .c-one-make-order h5 {
+    font-size: 0.9rem;
+  }
+  .c-width-form-icon-make-order {
+    width: 80px;
+    text-align: center !important;
+  }
+  .c-two-make-order th {
+    text-align: center;
+  }
+  .c-two-make-order #c-size-name-product-make-order {
+    min-width: 100px;
+  }
+  .c-two-make-order .input-group-prepend span {
+    font-size: 9pt;
+  }
+  .c-two-make-order .input-group input {
+    font-size: 8pt;
+    word-spacing: -4px;
+  }
+  .c-two-make-order .table th {
+    font-size: 8pt;
+  }
+  .c-two-make-order .table td {
+    font-size: 8pt;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .c-two-make-order .table .btn-danger {
+    font-size: 8pt;
+  }
+  .c-two-make-order .c-button-make-order button {
+    font-size: 8pt;
+  }
+  .modal-body th {
+    font-size: 8pt;
+  }
+  .modal-body td {
+    font-size: 8pt;
+  }
+  .modal-body .c-size-input-popup input {
+    font-size: 8pt;
+  }
 }
+
+@media (min-width:376px) and (max-width: 767px) {
+  .zero h1 {
+    font-size: 1.2rem;
+    -webkit-text-stroke: 0.1px green;
+  }
+ 
+}
+
+@media (min-width: 768px) and (max-width:1200px) {
+  .zero h1 {
+    font-size: 1.1rem;
+    -webkit-text-stroke: 0.1px green;
+  }
+  .c-width-form-icon-make-order {
+    width: 70px;
+    text-align: center !important;
+  }
+  .c-one-make-order h3 {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  .c-two-make-order h3 {
+    font-size: 1rem;
+    text-decoration: underline;
+  }
+  .c-one-make-order .scrolling-wrapper button {
+    font-size: 10pt;
+  }
+  .c-one-make-order .select-list button {
+    font-size: 9pt;
+    word-spacing: -4px;
+  }
+  .c-one-make-order .select-list-medium button {
+    font-size: 8pt;
+    word-spacing: -4px;
+  }
+  .c-one-make-order .select-list-small button {
+    font-size: 7pt;
+    word-spacing: -4px;
+  }
+  .c-one-make-order .btn {
+    background: none;
+  }
+  .c-one-make-order .c-bg-goods-type {
+    background: white;
+    border: solid 1px #88888888;
+    box-shadow: 0px 0px 1px 0px #cccaca;
+  }
+  .c-one-make-order h5 {
+    font-size: 1.1rem;
+  }
+  .c-two-make-order #c-size-name-product-make-order {
+    min-width: 80px;
+    text-align: center;
+  }
+  .c-two-make-order th {
+    text-align: center;
+  }
+  .c-two-make-order .input-group-prepend span {
+    font-size: 7pt;
+  }
+  .c-two-make-order .input-group input {
+    font-size: 7pt;
+    word-spacing: -4px;
+  }
+  .c-two-make-order .table th {
+    font-size: 7pt;
+  }
+  .c-two-make-order .table td {
+    font-size: 7pt;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .c-two-make-order .table .btn-danger {
+    font-size: 9pt;
+  }
+  .c-two-make-order .width-medium-button-make-order-page button {
+    padding: none !important;
+    margin: none !important;
+    font-size: 4pt !important;
+  }
+  .modal-body th {
+    font-size: 9pt;
+  }
+  .modal-body td {
+    font-size: 9pt;
+  }
+  .modal-body .c-size-input-popup input {
+    font-size: 9pt;
+  }
+  .c-two-make-order .c-button-make-order button {
+    font-size: 10pt;
+  }
+}
+
+@media (min-width:310px) and (max-width:479px){
+    .fixed-bottom {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+      }
+      .hello-test{
+        margin-bottom: 200px;
+        }
+        .scrolly { 
+            max-height: 240px !important;
+            height: auto;
+            overflow:initial;
+            overflow-y: auto;           
+          }
+}
+
+@media (min-width:479px) and (max-width:700px){
+    .fixed-bottom {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+      }
+      .hello-test{
+        margin-bottom: 450px;
+        }
+        .scrolly { 
+            max-height: 300px;
+            height: auto;
+            overflow:initial;
+            overflow-y: auto;           
+          }
+          
+    }
+
+          
+
