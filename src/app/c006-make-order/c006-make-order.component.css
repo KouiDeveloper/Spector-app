@@ -156,7 +156,7 @@
  
     max-height: 500px;
     height: auto;
-    overflow:initial;
+    overflow:hidden;
     overflow-y: auto;
    
   }
@@ -354,7 +354,7 @@
         .scrolly { 
             max-height: 240px !important;
             height: auto;
-            overflow:initial;
+            overflow:hidden;
             overflow-y: auto;           
           }
 }
@@ -373,7 +373,7 @@
         .scrolly { 
             max-height: 300px;
             height: auto;
-            overflow:initial;
+            overflow:hidden;
             overflow-y: auto;           
           }
           
