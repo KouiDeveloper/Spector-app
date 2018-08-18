@@ -92,7 +92,7 @@
       }
       .h-main-menu{
         margin-top:50px;
-        height: 80px;
+        /* height: 80px; */
         border: 1px solid #d3d7db;
         box-shadow: 0px 2px #d3d7db;
         border-radius: 30px 00px 30px 0px;
@@ -104,7 +104,7 @@
     }
     .h-main-menu:hover{
         margin-top:50px;
-        height: 80px;
+        /* height: 80px; */
         border: 1px solid #ccd2d8;
         box-shadow: 2px 2px 2px 2px #cbd2d8;;
         background: #dadee2 !important;
@@ -124,25 +124,25 @@
       }
     .h-main-menu{
     margin-top:50px;
-    height: 100px;
+    /* height: 100px; */
     border: 1px solid #d3d7db;
     box-shadow: 0px 2px #d3d7db;
     border-radius: 30px 00px 30px 0px;
     background: #e9ecef !important;
     border-radius: 30px 00px 30px 0px;
     color: rgb(32, 32, 32);
-    font-size: 12pt;
+    font-size: 11pt;
     /* font-weight: normal !important; */
 }
     .h-main-menu:hover{
         margin-top:50px;
-        height: 100px;
+        /* height: 100px; */
         border: 1px solid #ccd2d8;
         box-shadow: 2px 2px 2px 2px #cbd2d8;;
         background: #dadee2 !important;
         border-radius: 30px 00px 30px 0px;
         color: rgb(32, 32, 32);
-        font-size: 13pt;
+        font-size: 12pt;
     }
     .bg-select-days{
         border: 1px solid #d3d7db;
