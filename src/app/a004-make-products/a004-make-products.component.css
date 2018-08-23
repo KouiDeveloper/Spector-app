@@ -1,4 +1,9 @@
 /* Start css global */
+
+.bg-top-make-product-page{
+    background: #3CC47C;
+    padding:30px;
+}
 .margin-top-make-product-to-sale-page{
   margin-top: 6%;
 }
