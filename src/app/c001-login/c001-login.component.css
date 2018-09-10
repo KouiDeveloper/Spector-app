@@ -31,6 +31,9 @@ h6{
     border-radius: 0px 20px 20px 0px !important;
     height: 30px;
 }
+.form-control:hover{
+    border:1px solid #17a2b8;
+}
 .card{
     padding-top: 30px;
     padding-bottom: 30px;

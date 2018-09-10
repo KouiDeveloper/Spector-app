@@ -193,8 +193,7 @@ font-size: 9pt;
 font-size: 10pt;
 }
 .zero h1{
-font-size: 1.5rem;
--webkit-text-stroke: 0.1px green;
+font-size: 1.8rem;
 }
 .zero .bg-head{
     background-color: #3CC47C;
@@ -233,16 +232,14 @@ vertical-align: middle;
 /* stop css global */
 
 
-@media (min-width:1px) and ( max-width:319px){
+@media (min-width:0px) and ( max-width:319px){
 .container{
     display: none !important;
 }
 }
 @media (min-width: 320px) and (max-width: 375px){
 .zero h1{
-    font-size: 0.9rem;
-    -webkit-text-stroke: 0.1px green;
-    font-weight: bold;
+    font-size: 1.3rem;
 }
 .c-one-make-order h3{
     font-size: 0.9rem;
@@ -317,15 +314,13 @@ box-shadow: 0px 0px 1px 0px #cccaca;
 
 @media (min-width:376px) and (max-width: 767px){
 .zero h1{
-    font-size: 1.2rem;
-    -webkit-text-stroke: 0.1px green;
+    font-size: 1.4rem;
 }
 }
 
 @media (min-width: 768px) and (max-width:1200px){
 .zero h1{
-    font-size: 1.1rem;
-    -webkit-text-stroke: 0.1px green;
+    font-size: 1.5rem;
 }
 
 .c-width-form-icon-make-order{
