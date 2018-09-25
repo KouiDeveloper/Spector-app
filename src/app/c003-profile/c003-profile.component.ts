@@ -10,6 +10,7 @@ export class C003ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.title = "ຂໍ້ມູນສ່ວນຕົວ"
   }
 
 }

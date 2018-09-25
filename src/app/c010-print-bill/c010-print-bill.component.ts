@@ -10,6 +10,7 @@ export class C010PrintBillComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.title = "ພິມບິນ";
   }
 
   printMe(){

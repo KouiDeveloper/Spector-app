@@ -172,6 +172,7 @@ export class C009MakeProductsToSaleComponent {
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
     //
+    document.title = "ສ້າງສິນຄ້າເພື່ອຂາຍ";
     this._message = JSON.parse(JSON.stringify(this._client));
 
     this._otherMessage = {};

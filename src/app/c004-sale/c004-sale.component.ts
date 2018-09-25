@@ -10,6 +10,7 @@ export class C004SaleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.title = "ຂາຍ";
   }
 
 }

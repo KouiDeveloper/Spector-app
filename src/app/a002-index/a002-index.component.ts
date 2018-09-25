@@ -32,6 +32,7 @@ export class A002IndexComponent {
     sessionStorage.setItem('selectedTime',JSON.stringify(this.arrModel));
   }
   ngOnInit() {
+    document.title = "ໜ້າທຳອິດ";
    this.selectToday();
    this.selectTime();
   }

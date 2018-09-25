@@ -10,6 +10,7 @@ export class C008ChangePasswordComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.title = "ປ່ຽນລະຫັດຜ່ານ";
   }
 
 }

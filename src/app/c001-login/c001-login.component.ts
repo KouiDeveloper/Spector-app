@@ -86,6 +86,8 @@ export class C001LoginComponent implements OnInit, OnDestroy {
   /// INIT FUNCTIONS
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
+    document.title = "ເຂົ້າສູ່ລະບົບ";
+
     this._newUser = JSON.parse(JSON.stringify(this._client));
     this._newUser.data = {};
     this._newUser.data.user = {};

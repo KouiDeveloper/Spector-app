@@ -10,6 +10,7 @@ export class C006MakeOrderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.title = "ສ້າງອໍ່ເດີ້"
   }
 
 }

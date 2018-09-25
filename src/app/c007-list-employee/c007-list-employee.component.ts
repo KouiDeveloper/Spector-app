@@ -10,6 +10,7 @@ export class C007ListEmployeeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.title = "ລາຍຊື່ພະນັກງານ";
   }
 
 }

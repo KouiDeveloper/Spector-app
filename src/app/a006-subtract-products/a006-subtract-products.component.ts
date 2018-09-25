@@ -166,6 +166,7 @@ export class A006SubtractProductsComponent {
   /// INIT FUNCTIONS
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit() {
+    document.title = "ນຳສິນຄ້າອອກຈາກສາງ";
     //
     this._message = JSON.parse(JSON.stringify(this._client));
 
