@@ -19,7 +19,7 @@ h3 {
   font-size: 1.5rem;
 }
 
-.scrolly {
+.scrollpy {
   max-height: 300px;
   height: auto;
   overflow: hidden;
